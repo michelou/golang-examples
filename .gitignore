@@ -1,0 +1,13 @@
+Debug/
+Release/
+target/
+*.crt
+*_LOCAL
+*_LOCAL.txt
+*.exe
+*.key
+*.msi
+*.pem
+*.pfx
+*.properties
+*.user
