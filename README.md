@@ -19,13 +19,13 @@ This project depends on the following external software for the **Microsoft Wind
 - [go 1.17][golang_downloads] ([*release notes*][golang_relnotes])
 - [Mage 1.12][mage_downloads] ([*release notes*][mage_relnotes])
 
-We also installed the following Go packages <sup id="anchor_01"><a href="#footnote_01">[1]</a></sup>:
+We also installed the following Go packages <sup id="anchor_01"><a href="#footnote_01">1</a></sup>:
 
 - [golint][github_golint]
 - [gopkgs 2.1][github_gopkgs] ([*release notes*][github_gopkgs_latest])
 - [mysql 1.5][github_mysql] ([*release notes*][github_mysql_latest])
 
-For instance our development environment looks as follows (*December 2021*) <sup id="anchor_02"><a href="#footnote_02">[2]</a></sup>:
+For instance our development environment looks as follows (*December 2021*) <sup id="anchor_02"><a href="#footnote_02">2</a></sup>:
 
 <pre style="font-size:80%;">
 C:\opt\go-1.17.5\    <i>(407 MB)</i>
