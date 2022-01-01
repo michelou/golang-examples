@@ -25,7 +25,7 @@ We also installed the following Go packages <sup id="anchor_01"><a href="#footno
 - [gopkgs 2.1][github_gopkgs] ([*release notes*][github_gopkgs_latest])
 - [mysql 1.5][github_mysql] ([*release notes*][github_mysql_latest])
 
-For instance our development environment looks as follows (*December 2021*) <sup id="anchor_02"><a href="#footnote_02">2</a></sup>:
+For instance our development environment looks as follows (*January 2022*) <sup id="anchor_02">[2](#footnote_02)</sup>:
 
 <pre style="font-size:80%;">
 C:\opt\go-1.17.5\    <i>(407 MB)</i>
@@ -71,7 +71,7 @@ The installed Go packages are located in <code>%GOPATH%</code> :
 <b>&gt; <a href="https://golang.org/cmd/go/#hdr-Add_dependencies_to_current_module_and_install_them">go get</a> -u golang.org/x/lint/golint</b>
 &nbsp;
 <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/where_1">where</a> /r "%GOPATH%" *lint*</b>
-%USERPROFILE%\go\bin\golint.exe
+<a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\go\bin\golint.exe
 %USERPROFILE%\go\src\golang.org\x\lint\lint.go
 %USERPROFILE%\go\src\golang.org\x\lint\lint_test.go
 %USERPROFILE%\go\src\golang.org\x\lint\golint\golint.go
@@ -85,7 +85,7 @@ The installed Go packages are located in <code>%GOPATH%</code> :
 <b>&gt; <a href="https://golang.org/cmd/go/#hdr-Add_dependencies_to_current_module_and_install_them">go get</a> -u github.com/go-sql-driver/mysql</b>
 &nbsp;
 <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/where_1">where</a> /r "%GOPATH%" *sql*</b>
-%USERPROFILE%\go\pkg\windows_amd64\github.com\go-sql-driver\mysql.a
+<a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\go\pkg\windows_amd64\github.com\go-sql-driver\mysql.a
 %USERPROFILE%\go\src\github.com\go-sql-driver\mysql\.travis\wait_mysql.sh
 </pre>
 </li>
@@ -98,7 +98,7 @@ github.com/MichaelTJones/walk (download)
 github.com/pkg/errors (download)
 &nbsp;
 <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/where_1">where</a> /r "%GOPATH%" gopkgs*</b>
-%USERPROFILE%\go\bin\gopkgs.exe
+<a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\go\bin\gopkgs.exe
 %USERPROFILE%\go\src\github.com\uudashr\gopkgs\gopkgs.go
 %USERPROFILE%\go\src\github.com\uudashr\gopkgs\gopkgs_test.go
 %USERPROFILE%\go\src\github.com\uudashr\gopkgs\internal\gopkgs.go
@@ -191,7 +191,7 @@ c:\opt\go-1.17.5
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/December 2021* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/January 2022* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->

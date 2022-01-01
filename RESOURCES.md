@@ -21,6 +21,7 @@
 
 ## <span id="books">Books</span>
 
+- [Build Systems with Go][book_tirado] by Juan M. Tirado, April 2021.<br/><span style="font-size:80%;">(E-Book, [GitHub repository](https://github.com/juanmanuel-tirado/savetheworldwithgo))</span>
 - [Mastering Go][book_tsoukalos] by Mihalis Thsoukalos, August 2019.</br><span style="font-size:80%;">(Packt Publishing, ISBN 978-1633430075, 312 pages, [GitHub repository](https://github.com/PacktPublishing/Mastering-Go-Second-Edition))</span>
 
 - [Go in Practice][book_butcher] by Matt Butcher &amp; Matt Farina, October 2016.</br><span style="font-size:80%;">(Manning Publications, ISBN 978-1633430075, 312 pages)</span>
@@ -64,7 +65,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/December 2021* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/January 2022* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -77,6 +78,7 @@
 [book_donovan]: https://www.amazon.com/gp/product/0134190440/
 [book_kennedy]: https://www.amazon.com/gp/product/1617291781/
 [book_ryer]: https://www.amazon.com/gp/product/1786468948/
+[book_tirado]: https://jmtirado.net/build-systems-with-go/
 [book_tsoukalos]: https://www.amazon.com/gp/product/B07WC24RTQ
 [callicoder_about]: https://www.callicoder.com/about/
 [talk_gerrand]: https://talks.golang.org/2014/names.slide#1
