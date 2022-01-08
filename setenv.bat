@@ -279,7 +279,7 @@ set "__VERSIONS_LINE2=  "
 set __WHERE_ARGS=
 where /q "%VSCODE_HOME%\bin:code.cmd"
 if %ERRORLEVEL%==0 (
-    for /f %%i in ('"%VSCODE_HOME%\bin\code.cmd" --version 2^>^&1^|findstr /b [1-9].[0-9]') do (
+    for /f %%i in ('"%VSCODE_HOME%\bin\code.cmd" --version 2^>^&1'^|findstr \.') do (
         set "__VERSIONS_LINE1=%__VERSIONS_LINE1% code %%i,"
     )
     set __WHERE_ARGS=%__WHERE_ARGS% "%VSCODE_HOME%\bin:code.cmd"
