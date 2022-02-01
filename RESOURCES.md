@@ -14,6 +14,10 @@
 
 ## <span id="blogs">Blogs</span>
 
+- [Trying Out Generics in Go][blog_phelps] by Mark Phelps, December 2021.
+- [Twelve Years of Go][blog_cox] by Russ Cox, November 2021.
+- [Golang for JavaScript developers - Part 2][blog_sasidharan2] by Deepu K Sasidharan, December 2019.
+- [Golang for JavaScript developers - Part 1][blog_sasidharan1] by Deepu K Sasidharan, December 2019.
 - [An Overview of Go's Tooling][blog_edwards] by Alex Edwards, April 2019.
 - [Software adventures and thoughts][blog_ralchev] by Svetlin Ralchev.
 - [Make Your Build Better With Mage](https://blog.gopheracademy.com/advent-2017/mage/) by Nate Finch, December 2017.
@@ -65,15 +69,19 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/January 2022* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/February 2022* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
 
 [article_guides]: https://www.digitalocean.com/community/tutorials/building-go-applications-for-different-operating-systems-and-architectures
 [blog_cheney]: https://dave.cheney.net/2015/08/22/cross-compilation-with-go-1-5
+[blog_cox]: https://go.dev/blog/12years
 [blog_edwards]: https://www.alexedwards.net/blog/an-overview-of-go-tooling
+[blog_phelps]: https://markphelps.me/posts/trying-out-generics-in-go/
 [blog_ralchev]: http://blog.ralch.com/
+[blog_sasidharan1]: https://deepu.tech/golang-for-javascript-developers-part-1/
+[blog_sasidharan2]: https://deepu.tech/golang-for-javascript-developers-part-2/
 [book_butcher]: https://www.amazon.com/gp/product/1633430073/
 [book_donovan]: https://www.amazon.com/gp/product/0134190440/
 [book_kennedy]: https://www.amazon.com/gp/product/1617291781/
