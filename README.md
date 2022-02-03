@@ -9,7 +9,7 @@
   </tr>
 </table>
 
-[Ada][ada_examples], [Deno][deno_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Node.js][nodejs_examples], [Scala 3][scala3_examples], [TruffleSqueak][trufflesqueak_examples] and [WiX][wix_examples] are other topics we are continuously monitoring.
+[Ada][ada_examples], [Deno][deno_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Node.js][nodejs_examples], [Scala 3][scala3_examples], [Spring][spring_examples], [TruffleSqueak][trufflesqueak_examples] and [WiX][wix_examples] are other topics we are continuously monitoring.
 
 ## <span id="proj_deps">Project dependencies</span>
 
@@ -104,14 +104,14 @@ In our case we downloaded the following installation files (see <a href="#proj_d
    Example: > env GODEBUG=gctrace=1,schedtrace=1000 godoc -http=:8080
   (see https://dave.cheney.net/tag/gomaxprocs)
 
-GOMAXPROCS
+<b>GOMAXPROCS</b>
    Starting from Go 1.5, the default value should be the number of cores.
 
-GOOS
+<b>GOOS</b>
    The operating system for which to compile code.
    Examples are linux, darwin, windows, netbsd.
 
-GOPATH
+<b>GOPATH</b>
    The location of your workspace.
    NB. To access it from your Go source code simply write
    import (
@@ -120,7 +120,7 @@ GOPATH
    )
    fmt.Println(build.Default.GOPATH)
 
-GOROOT
+<b>GOROOT</b>
    The root of the go tree.
 </pre>
 </dd>
@@ -164,5 +164,6 @@ c:\opt\go-1.17.6
 [mage_relnotes]: https://github.com/magefile/mage/releases/tag/v1.11.0
 [nodejs_examples]: https://github.com/michelou/nodejs-examples
 [scala3_examples]: https://github.com/michelou/dotty-examples
+[spring_examples]: https://github.com/michelou/spring-examples
 [trufflesqueak_examples]: https://github.com/michelou/trufflesqueak-examples
 [wix_examples]: https://github.com/michelou/wix-examples
