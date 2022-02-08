@@ -3,7 +3,7 @@
 <table style="font-family:Helvetica,Arial;font-size:14px;line-height:1.6;">
   <tr>
   <td style="border:0;padding:0 10px 0 0;min-width:120px;"><a href="https://golang.org/" rel="external"><img style="border:0;" src="./docs/images/go-logo-blue.svg" width="120" alt="Go project"/></a></td>
-  <td style="border:0;padding:0;vertical-align:text-top;">This document gathers <a href="https://golang.org/" rel="external">Golang</a> related resources.
+  <td style="border:0;padding:0;vertical-align:text-top;">This document gathers <a href="https://golang.org/" rel="external">Golang</a> related resources that caught our attention.
   </td>
   </tr>
 </table>
@@ -22,6 +22,10 @@
 - [Software adventures and thoughts][blog_ralchev] by Svetlin Ralchev.
 - [Make Your Build Better With Mage](https://blog.gopheracademy.com/advent-2017/mage/) by Nate Finch, December 2017.
 - [Cross compilation with Go 1.5][blog_cheney] by Dave Cheney, August 2015.
+- [**golangspec**](https://medium.com/golangspec) (Medium):
+  - [Untyped constants in Go][blog_lowicki2020b] by Michael Lowicki, March 2020.
+  - [Equality in Golang][blog_lowicki2020a] by Michael Lowicki, February 2020.
+  - [Variadic functions in Go][blog_lowick2016] by Michael Lowicki, October 2016.
 
 ## <span id="books">Books</span>
 
@@ -57,8 +61,8 @@
 
 ## <span id="tools">Tools</span>
 
-- [Cobra](https://github.com/spf13/cobra) is both a library for creating powerful modern CLI applications as well as a program to generate applications and command files.
-
+- [Cobra][tool_cobra] is both a library for creating powerful modern CLI applications as well as a program to generate applications and command files.
+- [Ristretto][tool_ristretto] is a fast, concurrent cache library for Go.
 
 ## <span id="tutorials">Tutorials</span>
 
@@ -78,6 +82,9 @@
 [blog_cheney]: https://dave.cheney.net/2015/08/22/cross-compilation-with-go-1-5
 [blog_cox]: https://go.dev/blog/12years
 [blog_edwards]: https://www.alexedwards.net/blog/an-overview-of-go-tooling
+[blog_lowick2016]: https://medium.com/golangspec/variadic-functions-in-go-13c33182b851
+[blog_lowicki2020a]: https://medium.com/golangspec/equality-in-golang-ff44da79b7f1
+[blog_lowicki2020b]: https://medium.com/golangspec/untyped-constants-in-go-2c69eb519b5b
 [blog_phelps]: https://markphelps.me/posts/trying-out-generics-in-go/
 [blog_ralchev]: http://blog.ralch.com/
 [blog_sasidharan1]: https://deepu.tech/golang-for-javascript-developers-part-1/
@@ -91,6 +98,8 @@
 [callicoder_about]: https://www.callicoder.com/about/
 [talk_gerrand]: https://talks.golang.org/2014/names.slide#1
 [talk_griesemer]: https://talks.go-zh.org/2015/gofmt-en.slide#1
+[tool_cobra]: https://github.com/spf13/cobra
+[tool_ristretto]: https://github.com/dgraph-io/ristretto
 [tutorial_alco]: https://github.com/alco/gostart
 [tutorial_callicoder]: https://www.callicoder.com/categories/golang/
 [tutorial_nilsson]: https://yourbasic.org/golang/go-java-tutorial/
