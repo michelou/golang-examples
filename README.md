@@ -9,7 +9,7 @@
   </tr>
 </table>
 
-[Ada][ada_examples], [Akka][akka_examples], [Deno][deno_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Node.js][nodejs_examples], [Scala 3][scala3_examples], [Spring][spring_examples], [TruffleSqueak][trufflesqueak_examples] and [WiX][wix_examples] are other topics we are continuously monitoring.
+[Ada][ada_examples], [Akka][akka_examples], [Deno][deno_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [Spring][spring_examples], [TruffleSqueak][trufflesqueak_examples] and [WiX][wix_examples] are other topics we are continuously monitoring.
 
 ## <span id="proj_deps">Project dependencies</span>
 
@@ -91,26 +91,26 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 <dl><dd>
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://golang.org/cmd/go/">go</a> help environment</b>
-
+&nbsp;
 <b>GOARCH</b>
    The architecture, or processor, for which to compile code.
    Examples are amd64, 386, arm, ppc64.
-
+&nbsp;
 <b>GOBIN</b>
    The directory where 'go install' will install a command.
    Empty by default.
-
+&nbsp;
 <b>GODEBUG</b>
    Example: > env GODEBUG=gctrace=1,schedtrace=1000 godoc -http=:8080
   (see https://dave.cheney.net/tag/gomaxprocs)
-
+&nbsp;
 <b>GOMAXPROCS</b>
    Starting from Go 1.5, the default value should be the number of cores.
-
+&nbsp;
 <b>GOOS</b>
    The operating system for which to compile code.
    Examples are linux, darwin, windows, netbsd.
-
+&nbsp;
 <b>GOPATH</b>
    The location of your workspace.
    NB. To access it from your Go source code simply write
@@ -119,7 +119,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
        "go/build"
    )
    fmt.Println(build.Default.GOPATH)
-
+&nbsp;
 <b>GOROOT</b>
    The root of the go tree.
 </pre>
@@ -164,6 +164,7 @@ c:\opt\go-1.17.7
 [mage_downloads]: https://github.com/magefile/mage/releases
 [mage_relnotes]: https://github.com/magefile/mage/releases/tag/v1.12.1
 [nodejs_examples]: https://github.com/michelou/nodejs-examples
+[rust_examples]: https://github.com/michelou/rust-examples
 [scala3_examples]: https://github.com/michelou/dotty-examples
 [spring_examples]: https://github.com/michelou/spring-examples
 [trufflesqueak_examples]: https://github.com/michelou/trufflesqueak-examples

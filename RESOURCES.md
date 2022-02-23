@@ -14,6 +14,9 @@
 
 ## <span id="blogs">Blogs</span>
 
+- [**DEV** Community](https://dev.to/):
+  - [Rollback Functions in Golang](https://dev.to/omniawahid/rollback-functions-in-golang-7e9) by Omnia Wahid, February 2022.
+  - [Working MongoDB with Golang]() by Burak Seyhan, November 2021.
 - [Trying Out Generics in Go][blog_phelps] by Mark Phelps, December 2021.
 - [Twelve Years of Go][blog_cox] by Russ Cox, November 2021.
 - [Golang for JavaScript developers - Part 2][blog_sasidharan2] by Deepu K Sasidharan, December 2019.
