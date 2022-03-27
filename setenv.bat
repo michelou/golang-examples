@@ -321,6 +321,8 @@ if %__VERBOSE%==1 (
     if defined GOPATH echo    "GOPATH=%GOPATH%" 1>&2
     if defined GOROOT echo    "GOROOT=%GOROOT%" 1>&2
     if defined VSCODE_HOME echo    "VSCODE_HOME=%VSCODE_HOME%" 1>&2
+    echo Path associations: 1>&2
+    for /f "delims=" %%i in ('subst') do echo    %%i 1>&2
 )
 goto :eof
 

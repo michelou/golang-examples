@@ -14,11 +14,17 @@
 
 ## <span id="blogs">Blogs</span>
 
+- [The Go Blog](https://go.dev/blog/):
+  - &#128077; [An Introduction to Generics](https://go.dev/blog/intro-generics) by Robert Griesemer and Ian Lance Taylor, March 2022.
+  - [Twelve Years of Go][blog_cox] by Russ Cox, November 2021.
+- [Eli Bendersky's blog posts](https://eli.thegreenplace.net/tag/go):
+  - [File-driven testing in Go](https://eli.thegreenplace.net/2022/file-driven-testing-in-go/), February 2022.
+  - [Rewriting Go source code with AST tooling](https://eli.thegreenplace.net/2021/rewriting-go-source-code-with-ast-tooling/), October 2021.
+  - [Go internals: capturing loop variables in closures](https://eli.thegreenplace.net/2019/go-internals-capturing-loop-variables-in-closures/), September 2019.
 - [**DEV** Community](https://dev.to/):
   - [Rollback Functions in Golang](https://dev.to/omniawahid/rollback-functions-in-golang-7e9) by Omnia Wahid, February 2022.
   - [Working MongoDB with Golang]() by Burak Seyhan, November 2021.
 - [Trying Out Generics in Go][blog_phelps] by Mark Phelps, December 2021.
-- [Twelve Years of Go][blog_cox] by Russ Cox, November 2021.
 - [Golang for JavaScript developers - Part 2][blog_sasidharan2] by Deepu K Sasidharan, December 2019.
 - [Golang for JavaScript developers - Part 1][blog_sasidharan1] by Deepu K Sasidharan, December 2019.
 - [An Overview of Go's Tooling][blog_edwards] by Alex Edwards, April 2019.
@@ -29,18 +35,21 @@
   - [Untyped constants in Go][blog_lowicki2020b] by Michael Lowicki, March 2020.
   - [Equality in Golang][blog_lowicki2020a] by Michael Lowicki, February 2020.
   - [Variadic functions in Go][blog_lowick2016] by Michael Lowicki, October 2016.
+- [Altoros blog posts](https://www.altoros.com/blog/) by Siarhei Matsiukevich:
+  - [Golang Internals, Part 6: Bootstrapping and Memory Allocator Initialization](https://www.altoros.com/blog/golang-internals-part-6-bootstrapping-and-memory-allocator-initialization/), October 2015.
+  - [Golang Internals, Part 5: the Runtime Bootstrap Process](https://www.altoros.com/blog/golang-internals-part-5-the-runtime-bootstrap-process/), April 2015.
+  - [Golang Internals, Part 4: Object Files and Function Metadata](https://www.altoros.com/blog/golang-internals-part-4-object-files-and-function-metadata/), March 2015.
+  - [Golang Internals, Part 3: The Linker, Object Files, and Relocations](https://www.altoros.com/blog/golang-internals-part-3-the-linker-object-files-and-relocations/), March 2015.
+  - [Golang Internals, Part 2: Diving Into the Go Compiler](https://www.altoros.com/blog/golang-internals-part-2-diving-into-the-go-compiler/), March 2015.
+  - [Golang Internals, Part 1: Main Concepts and Project Structure](https://www.altoros.com/blog/golang-internals-part-1-main-concepts-and-project-structure/), March 2015.
 
 ## <span id="books">Books</span>
 
 - [Build Systems with Go][book_tirado] by Juan M. Tirado, April 2021.<br/><span style="font-size:80%;">(E-Book, [GitHub repository](https://github.com/juanmanuel-tirado/savetheworldwithgo))</span>
 - [Mastering Go][book_tsoukalos] by Mihalis Thsoukalos, August 2019.</br><span style="font-size:80%;">(Packt Publishing, ISBN 978-1633430075, 312 pages, [GitHub repository](https://github.com/PacktPublishing/Mastering-Go-Second-Edition))</span>
-
 - [Go in Practice][book_butcher] by Matt Butcher &amp; Matt Farina, October 2016.</br><span style="font-size:80%;">(Manning Publications, ISBN 978-1633430075, 312 pages)</span>
-
 - [Go Blueprints][book_ryer] by Mat Ryer, October 2016.</br><span style="font-size:80%;">(Packt Publishing, ISBN 978-1786468949, 394 pages)</span>
-
 - [Go in Action][book_kennedy] by William Kennedy, Brian Ketelsen &amp; Erik St. Martin, November 2015.</br><span style="font-size:80%;">(Manning Publications, ISBN 978-1617291784, 264 pages)</span>
-
 - [The Go Programming Language][book_donovan] by Alan Donovan &amp; Brian Kerninghan, October 2015.</br><span style="font-size:80%;">(Addison-Wesley, ISBN 978-0134190440, 398 pages)</span>
 
 
@@ -52,9 +61,8 @@
 ## <span id="talks">Talks</span>
 
 - [The Cultural Evolution of gofmt][talk_griesemer]by Robert Griesemer, 2015.
-
 - [What's in a name ?][talk_gerrand] by Andrew Gerrand, 2014.
-
+- &#128077; [Go at Google: Language Design in the Service of Software Engineering][talk_pike], by Rob Pike, October 2012.
 
 ## <span id="tips">Tips</span>
 
@@ -65,6 +73,7 @@
 ## <span id="tools">Tools</span>
 
 - [Cobra][tool_cobra] is both a library for creating powerful modern CLI applications as well as a program to generate applications and command files.
+- [go-cache][tool_go_cache] is an in-memory key:value store/cache library for Go,
 - [Ristretto][tool_ristretto] is a fast, concurrent cache library for Go.
 
 ## <span id="tutorials">Tutorials</span>
@@ -76,7 +85,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/February 2022* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/March 2022* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -101,7 +110,9 @@
 [callicoder_about]: https://www.callicoder.com/about/
 [talk_gerrand]: https://talks.golang.org/2014/names.slide#1
 [talk_griesemer]: https://talks.go-zh.org/2015/gofmt-en.slide#1
+[talk_pike]: https://talks.golang.org/2012/splash.article
 [tool_cobra]: https://github.com/spf13/cobra
+[tool_go_cache]: https://github.com/patrickmn/go-cache
 [tool_ristretto]: https://github.com/dgraph-io/ristretto
 [tutorial_alco]: https://github.com/alco/gostart
 [tutorial_callicoder]: https://www.callicoder.com/categories/golang/

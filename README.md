@@ -16,8 +16,8 @@
 This project depends on the following external software for the **Microsoft Windows** platform:
 
 - [Git 2.35][git_downloads] ([*release notes*][git_relnotes])
-- [go 1.17][golang_downloads] ([*release notes*][golang_relnotes])
-- [Mage 1.12][mage_downloads] ([*release notes*][mage_relnotes])
+- [go 1.18][golang_downloads] ([*release notes*][golang_relnotes])
+- [Mage 1.13][mage_downloads] ([*release notes*][mage_relnotes])
 
 > **&#9755;** ***Go packages***<br/>
 > We present the installed Go packages in document [`SETUP.md`](./SETUP.md).
@@ -25,7 +25,7 @@ This project depends on the following external software for the **Microsoft Wind
 For instance our development environment looks as follows (*March 2022*) <sup id="anchor_01">[1](#footnote_01)</sup>:
 
 <pre style="font-size:80%;">
-C:\opt\go-1.17.8\    <i>(407 MB)</i>
+C:\opt\go-1.18.0\    <i>(407 MB)</i>
 C:\opt\Git-2.35.1\   <i>(282 MB)</i>
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\go\    <i>( 60 MB)</i>
 </pre>
@@ -65,8 +65,8 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 </dd>
 <dd>
 <pre style="font-size:80%;">
-<a href="https://golang.org/dl/#stable">go1.17.8.windows-amd64.zip</a>        <i>(137 MB)</i>
-<a href="https://github.com/magefile/mage/releases">mage_1.12.1_Windows-64bit.zip</a>     <i>(  1 MB)</i>
+<a href="https://golang.org/dl/#stable">go1.18.windows-amd64.zip</a>          <i>(137 MB)</i>
+<a href="https://github.com/magefile/mage/releases">mage_1.13.0_Windows-64bit.zip</a>     <i>(  1 MB)</i>
 <a href="https://git-scm.com/download/win">PortableGit-2.35.1-64-bit.7z.exe</a>  <i>( 41 MB)</i>
 </pre>
 </dd></dl>
@@ -132,7 +132,7 @@ For instance:
 <b>&gt; <a href="https://golang.org/cmd/go/#hdr-Print_Go_environment_information">go env</a> GOARCH GOOS GOROOT GOPATH GOBIN</b>
 amd64
 windows
-c:\opt\go-1.17.8
+c:\opt\go-1.18.0
 %USERPROFILE%\go
 %USERPROFILE%\go\bin
 </pre>
@@ -163,7 +163,7 @@ c:\opt\go-1.17.8
 [kotlin_examples]: https://github.com/michelou/kotlin-examples
 [llvm_examples]: https://github.com/michelou/llvm-examples
 [mage_downloads]: https://github.com/magefile/mage/releases
-[mage_relnotes]: https://github.com/magefile/mage/releases/tag/v1.12.1
+[mage_relnotes]: https://github.com/magefile/mage/releases/tag/v1.13.0
 [nodejs_examples]: https://github.com/michelou/nodejs-examples
 [rust_examples]: https://github.com/michelou/rust-examples
 [scala3_examples]: https://github.com/michelou/dotty-examples

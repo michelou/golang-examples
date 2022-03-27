@@ -12,6 +12,7 @@ We also install the following Go packages :
 
 - [`golint`][github_golint]
 - [`gopkgs 2.1`][github_gopkgs] ([*release notes*][github_gopkgs_latest])
+- [`mage 1.13`][github_mage] ([*release notes*][github_mage_latest])
 - [`mysql 1.5`][github_mysql] ([*release notes*][github_mysql_latest])
 
 The installed Go packages are located in <code>%GOPATH%</code>.
@@ -46,6 +47,10 @@ github.com/pkg/errors (download)
 %USERPROFILE%\go\src\github.com\uudashr\gopkgs\internal\gopkgs_test.go
 ...</pre>
 
+## <span id="mage"><a href="https://github.com/magefile/mage"><b><code>mage</code></b></a></span>
+
+*WIP*
+
 ## <span id="mysql"><a href="https://github.com/go-sql-driver/mysql"><b><code>mysql</code></b></a></span>
 
 <pre style="font-size:80%;">
@@ -58,7 +63,7 @@ github.com/pkg/errors (download)
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/February 2022* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/March 2022* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -66,5 +71,7 @@ github.com/pkg/errors (download)
 [github_golint]: https://github.com/golang/lint
 [github_gopkgs]: https://github.com/uudashr/gopkgs
 [github_gopkgs_latest]: https://github.com/uudashr/gopkgs/releases/latest
+[github_mage]: https://github.com/magefile/mage
+[github_mage_latest]: https://github.com/magefile/mage/releases
 [github_mysql]: https://github.com/go-sql-driver/mysql
 [github_mysql_latest]: https://github.com/go-sql-driver/mysql/releases/latest
