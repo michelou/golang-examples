@@ -13,7 +13,7 @@ We also install the following Go packages :
 - [`golint`][github_golint]
 - [`gopkgs 2.1`][github_gopkgs] ([*release notes*][github_gopkgs_latest])
 - [`mage 1.13`][github_mage] ([*release notes*][github_mage_latest])
-- [`mysql 1.5`][github_mysql] ([*release notes*][github_mysql_latest])
+- [`mysql 1.6`][github_mysql] ([*release notes*][github_mysql_latest])
 
 The installed Go packages are located in <code>%GOPATH%</code>.
 
@@ -49,21 +49,47 @@ github.com/pkg/errors (download)
 
 ## <span id="mage"><a href="https://github.com/magefile/mage"><b><code>mage</code></b></a></span>
 
-*WIP*
+We just need to execute the Go command `install` <sup id="anchor_01">[1](#footnote_01)</sup>.
+
+<pre style="font-size:80%;">
+<b>&gt; <a href="https://go.dev/ref/mod#go-list">go list</a> -m -versions github.com/magefile/mage</b>
+github.com/magefile/mage v1.0.1 v1.0.2 v1.2.4 v1.3.0 v1.4.0 v1.5.0 v1.6.0 v1.6.1 v1.6.2 v1.7.0 v1.7.1 v1.8.0 v1.9.0 v1.10.0 v1.11.0 v1.12.0 v1.12.1 v1.13.0
+&nbsp;
+<b>&gt; <a href="https://go.dev/ref/mod#go-install">go install</a> github.com/magefile/mage@v1.13.0</b>
+</pre>
 
 ## <span id="mysql"><a href="https://github.com/go-sql-driver/mysql"><b><code>mysql</code></b></a></span>
 
 <pre style="font-size:80%;">
-<b>&gt; <a href="https://golang.org/cmd/go/#hdr-Add_dependencies_to_current_module_and_install_them">go get</a> -u github.com/go-sql-driver/mysql</b>
+<b>&gt; <a href="https://go.dev/ref/mod#go-install">go install</a> github.com/go-sql-driver/mysql@latest</b>
+go: downloading github.com/go-sql-driver/mysql v1.6.0
+package github.com/go-sql-driver/mysql is not a main package
 &nbsp;
 <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/where_1">where</a> /r "%GOPATH%" *sql*</b>
+<a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\go\pkg\mod\cache\[...]\go-sql-driver\mysql@v1.6.0
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\go\pkg\windows_amd64\github.com\go-sql-driver\mysql.a
 %USERPROFILE%\go\src\github.com\go-sql-driver\mysql\.travis\wait_mysql.sh
 </pre>
 
+## <span id="footnotes">Footnotes</span>
+
+<span id="footnote_01">[1]</span> ***Mage Module*** [↩](#anchor_01)
+
+<dl><dd>
+Alternatively we can download the binary release <a href="https://github.com/magefile/mage/releases/tag/v1.13.0"><code>mage_1.13.0_Windows-64bit.zip</code></a> and copy its contents &ndash; the single executable <code>mage.exe</code> &ndash; to directory <code><b>%GOBIN%</b></code>.
+</dd><dd>
+<pre style="font-size:80%;">
+<b>&gt; %GOBIN%\mage -version</b>
+Mage Build Tool 1.13.0
+Build Date: 2022-03-16T17:05:54Z
+Commit: 3504e09d7fcfdeab6e70281edce5d5dfb205f31a
+built with: go1.17
+</pre>
+</dd></dl>
+
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/March 2022* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/April 2022* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->

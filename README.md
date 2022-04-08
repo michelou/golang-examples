@@ -22,7 +22,7 @@ This project depends on the following external software for the **Microsoft Wind
 > **&#9755;** ***Go packages***<br/>
 > We present the installed Go packages in document [`SETUP.md`](./SETUP.md).
 
-For instance our development environment looks as follows (*March 2022*) <sup id="anchor_01">[1](#footnote_01)</sup>:
+For instance our development environment looks as follows (*April 2022*) <sup id="anchor_01">[1](#footnote_01)</sup>:
 
 <pre style="font-size:80%;">
 C:\opt\go-1.18.0\    <i>(407 MB)</i>
@@ -140,7 +140,7 @@ c:\opt\go-1.18.0
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/March 2022* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/April 2022* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->

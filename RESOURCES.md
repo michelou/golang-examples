@@ -10,6 +10,7 @@
 
 ## <span id="articles">Articles</span>
 
+- [Introduction to the Go Programming Language][article_lee] by Wei-Meng Lee, November 2020.
 - [Building Go Applications for Different OS and Architectures][article_guides] by Gopher Guides, October 2019.
 
 ## <span id="blogs">Blogs</span>
@@ -45,6 +46,7 @@
 
 ## <span id="books">Books</span>
 
+- [Pro Go][book_freeman] by Adam Freeman, 2022.<br/><span style="font-size:80%;">(Apress, ISBN 978-1-4842-7354-8, 1076 pages)</span>
 - [Build Systems with Go][book_tirado] by Juan M. Tirado, April 2021.<br/><span style="font-size:80%;">(E-Book, [GitHub repository](https://github.com/juanmanuel-tirado/savetheworldwithgo))</span>
 - [Mastering Go][book_tsoukalos] by Mihalis Thsoukalos, August 2019.</br><span style="font-size:80%;">(Packt Publishing, ISBN 978-1633430075, 312 pages, [GitHub repository](https://github.com/PacktPublishing/Mastering-Go-Second-Edition))</span>
 - [Go in Practice][book_butcher] by Matt Butcher &amp; Matt Farina, October 2016.</br><span style="font-size:80%;">(Manning Publications, ISBN 978-1633430075, 312 pages)</span>
@@ -74,6 +76,7 @@
 
 - [Cobra][tool_cobra] is both a library for creating powerful modern CLI applications as well as a program to generate applications and command files.
 - [go-cache][tool_go_cache] is an in-memory key:value store/cache library for Go,
+- [Revel][tool_revel] is a flexible web framework for the Go language.
 - [Ristretto][tool_ristretto] is a fast, concurrent cache library for Go.
 
 ## <span id="tutorials">Tutorials</span>
@@ -85,12 +88,13 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/March 2022* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/April 2022* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
 
 [article_guides]: https://www.digitalocean.com/community/tutorials/building-go-applications-for-different-operating-systems-and-architectures
+[article_lee]: https://www.codemag.com/Article/2011051/Introduction-to-the-Go-Programming-Language
 [blog_cheney]: https://dave.cheney.net/2015/08/22/cross-compilation-with-go-1-5
 [blog_cox]: https://go.dev/blog/12years
 [blog_edwards]: https://www.alexedwards.net/blog/an-overview-of-go-tooling
@@ -103,6 +107,7 @@
 [blog_sasidharan2]: https://deepu.tech/golang-for-javascript-developers-part-2/
 [book_butcher]: https://www.amazon.com/gp/product/1633430073/
 [book_donovan]: https://www.amazon.com/gp/product/0134190440/
+[book_freeman]: https://
 [book_kennedy]: https://www.amazon.com/gp/product/1617291781/
 [book_ryer]: https://www.amazon.com/gp/product/1786468948/
 [book_tirado]: https://jmtirado.net/build-systems-with-go/
@@ -113,6 +118,7 @@
 [talk_pike]: https://talks.golang.org/2012/splash.article
 [tool_cobra]: https://github.com/spf13/cobra
 [tool_go_cache]: https://github.com/patrickmn/go-cache
+[tool_revel]: https://revel.github.io/ "Revel - A flexible web framework for Go"
 [tool_ristretto]: https://github.com/dgraph-io/ristretto
 [tutorial_alco]: https://github.com/alco/gostart
 [tutorial_callicoder]: https://www.callicoder.com/categories/golang/
