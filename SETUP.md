@@ -85,6 +85,9 @@ Build Date: 2022-03-16T17:05:54Z
 Commit: 3504e09d7fcfdeab6e70281edce5d5dfb205f31a
 built with: go1.17
 </pre>
+</dd>
+<dd>
+By default <code><b>%GOBIN%</b></code> variable should default to <code><b>%GOPATH%</b>\bin</code>.
 </dd></dl>
 
 ***

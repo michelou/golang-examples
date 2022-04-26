@@ -291,6 +291,7 @@ if %ERRORLEVEL%==0 (
 )
 where /q "%GOBIN%:mage.exe"
 if %ERRORLEVEL%==0 (
+    @rem for any reason option --version may return "<not set>"
     for /f "tokens=1-3,*" %%i in ('"%GOBIN%\mage.exe" --version ^| findstr Mage') do set "__VERSIONS_LINE1=%__VERSIONS_LINE1% mage %%l"
     set __WHERE_ARGS=%__WHERE_ARGS% "%GOBIN%:mage.exe"
 )

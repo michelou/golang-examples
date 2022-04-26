@@ -15,6 +15,14 @@
 
 ## <span id="blogs">Blogs</span>
 
+- [Ardan Labs Go Blog](https://www.ardanlabs.com/categories/go-programing/)
+  - [Blockchain In Go: Part III: Redundant Storage And Consensus](https://www.ardanlabs.com/blog/2022/04/blockchain-04-redundant-storage-and-consensus.html) by William Kennedy, April 2022.
+   - [Visualization in Go - Plotting Stock Information](https://www.ardanlabs.com/blog/2022/01/visualizations-in-go.html) by Miki Tebeka, January 2022.
+  - [GIS in Go](https://www.ardanlabs.com/blog/2021/11/gis-in-go.html) by Miki Tebeka, November 2021.
+  - [Extract, Transform, and Load in Go](https://www.ardanlabs.com/blog/2021/09/extract-transform-load-in-go.html) by Miki Tebeka, September 2021.
+  - [Generics Part 03: Struct Types and Data Semantics](https://www.ardanlabs.com/blog/2020/09/generics-03-struct-types-and-data-semantics.html) by William Kennedy, September 2020.
+  - [Generics Part 02: Underlying Types](https://www.ardanlabs.com/blog/2020/08/generics-02-underlying-types.html) by William Kennedy, August 2020.
+  - [Generics Part 01: Basic Syntax](https://www.ardanlabs.com/blog/2020/07/generics-01-basic-syntax.html) by William Kennedy, July 2020.
 - [The Go Blog](https://go.dev/blog/):
   - &#128077; [An Introduction to Generics](https://go.dev/blog/intro-generics) by Robert Griesemer and Ian Lance Taylor, March 2022.
   - [Twelve Years of Go][blog_cox] by Russ Cox, November 2021.
@@ -46,6 +54,7 @@
 
 ## <span id="books">Books</span>
 
+- [Essential Go](https://www.programming-books.io/essential/go/) (*free online book*) by [Krzysztof Kowalczyk](https://blog.kowalczyk.info/).
 - [Pro Go][book_freeman] by Adam Freeman, 2022.<br/><span style="font-size:80%;">(Apress, ISBN 978-1-4842-7354-8, 1076 pages)</span>
 - [Build Systems with Go][book_tirado] by Juan M. Tirado, April 2021.<br/><span style="font-size:80%;">(E-Book, [GitHub repository](https://github.com/juanmanuel-tirado/savetheworldwithgo))</span>
 - [Mastering Go][book_tsoukalos] by Mihalis Thsoukalos, August 2019.</br><span style="font-size:80%;">(Packt Publishing, ISBN 978-1633430075, 312 pages, [GitHub repository](https://github.com/PacktPublishing/Mastering-Go-Second-Edition))</span>
@@ -74,13 +83,16 @@
 
 ## <span id="tools">Tools</span>
 
-- [Cobra][tool_cobra] is both a library for creating powerful modern CLI applications as well as a program to generate applications and command files.
-- [go-cache][tool_go_cache] is an in-memory key:value store/cache library for Go,
-- [Revel][tool_revel] is a flexible web framework for the Go language.
-- [Ristretto][tool_ristretto] is a fast, concurrent cache library for Go.
+- [Cobra][tool_cobra] &ndash; both a library for creating powerful modern CLI applications as well as a program to generate applications and command files.
+- [go-cache][tool_go_cache] &ndash; an in-memory key:value store/cache library for Go,
+- [Revel][tool_revel] &ndash; a flexible web framework for the Go language.
+- [Ristretto][tool_ristretto] &ndash; a fast, concurrent cache library for Go.
+- [setup-go](https://github.com/actions/setup-go) &ndash; Set up your GitHub Actions workflow with a specific version of Go.
 
 ## <span id="tutorials">Tutorials</span>
 
+- [Go 101](https://go101.org/) (fundamentals, generice, optimizations, quizzes).
+- [Golang 101 hacks][tutorial_xiao] by Nan Xiao.
 - [Golang Tutorial][tutorial_callicoder] by [Callicoder][callicoder_about]
 - [GoStart][tutorial_alco] by [Alexei Sholik](https://alexeisholik.com/)
 - [How To Code in Go](https://www.digitalocean.com/community/books/how-to-code-in-go-ebook), June 2020 (EPUB or PDF).
@@ -123,3 +135,4 @@
 [tutorial_alco]: https://github.com/alco/gostart
 [tutorial_callicoder]: https://www.callicoder.com/categories/golang/
 [tutorial_nilsson]: https://yourbasic.org/golang/go-java-tutorial/
+[tutorial_xiao]: https://nanxiao.gitbooks.io/golang-101-hacks/content/
