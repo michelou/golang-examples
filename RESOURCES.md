@@ -34,6 +34,7 @@
   - [Rollback Functions in Golang](https://dev.to/omniawahid/rollback-functions-in-golang-7e9) by Omnia Wahid, February 2022.
   - [Working MongoDB with Golang]() by Burak Seyhan, November 2021.
 - [Trying Out Generics in Go][blog_phelps] by Mark Phelps, December 2021.
+- [Mage is My Favorite Make][blog_vanslyck] by Carolyn Van Slyck, January 2021.
 - [Golang for JavaScript developers - Part 2][blog_sasidharan2] by Deepu K Sasidharan, December 2019.
 - [Golang for JavaScript developers - Part 1][blog_sasidharan1] by Deepu K Sasidharan, December 2019.
 - [An Overview of Go's Tooling][blog_edwards] by Alex Edwards, April 2019.
@@ -100,7 +101,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/April 2022* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/May 2022* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -117,6 +118,7 @@
 [blog_ralchev]: http://blog.ralch.com/
 [blog_sasidharan1]: https://deepu.tech/golang-for-javascript-developers-part-1/
 [blog_sasidharan2]: https://deepu.tech/golang-for-javascript-developers-part-2/
+[blog_vanslyck]: https://carolynvanslyck.com/blog/2021/01/mage-is-my-favorite-make/
 [book_butcher]: https://www.amazon.com/gp/product/1633430073/
 [book_donovan]: https://www.amazon.com/gp/product/0134190440/
 [book_freeman]: https://
