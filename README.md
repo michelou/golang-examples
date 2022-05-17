@@ -26,7 +26,7 @@ For instance our development environment looks as follows (*May 2022*) <sup id="
 
 <pre style="font-size:80%;">
 C:\opt\go-1.18.2\    <i>(407 MB)</i>
-C:\opt\Git-2.36.1\   <i>(282 MB)</i>
+C:\opt\Git-2.36.1\   <i>(286 MB)</i>
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\go\    <i>( 60 MB)</i>
 </pre>
 <!--
@@ -137,6 +137,21 @@ c:\opt\go-1.18.2
 %USERPROFILE%\go
 %USERPROFILE%\go\bin
 </pre>
+</dd>
+<dd>
+Run the following command to list the architectures supported on the Windows OS :
+</dd>
+<dd>
+<pre style="font-size:80%;">
+<b>&gt; go version</b>
+go version go1.18.2 windows/amd64
+&nbsp;
+<b>&gt; <a href="https://pkg.go.dev/cmd/go#hdr-Run_specified_go_tool" rel="external">go tool</a> dist list |<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/findstr" rel="external">findstr</a> windows</b>
+windows/386
+windows/amd64
+windows/arm
+windows/arm64
+</pre>
 </dd></dl>
 
 ***
@@ -158,7 +173,7 @@ c:\opt\go-1.18.2
 [github_markdown]: https://github.github.com/gfm/
 [golang]: https://golang.org/
 [golang_downloads]: https://golang.org/dl/#stable
-[golang_relnotes]: https://golang.org/doc/devel/release.html#go1.17
+[golang_relnotes]: https://golang.org/doc/devel/release.html#go1.18
 [graalvm_examples]: https://github.com/michelou/graalvm-examples
 [haskell_examples]: https://github.com/michelou/haskell-examples
 [kotlin_examples]: https://github.com/michelou/kotlin-examples

@@ -10,7 +10,7 @@
 
 We also install the following Go packages :
 
-- [`golint`][github_golint]
+- [`golint`][github_golint] (*deprecated*)
 - [`gopkgs 2.1`][github_gopkgs] ([*release notes*][github_gopkgs_latest])
 - [`mage 1.13`][github_mage] ([*release notes*][github_mage_latest])
 - [`mysql 1.6`][github_mysql] ([*release notes*][github_mysql_latest])
