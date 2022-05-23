@@ -79,8 +79,8 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 <li>Command <b><code>go get</code></b> requires a <a href="https://git-scm.com/docs/git"><b><code>git</code></b></a> executable in <code>%PATH%</code>, and since we've installed Git for Windows we just just need to add <code>bin\</code> path to our execution path,
       e.g. <code>c:\opt\Git-2.36.1\bin\</code>
 </li>
-<li>Command <b><code>go fmt</code></b> (or utility <b><code>gofmt</code></b>) requires a <a href="https://www.gnu.org/software/diffutils/manual/html_node/Invoking-diff.html"><b><code>diff_cli</code></b></a> executable in <code>%PATH%</code>, and since we've installed Git for Windows we just just need to add <code>usr\bin\</code> path to your execution path,
-      e.g. <code>c:\opt\Git\usr\bin\</code>
+<li>Command <b><code>go fmt</code></b> (or utility <b><code>gofmt</code></b>) requires a <a href="https://www.gnu.org/software/diffutils/manual/html_node/Invoking-diff.html"><b><code>diff</code></b></a> executable in <code>%PATH%</code>, and since we've installed Git for Windows we just just need to add <code>usr\bin\</code> path to your execution path,
+      e.g. <code>c:\opt\Git-2.36.1\usr\bin\</code>
 </li>
 <li><a href="http://liteide.org/en/">LiteIDE</a> - a simple, open source, cross-platform Go IDE.
 </li>
@@ -102,8 +102,8 @@ In our case we downloaded the following installation files (see <a href="#proj_d
    Empty by default.
 &nbsp;
 <b>GODEBUG</b>
-   Example: > env GODEBUG=gctrace=1,schedtrace=1000 godoc -http=:8080
-  (see https://dave.cheney.net/tag/gomaxprocs)
+   Example: &gt; <a href="https://man7.org/linux/man-pages/man1/env.1.html" rel="external">env</a> GODEBUG=gctrace=1,schedtrace=1000 <a href="https://pkg.go.dev/golang.org/x/tools/cmd/godoc" rel="external">godoc</a> -http=:8080
+  (see <a href="https://dave.cheney.net/tag/gomaxprocs" rel="external">https://dave.cheney.net/tag/gomaxprocs</a>)
 &nbsp;
 <b>GOMAXPROCS</b>
    Starting from Go 1.5, the default value should be the number of cores.
@@ -134,7 +134,7 @@ For instance:
 amd64
 windows
 c:\opt\go-1.18.2
-%USERPROFILE%\go
+<a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\go
 %USERPROFILE%\go\bin
 </pre>
 </dd>
