@@ -53,10 +53,11 @@
   - [Golang Internals, Part 2: Diving Into the Go Compiler](https://www.altoros.com/blog/golang-internals-part-2-diving-into-the-go-compiler/), March 2015.
   - [Golang Internals, Part 1: Main Concepts and Project Structure](https://www.altoros.com/blog/golang-internals-part-1-main-concepts-and-project-structure/), March 2015.
 
-## <span id="books">Books</span>
+## <span id="books">Books</span>[**&#x25B4;**](#top)
 
 - [Essential Go](https://www.programming-books.io/essential/go/) (*free online book*) by [Krzysztof Kowalczyk](https://blog.kowalczyk.info/).
 - [Pro Go][book_freeman] by Adam Freeman, 2022.<br/><span style="font-size:80%;">(Apress, ISBN 978-1-4842-7354-8, 1076 pages)</span>
+- [Go for Java Programmers][book_feigenbaum] by Barry Feigenbaum, 2022.<br/><span>(Apress, ISBN 978-1-4842-7198-8, 582 pages)</span>
 - [Build Systems with Go][book_tirado] by Juan M. Tirado, April 2021.<br/><span style="font-size:80%;">(E-Book, [GitHub repository](https://github.com/juanmanuel-tirado/savetheworldwithgo))</span>
 - [Mastering Go][book_tsoukalos] by Mihalis Thsoukalos, August 2019.</br><span style="font-size:80%;">(Packt Publishing, ISBN 978-1633430075, 312 pages, [GitHub repository](https://github.com/PacktPublishing/Mastering-Go-Second-Edition))</span>
 - [Go in Practice][book_butcher] by Matt Butcher &amp; Matt Farina, October 2016.</br><span style="font-size:80%;">(Manning Publications, ISBN 978-1633430075, 312 pages)</span>
@@ -76,7 +77,7 @@
 - [What's in a name ?][talk_gerrand] by Andrew Gerrand, 2014.
 - &#128077; [Go at Google: Language Design in the Service of Software Engineering][talk_pike], by Rob Pike, October 2012.
 
-## <span id="tips">Tips</span>
+## <span id="tips">Tips</span>[**&#x25B4;**](#top)
 
 - Cheat sheet: [Go string handling overview](https://yourbasic.org/golang/string-functions-reference-cheat-sheet/).
 - [Timing functions in golang](https://coderwall.com/p/cp5fya/measuring-execution-time-in-go).
@@ -101,7 +102,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/May 2022* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/June 2022* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -121,7 +122,8 @@
 [blog_vanslyck]: https://carolynvanslyck.com/blog/2021/01/mage-is-my-favorite-make/
 [book_butcher]: https://www.amazon.com/gp/product/1633430073/
 [book_donovan]: https://www.amazon.com/gp/product/0134190440/
-[book_freeman]: https://
+[book_feigenbaum]: https://link.springer.com/book/10.1007/978-1-4842-7199-5
+[book_freeman]: https://link.springer.com/book/10.1007/978-1-4842-7355-5
 [book_kennedy]: https://www.amazon.com/gp/product/1617291781/
 [book_ryer]: https://www.amazon.com/gp/product/1786468948/
 [book_tirado]: https://jmtirado.net/build-systems-with-go/

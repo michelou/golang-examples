@@ -22,7 +22,7 @@ This project depends on the following external software for the **Microsoft Wind
 > **&#9755;** ***Go packages***<br/>
 > We present the installed Go packages in document [`SETUP.md`](./SETUP.md).
 
-For instance our development environment looks as follows (*May 2022*) <sup id="anchor_01">[1](#footnote_01)</sup>:
+For instance our development environment looks as follows (*June 2022*) <sup id="anchor_01">[1](#footnote_01)</sup>:
 
 <pre style="font-size:80%;">
 C:\opt\go-1.18.2\    <i>(407 MB)</i>
@@ -57,7 +57,7 @@ where
 - file [**`setenv.bat`**](setenv.bat) is the batch script for setting up our environment.
 
 
-## <span id="footnotes">Footnotes</span>
+## <span id="footnotes">Footnotes</span>[**&#x25B4;**](#top)
 
 <span id="footnote_01">[1]</span> ***Downloads*** [↩](#anchor_01)
 
@@ -156,7 +156,7 @@ windows/arm64
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/May 2022* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/June 2022* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
