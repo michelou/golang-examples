@@ -10,6 +10,7 @@
 
 ## <span id="articles">Articles</span>
 
+- [The Go Programming Language and Environment][article_cox] by Russ Cox et al., May 2022.
 - [Introduction to the Go Programming Language][article_lee] by Wei-Meng Lee, November 2020.
 - [Building Go Applications for Different OS and Architectures][article_guides] by Gopher Guides, October 2019.
 
@@ -26,6 +27,7 @@
 - [The Go Blog](https://go.dev/blog/):
   - &#128077; [An Introduction to Generics](https://go.dev/blog/intro-generics) by Robert Griesemer and Ian Lance Taylor, March 2022.
   - [Twelve Years of Go][blog_cox] by Russ Cox, November 2021.
+- [Options Pattern in Golang](https://levelup.gitconnected.com/options-pattern-in-golang-9a0384a9d8db) by Himanshu Pandey, March 2022.
 - [Eli Bendersky's blog posts](https://eli.thegreenplace.net/tag/go):
   - [File-driven testing in Go](https://eli.thegreenplace.net/2022/file-driven-testing-in-go/), February 2022.
   - [Rewriting Go source code with AST tooling](https://eli.thegreenplace.net/2021/rewriting-go-source-code-with-ast-tooling/), October 2021.
@@ -35,6 +37,7 @@
   - [Working MongoDB with Golang]() by Burak Seyhan, November 2021.
 - [Trying Out Generics in Go][blog_phelps] by Mark Phelps, December 2021.
 - [Mage is My Favorite Make][blog_vanslyck] by Carolyn Van Slyck, January 2021.
+- [Go Error Handling - A Different Philosophy](https://jeremybytes.blogspot.com/2021/01/go-golang-error-handling-different.html) by Jeremy Bytes, January 2021.
 - [Golang for JavaScript developers - Part 2][blog_sasidharan2] by Deepu K Sasidharan, December 2019.
 - [Golang for JavaScript developers - Part 1][blog_sasidharan1] by Deepu K Sasidharan, December 2019.
 - [An Overview of Go's Tooling][blog_edwards] by Alex Edwards, April 2019.
@@ -65,6 +68,9 @@
 - [Go in Action][book_kennedy] by William Kennedy, Brian Ketelsen &amp; Erik St. Martin, November 2015.</br><span style="font-size:80%;">(Manning Publications, ISBN 978-1617291784, 264 pages)</span>
 - [The Go Programming Language][book_donovan] by Alan Donovan &amp; Brian Kerninghan, October 2015.</br><span style="font-size:80%;">(Addison-Wesley, ISBN 978-0134190440, 398 pages)</span>
 
+## <span id="news">News</span>
+
+- [Golang Weekly](https://golangweekly.com/latest).
 
 ## <span id="projects">Projects</span>
 
@@ -107,6 +113,7 @@
 
 <!-- link refs -->
 
+[article_cox]: https://cacm.acm.org/magazines/2022/5/260357-the-go-programming-language-and-environment/fulltext
 [article_guides]: https://www.digitalocean.com/community/tutorials/building-go-applications-for-different-operating-systems-and-architectures
 [article_lee]: https://www.codemag.com/Article/2011051/Introduction-to-the-Go-Programming-Language
 [blog_cheney]: https://dave.cheney.net/2015/08/22/cross-compilation-with-go-1-5
