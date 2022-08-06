@@ -16,22 +16,22 @@
 This project depends on the following external software for the **Microsoft Windows** platform:
 
 - [Git 2.37][git_downloads] ([*release notes*][git_relnotes])
-- [go 1.18][golang_downloads] ([*release notes*][golang_relnotes])
+- [go 1.19][golang_downloads] ([*release notes*][golang_relnotes])
 - [Mage 1.13][mage_downloads] ([*release notes*][mage_relnotes])
 
 > **&#9755;** ***Go packages***<br/>
 > We present the installed Go packages in document [`SETUP.md`](./SETUP.md).
 
-For instance our development environment looks as follows (*July 2022*) <sup id="anchor_01">[1](#footnote_01)</sup>:
+For instance our development environment looks as follows (*August 2022*) <sup id="anchor_01">[1](#footnote_01)</sup>:
 
 <pre style="font-size:80%;">
-C:\opt\go-1.18.4\    <i>(407 MB)</i>
+C:\opt\go-1.19\      <i>(407 MB)</i>
 C:\opt\Git-2.37.1\   <i>(286 MB)</i>
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\go\    <i>( 60 MB)</i>
 </pre>
 <!--
-go1.14   -> 334 MB, go1.15 -> 369 MB, go1.16 -> 387 MB, go1.17 -> 407 MB
-go1.18.1 -> 427 MB, go1.18.2 -> 345 MB, go1.18.4 -> MB
+go1.14   -> 334 MB, go1.15   -> 369 MB, go1.16   -> 387 MB, go1.17 -> 407 MB
+go1.18.1 -> 427 MB, go1.18.2 -> 345 MB, go1.18.4 -> 423 MB, go1.19 -> 451 MB
 -->
 
 ## <span id="structure">Directory structure</span>
@@ -66,7 +66,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 </dd>
 <dd>
 <pre style="font-size:80%;">
-<a href="https://golang.org/dl/#stable" rel="external">go1.18.4.windows-amd64.zip</a>        <i>(150 MB)</i>
+<a href="https://golang.org/dl/#stable" rel="external">go1.19.windows-amd64.zip</a>        <i>(150 MB)</i>
 <a href="https://github.com/magefile/mage/releases" rel="external">mage_1.13.0_Windows-64bit.zip</a>     <i>(  1 MB)</i>
 <a href="https://git-scm.com/download/win" rel="external">PortableGit-2.37.1-64-bit.7z.exe</a>  <i>( 41 MB)</i>
 </pre>
@@ -133,7 +133,7 @@ For instance:
 <b>&gt; <a href="https://golang.org/cmd/go/#hdr-Print_Go_environment_information">go env</a> GOARCH GOOS GOROOT GOPATH GOBIN</b>
 amd64
 windows
-c:\opt\go-1.18.4
+c:\opt\go-1.19
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\go
 %USERPROFILE%\go\bin
 </pre>
@@ -144,7 +144,7 @@ Run the following command to list the architectures supported on the Windows OS 
 <dd>
 <pre style="font-size:80%;">
 <b>&gt; go version</b>
-go version go1.18.4 windows/amd64
+go version go1.19 windows/amd64
 &nbsp;
 <b>&gt; <a href="https://pkg.go.dev/cmd/go#hdr-Run_specified_go_tool" rel="external">go tool</a> dist list |<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/findstr" rel="external">findstr</a> windows</b>
 windows/386
@@ -156,7 +156,7 @@ windows/arm64
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/July 2022* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/August 2022* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
