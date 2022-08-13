@@ -26,7 +26,7 @@ For instance our development environment looks as follows (*August 2022*) <sup i
 
 <pre style="font-size:80%;">
 C:\opt\go-1.19\      <i>(407 MB)</i>
-C:\opt\Git-2.37.1\   <i>(286 MB)</i>
+C:\opt\Git-2.37.2\   <i>(286 MB)</i>
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\go\    <i>( 60 MB)</i>
 </pre>
 <!--
@@ -66,9 +66,9 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 </dd>
 <dd>
 <pre style="font-size:80%;">
-<a href="https://golang.org/dl/#stable" rel="external">go1.19.windows-amd64.zip</a>        <i>(150 MB)</i>
+<a href="https://golang.org/dl/#stable" rel="external">go1.19.windows-amd64.zip</a>          <i>(150 MB)</i>
 <a href="https://github.com/magefile/mage/releases" rel="external">mage_1.13.0_Windows-64bit.zip</a>     <i>(  1 MB)</i>
-<a href="https://git-scm.com/download/win" rel="external">PortableGit-2.37.1-64-bit.7z.exe</a>  <i>( 41 MB)</i>
+<a href="https://git-scm.com/download/win" rel="external">PortableGit-2.37.2-64-bit.7z.exe</a>  <i>( 41 MB)</i>
 </pre>
 </dd></dl>
 
@@ -77,10 +77,10 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 <dl><dd>
 <ol>
 <li>Command <b><code>go get</code></b> requires a <a href="https://git-scm.com/docs/git"><b><code>git</code></b></a> executable in <code>%PATH%</code>, and since we've installed Git for Windows we just just need to add <code>bin\</code> path to our execution path,
-      e.g. <code>c:\opt\Git-2.37.1\bin\</code>
+      e.g. <code>c:\opt\Git-2.37.2\bin\</code>
 </li>
 <li>Command <b><code>go fmt</code></b> (or utility <b><code>gofmt</code></b>) requires a <a href="https://www.gnu.org/software/diffutils/manual/html_node/Invoking-diff.html"><b><code>diff</code></b></a> executable in <code>%PATH%</code>, and since we've installed Git for Windows we just just need to add <code>usr\bin\</code> path to your execution path,
-      e.g. <code>c:\opt\Git-2.37.1\usr\bin\</code>
+      e.g. <code>c:\opt\Git-2.37.2\usr\bin\</code>
 </li>
 <li><a href="http://liteide.org/en/">LiteIDE</a> - a simple, open source, cross-platform Go IDE.
 </li>
@@ -169,7 +169,7 @@ windows/arm64
 [git_cli]: https://git-scm.com/docs/git
 [git_downloads]: https://git-scm.com/download/win
 [git_exe]: https://git-scm.com/docs/git
-[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.37.1.txt
+[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.37.2.txt
 [github_markdown]: https://github.github.com/gfm/
 [golang]: https://golang.org/
 [golang_downloads]: https://golang.org/dl/#stable
