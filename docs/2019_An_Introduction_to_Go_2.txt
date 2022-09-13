@@ -1,0 +1,2 @@
+Website: https://indico.cern.ch/event/748373/
+Download: https://indico.cern.ch/event/748373/attachments/1797322/2962981/An_Introduction_to_Go_2.pdf
