@@ -17,7 +17,7 @@ This project depends on the following external software for the **Microsoft Wind
 
 - [Git 2.37][git_downloads] ([*release notes*][git_relnotes])
 - [go 1.19][golang_downloads] ([*release notes*][golang_relnotes])
-- [Mage 1.13][mage_downloads] ([*release notes*][mage_relnotes])
+- [Mage 1.14][mage_downloads] ([*release notes*][mage_relnotes])
 
 > **&#9755;** ***Go packages***<br/>
 > We present the installed Go packages in document [`SETUP.md`](./SETUP.md).
@@ -67,7 +67,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 <dd>
 <pre style="font-size:80%;">
 <a href="https://golang.org/dl/#stable" rel="external">go1.19.1.windows-amd64.zip</a>        <i>(156 MB)</i>
-<a href="https://github.com/magefile/mage/releases" rel="external">mage_1.13.0_Windows-64bit.zip</a>     <i>(  1 MB)</i>
+<a href="https://github.com/magefile/mage/releases" rel="external">mage_1.14.0_Windows-64bit.zip</a>     <i>(  1 MB)</i>
 <a href="https://git-scm.com/download/win" rel="external">PortableGit-2.37.3-64-bit.7z.exe</a>  <i>( 41 MB)</i>
 </pre>
 </dd></dl>
@@ -133,7 +133,7 @@ For instance:
 <b>&gt; <a href="https://golang.org/cmd/go/#hdr-Print_Go_environment_information">go env</a> GOARCH GOOS GOROOT GOPATH GOBIN</b>
 amd64
 windows
-c:\opt\go-1.19
+c:\opt\go-1.19.1
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\go
 %USERPROFILE%\go\bin
 </pre>
@@ -144,7 +144,7 @@ Run the following command to list the architectures supported on the Windows OS 
 <dd>
 <pre style="font-size:80%;">
 <b>&gt; go version</b>
-go version go1.19 windows/amd64
+go version go1.19.1 windows/amd64
 &nbsp;
 <b>&gt; <a href="https://pkg.go.dev/cmd/go#hdr-Run_specified_go_tool" rel="external">go tool</a> dist list |<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/findstr" rel="external">findstr</a> windows</b>
 windows/386
@@ -180,7 +180,7 @@ windows/arm64
 [kotlin_examples]: https://github.com/michelou/kotlin-examples
 [llvm_examples]: https://github.com/michelou/llvm-examples
 [mage_downloads]: https://github.com/magefile/mage/releases
-[mage_relnotes]: https://github.com/magefile/mage/releases/tag/v1.13.0
+[mage_relnotes]: https://github.com/magefile/mage/releases/tag/v1.14.0
 [nodejs_examples]: https://github.com/michelou/nodejs-examples
 [rust_examples]: https://github.com/michelou/rust-examples
 [scala3_examples]: https://github.com/michelou/dotty-examples
