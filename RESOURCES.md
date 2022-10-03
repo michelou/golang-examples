@@ -62,6 +62,7 @@
 
 ## <span id="books">Books</span>[**&#x25B4;**](#top)
 
+- [Mastering Golang][book_uzayr] by Sufyan bin Uzayr, 2022.<br/><span>(CRC Press, ISBN 978-1-0323-1591-1, 298 pages)</span>
 - [Essential Go](https://www.programming-books.io/essential/go/) (*free online book*) by [Krzysztof Kowalczyk](https://blog.kowalczyk.info/).
 - [Pro Go][book_freeman] by Adam Freeman, 2022.<br/><span style="font-size:80%;">(Apress, ISBN 978-1-4842-7354-8, 1076 pages)</span>
 - [Go for Java Programmers][book_feigenbaum] by Barry Feigenbaum, 2022.<br/><span>(Apress, ISBN 978-1-4842-7198-8, 582 pages)</span>
@@ -139,6 +140,7 @@
 [book_ryer]: https://www.amazon.com/gp/product/1786468948/
 [book_tirado]: https://jmtirado.net/build-systems-with-go/
 [book_tsoukalos]: https://www.amazon.com/gp/product/B07WC24RTQ
+[book_uzayr]: https://www.taylorfrancis.com/books/mono/10.1201/9781003310457/mastering-golang-sufyan-bin-uzayr
 [callicoder_about]: https://www.callicoder.com/about/
 [talk_gerrand]: https://talks.golang.org/2014/names.slide#1
 [talk_griesemer]: https://talks.go-zh.org/2015/gofmt-en.slide#1

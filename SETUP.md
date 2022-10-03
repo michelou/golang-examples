@@ -12,7 +12,7 @@ We also install the following Go packages :
 
 - [`golint`][github_golint] (*deprecated*)
 - [`gopkgs 2.1`][github_gopkgs] ([*release notes*][github_gopkgs_latest])
-- [`mage 1.13`][github_mage] ([*release notes*][github_mage_latest])
+- [`mage 1.14`][github_mage] ([*release notes*][github_mage_latest])
 - [`mysql 1.6`][github_mysql] ([*release notes*][github_mysql_latest])
 
 The installed Go packages are located in <code>%GOPATH%</code>.
@@ -53,9 +53,9 @@ We just need to execute the Go command `install` <sup id="anchor_01">[1](#footno
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://go.dev/ref/mod#go-list">go list</a> -m -versions github.com/magefile/mage</b>
-github.com/magefile/mage v1.0.1 v1.0.2 v1.2.4 v1.3.0 v1.4.0 v1.5.0 v1.6.0 v1.6.1 v1.6.2 v1.7.0 v1.7.1 v1.8.0 v1.9.0 v1.10.0 v1.11.0 v1.12.0 v1.12.1 v1.13.0
+github.com/magefile/mage v1.0.1 v1.0.2 v1.2.4 v1.3.0 v1.4.0 v1.5.0 v1.6.0 v1.6.1 v1.6.2 v1.7.0 v1.7.1 v1.8.0 v1.9.0 v1.10.0 v1.11.0 v1.12.0 v1.12.1 v1.13.0 v1.14.0
 &nbsp;
-<b>&gt; <a href="https://go.dev/ref/mod#go-install">go install</a> github.com/magefile/mage@v1.13.0</b>
+<b>&gt; <a href="https://go.dev/ref/mod#go-install">go install</a> github.com/magefile/mage@v1.14.0</b>
 </pre>
 
 ## <span id="mysql"><a href="https://github.com/go-sql-driver/mysql"><b><code>mysql</code></b></a></span>
@@ -76,7 +76,7 @@ package github.com/go-sql-driver/mysql is not a main package
 <span id="footnote_01">[1]</span> ***Mage Module*** [↩](#anchor_01)
 
 <dl><dd>
-Alternatively we can download the binary release <a href="https://github.com/magefile/mage/releases/tag/v1.13.0"><code>mage_1.13.0_Windows-64bit.zip</code></a> and copy its contents &ndash; the single executable <code>mage.exe</code> &ndash; to directory <code><b>%GOBIN%</b></code>.
+Alternatively we can download the binary release <a href="https://github.com/magefile/mage/releases/tag/v1.14.0"><code>mage_1.14.0_Windows-64bit.zip</code></a> and copy its contents &ndash; the single executable <code>mage.exe</code> &ndash; to directory <code><b>%GOBIN%</b></code>.
 </dd><dd>
 <pre style="font-size:80%;">
 <b>&gt; %GOBIN%\mage -version</b>
@@ -92,7 +92,7 @@ By default <code><b>%GOBIN%</b></code> variable should default to <code><b>%GOPA
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/September 2022* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/October 2022* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
