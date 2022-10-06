@@ -15,7 +15,7 @@
 
 This project depends on the following external software for the **Microsoft Windows** platform:
 
-- [Git 2.37][git_downloads] ([*release notes*][git_relnotes])
+- [Git 2.38][git_downloads] ([*release notes*][git_relnotes])
 - [go 1.19][golang_downloads] ([*release notes*][golang_relnotes])
 - [Mage 1.14][mage_downloads] ([*release notes*][mage_relnotes])
 
@@ -25,8 +25,8 @@ This project depends on the following external software for the **Microsoft Wind
 For instance our development environment looks as follows (*October 2022*) <sup id="anchor_01">[1](#footnote_01)</sup>:
 
 <pre style="font-size:80%;">
-C:\opt\go-1.19.1\    <i>(451 MB)</i>
-C:\opt\Git-2.37.3\   <i>(289 MB)</i>
+C:\opt\go-1.19.2\    <i>(451 MB)</i>
+C:\opt\Git-2.38.0\   <i>(289 MB)</i>
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\go\    <i>( 60 MB)</i>
 </pre>
 <!--
@@ -66,9 +66,9 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 </dd>
 <dd>
 <pre style="font-size:80%;">
-<a href="https://golang.org/dl/#stable" rel="external">go1.19.1.windows-amd64.zip</a>        <i>(156 MB)</i>
+<a href="https://golang.org/dl/#stable" rel="external">go1.19.2.windows-amd64.zip</a>        <i>(156 MB)</i>
 <a href="https://github.com/magefile/mage/releases" rel="external">mage_1.14.0_Windows-64bit.zip</a>     <i>(  1 MB)</i>
-<a href="https://git-scm.com/download/win" rel="external">PortableGit-2.37.3-64-bit.7z.exe</a>  <i>( 41 MB)</i>
+<a href="https://git-scm.com/download/win" rel="external">PortableGit-2.38.0-64-bit.7z.exe</a>  <i>( 41 MB)</i>
 </pre>
 </dd></dl>
 
@@ -77,10 +77,10 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 <dl><dd>
 <ol>
 <li>Command <b><code>go get</code></b> requires a <a href="https://git-scm.com/docs/git"><b><code>git</code></b></a> executable in <code>%PATH%</code>, and since we've installed Git for Windows we just just need to add <code>bin\</code> path to our execution path,
-      e.g. <code>c:\opt\Git-2.37.3\bin\</code>
+      e.g. <code>c:\opt\Git-2.38.0\bin\</code>
 </li>
 <li>Command <b><code>go fmt</code></b> (or utility <b><code>gofmt</code></b>) requires a <a href="https://www.gnu.org/software/diffutils/manual/html_node/Invoking-diff.html"><b><code>diff</code></b></a> executable in <code>%PATH%</code>, and since we've installed Git for Windows we just just need to add <code>usr\bin\</code> path to your execution path,
-      e.g. <code>c:\opt\Git-2.37.3\usr\bin\</code>
+      e.g. <code>c:\opt\Git-2.38.0\usr\bin\</code>
 </li>
 <li><a href="http://liteide.org/en/">LiteIDE</a> - a simple, open source, cross-platform Go IDE.
 </li>
@@ -133,7 +133,7 @@ For instance:
 <b>&gt; <a href="https://golang.org/cmd/go/#hdr-Print_Go_environment_information">go env</a> GOARCH GOOS GOROOT GOPATH GOBIN</b>
 amd64
 windows
-c:\opt\go-1.19.1
+c:\opt\go-1.19.2
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\go
 %USERPROFILE%\go\bin
 </pre>
@@ -144,7 +144,7 @@ Run the following command to list the architectures supported on the Windows OS 
 <dd>
 <pre style="font-size:80%;">
 <b>&gt; go version</b>
-go version go1.19.1 windows/amd64
+go version go1.19.2 windows/amd64
 &nbsp;
 <b>&gt; <a href="https://pkg.go.dev/cmd/go#hdr-Run_specified_go_tool" rel="external">go tool</a> dist list |<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/findstr" rel="external">findstr</a> windows</b>
 windows/386
@@ -170,7 +170,7 @@ windows/arm64
 [git_cli]: https://git-scm.com/docs/git
 [git_downloads]: https://git-scm.com/download/win
 [git_exe]: https://git-scm.com/docs/git
-[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.37.3.txt
+[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.38.0.txt
 [github_markdown]: https://github.github.com/gfm/
 [golang]: https://golang.org/
 [golang_downloads]: https://golang.org/dl/#stable
