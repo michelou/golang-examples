@@ -4,7 +4,7 @@
   <tr>
   <td style="border:0;padding:0 10px 0 0;min-width:25%;"><a href="https://golang.org/" rel="external"><img src="./docs/images/go-logo-blue.svg" width="120" alt="Go project"/></a></td>
   <td style="border:0;padding:0;vertical-align:text-top;">This repository gathers <a href="https://golang.org/" rel="external">Go</a> code examples coming from various websites and books.<br/>
-  It also includes several <a href="https://en.wikibooks.org/wiki/Windows_Batch_Scripting" rel="external">batch files</a> for experimenting with <a href="https://golang.org/" rel="external">Go</a> on a Windows machine.
+  It also includes several build scripts (<a href="https://en.wikibooks.org/wiki/Windows_Batch_Scripting" rel="external">batch files</a>, <a href="https://magefile.org/magefiles/" rel="external">Mage files</a>) for experimenting with <a href="https://golang.org/" rel="external">Go</a> on a Windows machine.
   </td>
   </tr>
 </table>
@@ -22,11 +22,11 @@ This project depends on the following external software for the **Microsoft Wind
 > **&#9755;** ***Go packages***<br/>
 > We present the installed Go packages in document [`SETUP.md`](./SETUP.md).
 
-For instance our development environment looks as follows (*October 2022*) <sup id="anchor_01">[1](#footnote_01)</sup>:
+For instance our development environment looks as follows (*November 2022*) <sup id="anchor_01">[1](#footnote_01)</sup>:
 
 <pre style="font-size:80%;">
-C:\opt\go-1.19.2\    <i>(451 MB)</i>
-C:\opt\Git-2.38.0\   <i>(289 MB)</i>
+C:\opt\go-1.19.3\    <i>(451 MB)</i>
+C:\opt\Git-2.38.1\   <i>(317 MB)</i>
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\go\    <i>( 60 MB)</i>
 </pre>
 <!--
@@ -66,9 +66,9 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 </dd>
 <dd>
 <pre style="font-size:80%;">
-<a href="https://golang.org/dl/#stable" rel="external">go1.19.2.windows-amd64.zip</a>        <i>(156 MB)</i>
+<a href="https://golang.org/dl/#stable" rel="external">go1.19.3.windows-amd64.zip</a>        <i>(156 MB)</i>
 <a href="https://github.com/magefile/mage/releases" rel="external">mage_1.14.0_Windows-64bit.zip</a>     <i>(  1 MB)</i>
-<a href="https://git-scm.com/download/win" rel="external">PortableGit-2.38.0-64-bit.7z.exe</a>  <i>( 41 MB)</i>
+<a href="https://git-scm.com/download/win" rel="external">PortableGit-2.38.1-64-bit.7z.exe</a>  <i>( 41 MB)</i>
 </pre>
 </dd></dl>
 
@@ -77,10 +77,10 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 <dl><dd>
 <ol>
 <li>Command <b><code>go get</code></b> requires a <a href="https://git-scm.com/docs/git"><b><code>git</code></b></a> executable in <code>%PATH%</code>, and since we've installed Git for Windows we just just need to add <code>bin\</code> path to our execution path,
-      e.g. <code>c:\opt\Git-2.38.0\bin\</code>
+      e.g. <code>c:\opt\Git-2.38.1\bin\</code>
 </li>
 <li>Command <b><code>go fmt</code></b> (or utility <b><code>gofmt</code></b>) requires a <a href="https://www.gnu.org/software/diffutils/manual/html_node/Invoking-diff.html"><b><code>diff</code></b></a> executable in <code>%PATH%</code>, and since we've installed Git for Windows we just just need to add <code>usr\bin\</code> path to your execution path,
-      e.g. <code>c:\opt\Git-2.38.0\usr\bin\</code>
+      e.g. <code>c:\opt\Git-2.38.1\usr\bin\</code>
 </li>
 <li><a href="http://liteide.org/en/">LiteIDE</a> - a simple, open source, cross-platform Go IDE.
 </li>
@@ -133,7 +133,7 @@ For instance:
 <b>&gt; <a href="https://golang.org/cmd/go/#hdr-Print_Go_environment_information">go env</a> GOARCH GOOS GOROOT GOPATH GOBIN</b>
 amd64
 windows
-c:\opt\go-1.19.2
+c:\opt\go-1.19.3
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\go
 %USERPROFILE%\go\bin
 </pre>
@@ -144,7 +144,7 @@ Run the following command to list the architectures supported on the Windows OS 
 <dd>
 <pre style="font-size:80%;">
 <b>&gt; go version</b>
-go version go1.19.2 windows/amd64
+go version go1.19.3 windows/amd64
 &nbsp;
 <b>&gt; <a href="https://pkg.go.dev/cmd/go#hdr-Run_specified_go_tool" rel="external">go tool</a> dist list |<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/findstr" rel="external">findstr</a> windows</b>
 windows/386
@@ -156,7 +156,7 @@ windows/arm64
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/October 2022* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/November 2022* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -170,7 +170,7 @@ windows/arm64
 [git_cli]: https://git-scm.com/docs/git
 [git_downloads]: https://git-scm.com/download/win
 [git_exe]: https://git-scm.com/docs/git
-[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.38.0.txt
+[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.38.1.txt
 [github_markdown]: https://github.github.com/gfm/
 [golang]: https://golang.org/
 [golang_downloads]: https://golang.org/dl/#stable

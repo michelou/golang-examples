@@ -80,7 +80,7 @@ Alternatively we can download the binary release <a href="https://github.com/mag
 </dd><dd>
 <pre style="font-size:80%;">
 <b>&gt; %GOBIN%\mage -version</b>
-Mage Build Tool 1.13.0
+Mage Build Tool 1.14.0
 Build Date: 2022-03-16T17:05:54Z
 Commit: 3504e09d7fcfdeab6e70281edce5d5dfb205f31a
 built with: go1.18
@@ -92,7 +92,7 @@ By default <code><b>%GOBIN%</b></code> variable should default to <code><b>%GOPA
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/October 2022* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/November 2022* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
