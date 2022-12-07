@@ -47,7 +47,7 @@ github.com/pkg/errors (download)
 %USERPROFILE%\go\src\github.com\uudashr\gopkgs\internal\gopkgs_test.go
 ...</pre>
 
-## <span id="mage"><a href="https://github.com/magefile/mage"><b><code>mage</code></b></a></span>[**&#x25B4;**](#top)
+## <span id="mage"><a href="https://github.com/magefile/mage"><b><code>mage</code></b></a></span> [**&#x25B4;**](#top)
 
 We just need to execute the Go command `install` <sup id="anchor_01">[1](#footnote_01)</sup>.
 
@@ -92,7 +92,7 @@ By default <code><b>%GOBIN%</b></code> variable should default to <code><b>%GOPA
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/November 2022* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/December 2022* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->

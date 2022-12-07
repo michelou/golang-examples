@@ -342,7 +342,8 @@ endlocal & (
         if not defined GOPATH set "GOPATH=%_GOPATH%"
         if not defined GOROOT set "GOROOT=%_GOLANG_HOME%"
         if not defined VSCODE_HOME set "VSCODE_HOME=%_VSCODE_HOME%"
-        set "PATH=%PATH%%_VSCODE_PATH%%_GOLANG_PATH%%_GIT_PATH%;%_GOBIN%;%~dp0bin"
+        @rem We prepend %_GIT_HOME%\bin to hide C:\Windows\System32\bash.exe
+        set "PATH=%_GIT_HOME%\bin;%PATH%%_VSCODE_PATH%%_GOLANG_PATH%%_GIT_PATH%;%_GOBIN%;%~dp0bin"
         call :print_env %_VERBOSE%
         if %_BASH%==1 (
             @rem see https://conemu.github.io/en/GitForWindows.html

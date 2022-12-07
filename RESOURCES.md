@@ -16,7 +16,13 @@
 
 ## <span id="blogs">Blogs</span>
 
-- [Ardan Labs Go Blog](https://www.ardanlabs.com/categories/go-programing/)
+- [Processing Large Files with Go](https://medium.com/@snassr/processing-large-files-in-go-golang-6ea87effbfe2) by Snassr, October 2022.
+- [Unit Testing in Go](https://medium.com/@snassr/unit-testing-in-go-golang-3a856ee3b9ba) by Snassr, September 2022.
+- [Alex Edwards Blog](https://www.alexedwards.net/blog/category/golang) :
+  - [The ‘fat service’ pattern for Go web applications](https://www.alexedwards.net/blog/the-fat-service-pattern), September 2022.
+  - [Golang Interfaces Explained](https://www.alexedwards.net/blog/interfaces-explained), August 2019.
+  - [An Overview of Go's Tooling][blog_edwards], April 2019.
+- [Ardan Labs Go Blog](https://www.ardanlabs.com/categories/go-programing/) :
   - [Blockchain In Go: Part III: Redundant Storage And Consensus](https://www.ardanlabs.com/blog/2022/04/blockchain-04-redundant-storage-and-consensus.html) by William Kennedy, April 2022.
    - [Visualization in Go - Plotting Stock Information](https://www.ardanlabs.com/blog/2022/01/visualizations-in-go.html) by Miki Tebeka, January 2022.
   - [GIS in Go](https://www.ardanlabs.com/blog/2021/11/gis-in-go.html) by Miki Tebeka, November 2021.
@@ -24,7 +30,7 @@
   - [Generics Part 03: Struct Types and Data Semantics](https://www.ardanlabs.com/blog/2020/09/generics-03-struct-types-and-data-semantics.html) by William Kennedy, September 2020.
   - [Generics Part 02: Underlying Types](https://www.ardanlabs.com/blog/2020/08/generics-02-underlying-types.html) by William Kennedy, August 2020.
   - [Generics Part 01: Basic Syntax](https://www.ardanlabs.com/blog/2020/07/generics-01-basic-syntax.html) by William Kennedy, July 2020.
-- [The Go Blog](https://go.dev/blog/):
+- [The Go Blog](https://go.dev/blog/) :
   - &#128077; [An Introduction to Generics](https://go.dev/blog/intro-generics) by Robert Griesemer and Ian Lance Taylor, March 2022.
   - [Twelve Years of Go][blog_cox] by Russ Cox, November 2021.
 - [Options Pattern in Golang](https://levelup.gitconnected.com/options-pattern-in-golang-9a0384a9d8db) by Himanshu Pandey, March 2022.
@@ -40,7 +46,6 @@
 - [Go Error Handling - A Different Philosophy](https://jeremybytes.blogspot.com/2021/01/go-golang-error-handling-different.html) by Jeremy Bytes, January 2021.
 - [Golang for JavaScript developers - Part 2][blog_sasidharan2] by Deepu K Sasidharan, December 2019.
 - [Golang for JavaScript developers - Part 1][blog_sasidharan1] by Deepu K Sasidharan, December 2019.
-- [An Overview of Go's Tooling][blog_edwards] by Alex Edwards, April 2019.
 - [Software adventures and thoughts][blog_ralchev] by Svetlin Ralchev.
 - [Make Your Build Better With Mage](https://blog.gopheracademy.com/advent-2017/mage/) by Nate Finch, December 2017.
 - [Cross compilation with Go 1.5][blog_cheney] by Dave Cheney, August 2015.
