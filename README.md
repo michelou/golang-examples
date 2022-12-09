@@ -57,7 +57,7 @@ where
 - file [**`setenv.bat`**](setenv.bat) is the batch script for setting up our environment.
 
 
-## <span id="footnotes">Footnotes</span>[**&#x25B4;**](#top)
+## <span id="footnotes">Footnotes</span> [**&#x25B4;**](#top)
 
 <span id="footnote_01">[1]</span> ***Downloads*** [↩](#anchor_01)
 

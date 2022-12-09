@@ -67,13 +67,14 @@
 
 ## <span id="books">Books</span> [**&#x25B4;**](#top)
 
-- [GoLang - The Ultimate Guide][book_uzayr2] by Sufyan bin Uzayr, December 2022.<br/><span>(CRC Press, ISBN 978-1-0323-1231-6, 366 pages)</span>
-- [Mastering Golang][book_uzayr1] by Sufyan bin Uzayr, November 2022.<br/><span>(CRC Press, ISBN 978-1-0323-1591-1, 298 pages)</span>
+- [GoLang - The Ultimate Guide][book_uzayr2] by Sufyan bin Uzayr, December 2022.<br/><span style="font-size:80%;">(CRC Press, ISBN 978-1-0323-1231-6, 366 pages)</span>
+- [Mastering Golang][book_uzayr1] by Sufyan bin Uzayr, November 2022.<br/><span style="font-size:80%;">(CRC Press, ISBN 978-1-0323-1591-1, 298 pages)</span>
 - [Essential Go](https://www.programming-books.io/essential/go/) (*free online book*) by [Krzysztof Kowalczyk](https://blog.kowalczyk.info/).
 - [Pro Go][book_freeman] by Adam Freeman, 2022.<br/><span style="font-size:80%;">(Apress, ISBN 978-1-4842-7354-8, 1076 pages)</span>
-- [Go for Java Programmers][book_feigenbaum] by Barry Feigenbaum, 2022.<br/><span>(Apress, ISBN 978-1-4842-7198-8, 582 pages)</span>
+- [Go for Java Programmers][book_feigenbaum] by Barry Feigenbaum, 2022.<br/><span style="font-size:80%;">(Apress, ISBN 978-1-4842-7198-8, 582 pages)</span>
 - [Build Systems with Go][book_tirado] by Juan M. Tirado, April 2021.<br/><span style="font-size:80%;">(E-Book, [GitHub repository](https://github.com/juanmanuel-tirado/savetheworldwithgo))</span>
 - [Mastering Go][book_tsoukalos] by Mihalis Thsoukalos, August 2019.</br><span style="font-size:80%;">(Packt Publishing, ISBN 978-1633430075, 312 pages, [GitHub repository](https://github.com/PacktPublishing/Mastering-Go-Second-Edition))</span>
+- [System Programming with Go][book_guerrieri] by Alex Guerrieri, July 2019.</br><span style="font-size:80%;">(Packt Publishing, ISBN 978-1-7898-0407-2, 458 pages)</span>
 - [Go in Practice][book_butcher] by Matt Butcher &amp; Matt Farina, October 2016.</br><span style="font-size:80%;">(Manning Publications, ISBN 978-1633430075, 312 pages)</span>
 - [Go Blueprints][book_ryer] by Mat Ryer, October 2016.</br><span style="font-size:80%;">(Packt Publishing, ISBN 978-1786468949, 394 pages)</span>
 - [Go in Action][book_kennedy] by William Kennedy, Brian Ketelsen &amp; Erik St. Martin, November 2015.</br><span style="font-size:80%;">(Manning Publications, ISBN 978-1617291784, 264 pages)</span>
@@ -107,6 +108,7 @@
 - [Revel][tool_revel] &ndash; a flexible web framework for the Go language.
 - [Ristretto][tool_ristretto] &ndash; a fast, concurrent cache library for Go.
 - [setup-go](https://github.com/actions/setup-go) &ndash; Set up your GitHub Actions workflow with a specific version of Go.
+- [Twirp][tool_twirp] &ndash; a simple RPC framework powered by protobuf.
 
 ## <span id="tutorials">Tutorials</span>
 
@@ -119,7 +121,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/November 2022* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/December 2022* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -142,6 +144,7 @@
 [book_donovan]: https://www.amazon.com/gp/product/0134190440/
 [book_feigenbaum]: https://link.springer.com/book/10.1007/978-1-4842-7199-5
 [book_freeman]: https://link.springer.com/book/10.1007/978-1-4842-7355-5
+[book_guerrieri]: https://www.packtpub.com/product/hands-on-systems-programming-with-go/9781789804072
 [book_kennedy]: https://www.amazon.com/gp/product/1617291781/
 [book_ryer]: https://www.amazon.com/gp/product/1786468948/
 [book_tirado]: https://jmtirado.net/build-systems-with-go/
@@ -156,6 +159,7 @@
 [tool_go_cache]: https://github.com/patrickmn/go-cache
 [tool_revel]: https://revel.github.io/ "Revel - A flexible web framework for Go"
 [tool_ristretto]: https://github.com/dgraph-io/ristretto
+[tool_twirp]: https://twitchtv.github.io/twirp/
 [tutorial_alco]: https://github.com/alco/gostart
 [tutorial_callicoder]: https://www.callicoder.com/categories/golang/
 [tutorial_nilsson]: https://yourbasic.org/golang/go-java-tutorial/
