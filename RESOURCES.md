@@ -95,7 +95,7 @@
 - [What's in a name ?][talk_gerrand] by Andrew Gerrand, 2014.
 - &#128077; [Go at Google: Language Design in the Service of Software Engineering][talk_pike], by Rob Pike, October 2012.
 
-## <span id="tips">Tips</span>[**&#x25B4;**](#top)
+## <span id="tips">Tips</span> [**&#x25B4;**](#top)
 
 - Cheat sheet: [Go string handling overview](https://yourbasic.org/golang/string-functions-reference-cheat-sheet/).
 - [Timing functions in golang](https://coderwall.com/p/cp5fya/measuring-execution-time-in-go).

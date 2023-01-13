@@ -293,7 +293,7 @@ where /q "%GOBIN%:mage.exe"
 if %ERRORLEVEL%==0 (
     @rem for some reason option --version may return "<not set>"
     set __VERSION=unknown
-    for /f "tokens=1-3,*" %%i in ('"%GOBIN%\mage.exe" --version ^| findstr Mage ^| findstr /v "not set"') do (
+    for /f "usebackq tokens=1-3,*" %%i in (`"%GOBIN%\mage.exe" --version ^| findstr Mage ^| findstr /v "not set" 2^>NUL`) do (
         set __VERSION=%%l
     )
     set "__VERSIONS_LINE1=%__VERSIONS_LINE1% mage !__VERSION!"

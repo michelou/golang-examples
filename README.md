@@ -9,7 +9,7 @@
   </tr>
 </table>
 
-[Ada][ada_examples], [Akka][akka_examples], [C++][cpp_examples], [Deno][deno_examples], [Flix][flix_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [Spark][spark_examples], [Spring][spring_examples], [TruffleSqueak][trufflesqueak_examples] and [WiX Toolset][wix_examples] are other topics we are continuously monitoring.
+[Ada][ada_examples], [Akka][akka_examples], [C++][cpp_examples], [Dart][dart_examples], [Deno][deno_examples], [Flix][flix_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [Spark][spark_examples], [Spring][spring_examples], [TruffleSqueak][trufflesqueak_examples] and [WiX Toolset][wix_examples] are other topics we are continuously monitoring.
 
 ## <span id="proj_deps">Project dependencies</span>
 
@@ -25,7 +25,7 @@ This project depends on the following external software for the **Microsoft Wind
 For instance our development environment looks as follows (*January 2023*) <sup id="anchor_01">[1](#footnote_01)</sup>:
 
 <pre style="font-size:80%;">
-C:\opt\go-1.19.4\    <i>(451 MB)</i>
+C:\opt\go-1.19.5\    <i>(451 MB)</i>
 C:\opt\Git-2.39.0\   <i>(314 MB)</i>
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\go\    <i>( 60 MB)</i>
 </pre>
@@ -66,7 +66,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 </dd>
 <dd>
 <pre style="font-size:80%;">
-<a href="https://golang.org/dl/#stable" rel="external">go1.19.4.windows-amd64.zip</a>        <i>(156 MB)</i>
+<a href="https://golang.org/dl/#stable" rel="external">go1.19.5.windows-amd64.zip</a>        <i>(156 MB)</i>
 <a href="https://github.com/magefile/mage/releases" rel="external">mage_1.14.0_Windows-64bit.zip</a>     <i>(  1 MB)</i>
 <a href="https://git-scm.com/download/win" rel="external">PortableGit-2.39.0-64-bit.7z.exe</a>  <i>( 41 MB)</i>
 </pre>
@@ -112,7 +112,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
    The operating system for which to compile code.
    Examples are linux, darwin, windows, netbsd.
 &nbsp;
-<b>GOPATH</b>
+<a href="https://www.jetbrains.com/help/go/configuring-goroot-and-gopath.html#gopath"><b>GOPATH</b></a>
    The location of your workspace.
    NB. To access it from your Go source code simply write
    import (
@@ -121,7 +121,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
    )
    fmt.Println(build.Default.GOPATH)
 &nbsp;
-<b>GOROOT</b>
+<a href="https://www.jetbrains.com/help/go/configuring-goroot-and-gopath.html#goroot"><b>GOROOT</b></a>
    The root of the go tree.
 </pre>
 </dd>
@@ -133,7 +133,7 @@ For instance:
 <b>&gt; <a href="https://golang.org/cmd/go/#hdr-Print_Go_environment_information">go env</a> GOARCH GOOS GOROOT GOPATH GOBIN</b>
 amd64
 windows
-c:\opt\go-1.19.4
+c:\opt\go-1.19.5
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\go
 %USERPROFILE%\go\bin
 </pre>
@@ -144,7 +144,7 @@ Run the following command to list the architectures supported on the Windows OS 
 <dd>
 <pre style="font-size:80%;">
 <b>&gt; go version</b>
-go version go1.19.4 windows/amd64
+go version go1.19.5 windows/amd64
 &nbsp;
 <b>&gt; <a href="https://pkg.go.dev/cmd/go#hdr-Run_specified_go_tool" rel="external">go tool</a> dist list |<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/findstr" rel="external">findstr</a> windows</b>
 windows/386
@@ -164,6 +164,7 @@ windows/arm64
 [ada_examples]: https://github.com/michelou/ada-examples
 [akka_examples]: https://github.com/michelou/akka-examples
 [cpp_examples]: https://github.com/michelou/cpp-examples
+[dart_examples]: https://github.com/michelou/dart-examples
 [deno_examples]: https://github.com/michelou/deno-examples
 [diff_cli]: https://www.gnu.org/software/diffutils/manual/html_node/Invoking-diff.html
 [flix_examples]: https://github.com/michelou/flix-examples
