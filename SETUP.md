@@ -1,6 +1,6 @@
 # <span id="top">Golang Setup</span> <span style="size:25%;"><a href="README.md">↩</a></span>
 
-<table style="font-family:Helvetica,Arial;font-size:14px;line-height:1.6;">
+<table style="font-family:Helvetica,Arial;line-height:1.6;">
   <tr>
   <td style="border:0;padding:0 10px 0 0;min-width:120px;"><a href="https://golang.org/" rel="external"><img style="border:0;" src="./docs/images/go-logo-blue.svg" width="120" alt="Go project"/></a></td>
   <td style="border:0;padding:0;vertical-align:text-top;">This document presents the <a href="https://golang.org/" rel="external">Go</a> packages our projects depend on.
@@ -13,7 +13,7 @@ We also install the following Go packages :
 - [`golint`][github_golint] (*deprecated*)
 - [`gopkgs 2.1`][github_gopkgs] ([*release notes*][github_gopkgs_latest])
 - [`mage 1.14`][github_mage] ([*release notes*][github_mage_latest])
-- [`mysql 1.6`][github_mysql] ([*release notes*][github_mysql_latest])
+- [`mysql 1.7`][github_mysql] ([*release notes*][github_mysql_latest])
 
 The installed Go packages are located in <code>%GOPATH%</code>.
 
@@ -61,6 +61,9 @@ github.com/magefile/mage v1.0.1 v1.0.2 v1.2.4 v1.3.0 v1.4.0 v1.5.0 v1.6.0 v1.6.1
 ## <span id="mysql"><a href="https://github.com/go-sql-driver/mysql"><b><code>mysql</code></b></a></span>
 
 <pre style="font-size:80%;">
+<b>&gt; <a href="https://go.dev/ref/mod#go-list">go list</a> -m -versions github.com/go-sql-driver/mysql</b>
+github.com/go-sql-driver/mysql v1.0.0 v1.0.1 v1.0.2 v1.0.3 v1.1.0 v1.2.0 v1.3.0 v1.4.0 v1.4.1 v1.5.0 v1.6.0 v1.7.0
+&nbsp;
 <b>&gt; <a href="https://go.dev/ref/mod#go-install">go install</a> github.com/go-sql-driver/mysql@latest</b>
 go: downloading github.com/go-sql-driver/mysql v1.7.0
 package github.com/go-sql-driver/mysql is not a main package
@@ -90,7 +93,7 @@ By default <code><b>%GOBIN%</b></code> variable should default to <code><b>%GOPA
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/January 2023* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/February 2023* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->

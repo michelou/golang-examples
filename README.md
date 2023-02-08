@@ -1,6 +1,6 @@
 # <span id="top">Playing with Go on Windows</span>
 
-<table style="font-family:Helvetica,Arial;font-size:14px;line-height:1.6;">
+<table style="font-family:Helvetica,Arial;line-height:1.6;">
   <tr>
   <td style="border:0;padding:0 10px 0 0;min-width:25%;"><a href="https://golang.org/" rel="external"><img src="./docs/images/go-logo-blue.svg" width="120" alt="Go project"/></a></td>
   <td style="border:0;padding:0;vertical-align:text-top;">This repository gathers <a href="https://golang.org/" rel="external">Go</a> code examples coming from various websites and books.<br/>
@@ -16,7 +16,7 @@
 This project depends on the following external software for the **Microsoft Windows** platform:
 
 - [Git 2.39][git_downloads] ([*release notes*][git_relnotes])
-- [go 1.19][golang_downloads] ([*release notes*][golang_relnotes])
+- [go 1.20][golang_downloads] ([*release notes*][golang_relnotes])
 - [Mage 1.14][mage_downloads] ([*release notes*][mage_relnotes])
 
 > **&#9755;** ***Go packages***<br/>
@@ -25,7 +25,7 @@ This project depends on the following external software for the **Microsoft Wind
 For instance our development environment looks as follows (*February 2023*) <sup id="anchor_01">[1](#footnote_01)</sup>:
 
 <pre style="font-size:80%;">
-C:\opt\go-1.19.5\    <i>(451 MB)</i>
+C:\opt\go-1.20.0\    <i>(451 MB)</i>
 C:\opt\Git-2.39.1\   <i>(314 MB)</i>
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\go\    <i>( 60 MB)</i>
 </pre>
@@ -66,7 +66,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 </dd>
 <dd>
 <pre style="font-size:80%;">
-<a href="https://golang.org/dl/#stable" rel="external">go1.19.5.windows-amd64.zip</a>        <i>(156 MB)</i>
+<a href="https://golang.org/dl/#stable" rel="external">go1.20.windows-amd64.zip</a>          <i>(245 MB)</i>
 <a href="https://github.com/magefile/mage/releases" rel="external">mage_1.14.0_Windows-64bit.zip</a>     <i>(  1 MB)</i>
 <a href="https://git-scm.com/download/win" rel="external">PortableGit-2.39.1-64-bit.7z.exe</a>  <i>( 41 MB)</i>
 </pre>
@@ -133,7 +133,7 @@ For instance:
 <b>&gt; <a href="https://golang.org/cmd/go/#hdr-Print_Go_environment_information">go env</a> GOARCH GOOS GOROOT GOPATH GOBIN</b>
 amd64
 windows
-c:\opt\go-1.19.5
+c:\opt\go-1.20.0
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\go
 %USERPROFILE%\go\bin
 </pre>
@@ -144,7 +144,7 @@ Run the following command to list the architectures supported on the Windows OS 
 <dd>
 <pre style="font-size:80%;">
 <b>&gt; go version</b>
-go version go1.19.5 windows/amd64
+go version go1.20 windows/amd64
 &nbsp;
 <b>&gt; <a href="https://pkg.go.dev/cmd/go#hdr-Run_specified_go_tool" rel="external">go tool</a> dist list |<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/findstr" rel="external">findstr</a> windows</b>
 windows/386
