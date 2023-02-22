@@ -116,6 +116,7 @@
 - [Golang 101 hacks][tutorial_xiao] by Nan Xiao.
 - [Golang Tutorial][tutorial_callicoder] by [Callicoder][callicoder_about]
 - [GoStart][tutorial_alco] by [Alexei Sholik](https://alexeisholik.com/)
+- [Go Training](https://github.com/ardanlabs/gotraining) by [Ardan Labs](https://github.com/ardanlabs)
 - [How To Code in Go](https://www.digitalocean.com/community/books/how-to-code-in-go-ebook), June 2020 (EPUB or PDF).
 - [Java to Go in-depth tutorial][tutorial_nilsson] by Stefan Nilsson.
 
