@@ -22,16 +22,17 @@ This project depends on the following external software for the **Microsoft Wind
 > **&#9755;** ***Go packages***<br/>
 > We present the installed Go packages in document [`SETUP.md`](./SETUP.md).
 
-For instance our development environment looks as follows (*February 2023*) <sup id="anchor_01">[1](#footnote_01)</sup>:
+For instance our development environment looks as follows (*March 2023*) <sup id="anchor_01">[1](#footnote_01)</sup>:
 
 <pre style="font-size:80%;">
-C:\opt\go-1.20.0\    <i>(451 MB)</i>
-C:\opt\Git-2.39.1\   <i>(314 MB)</i>
+C:\opt\go-1.20.1\    <i>(451 MB)</i>
+C:\opt\Git-2.39.2\   <i>(314 MB)</i>
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\go\    <i>( 60 MB)</i>
 </pre>
 <!--
 go1.14   -> 334 MB, go1.15   -> 369 MB, go1.16   -> 387 MB, go1.17 -> 407 MB
 go1.18.1 -> 427 MB, go1.18.2 -> 345 MB, go1.18.4 -> 423 MB, go1.19 -> 451 MB
+go1.19.2 -> 451 MB, go1.20.1 -> 245 MB
 -->
 
 ## <span id="structure">Directory structure</span>
@@ -66,9 +67,9 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 </dd>
 <dd>
 <pre style="font-size:80%;">
-<a href="https://golang.org/dl/#stable" rel="external">go1.20.windows-amd64.zip</a>          <i>(245 MB)</i>
+<a href="https://golang.org/dl/#stable" rel="external">go1.20.1.windows-amd64.zip</a>        <i>(245 MB)</i>
 <a href="https://github.com/magefile/mage/releases" rel="external">mage_1.14.0_Windows-64bit.zip</a>     <i>(  1 MB)</i>
-<a href="https://git-scm.com/download/win" rel="external">PortableGit-2.39.1-64-bit.7z.exe</a>  <i>( 41 MB)</i>
+<a href="https://git-scm.com/download/win" rel="external">PortableGit-2.39.2-64-bit.7z.exe</a>  <i>( 41 MB)</i>
 </pre>
 </dd></dl>
 
@@ -77,10 +78,10 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 <dl><dd>
 <ol>
 <li>Command <b><code>go.exe get</code></b> requires a <a href="https://git-scm.com/docs/git"><b><code>git.exe</code></b></a> executable in <code>%PATH%</code>, and since we've installed Git for Windows we just just need to add <code>bin\</code> path to our execution path,
-      e.g. <code>c:\opt\Git-2.39.1\bin\</code>
+      e.g. <code>c:\opt\Git-2.39.2\bin\</code>
 </li>
 <li>Command <b><code>go.exe fmt</code></b> (or utility <b><code>gofmt</code></b>) requires a <a href="https://www.gnu.org/software/diffutils/manual/html_node/Invoking-diff.html"><b><code>diff.exe</code></b></a> executable in <code>%PATH%</code>, and since we've installed Git for Windows we just just need to add <code>usr\bin\</code> path to your execution path,
-      e.g. <code>c:\opt\Git-2.39.1\usr\bin\</code>
+      e.g. <code>c:\opt\Git-2.39.2\usr\bin\</code>
 </li>
 <li><a href="http://liteide.org/en/">LiteIDE</a> - a simple, open source, cross-platform Go IDE.
 </li>
@@ -133,7 +134,7 @@ For instance:
 <b>&gt; <a href="https://golang.org/cmd/go/#hdr-Print_Go_environment_information">go env</a> GOARCH GOOS GOROOT GOPATH GOBIN</b>
 amd64
 windows
-c:\opt\go-1.20.0
+c:\opt\go-1.20.1
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\go
 %USERPROFILE%\go\bin
 </pre>
@@ -156,7 +157,7 @@ windows/arm64
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/February 2023* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/March 2023* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -171,7 +172,7 @@ windows/arm64
 [git_cli]: https://git-scm.com/docs/git
 [git_downloads]: https://git-scm.com/download/win
 [git_exe]: https://git-scm.com/docs/git
-[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.39.1.txt
+[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.39.2.txt
 [github_markdown]: https://github.github.com/gfm/
 [golang]: https://golang.org/
 [golang_downloads]: https://golang.org/dl/#stable
