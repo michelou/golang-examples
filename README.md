@@ -20,19 +20,19 @@ This project depends on the following external software for the **Microsoft Wind
 - [Mage 1.14][mage_downloads] ([*release notes*][mage_relnotes])
 
 > **&#9755;** ***Go packages***<br/>
-> We present the installed Go packages in document [`SETUP.md`](./SETUP.md).
+> We present the installed Go packages in document [`PACKAGES.md`](./PACKAGES.md).
 
 For instance our development environment looks as follows (*March 2023*) <sup id="anchor_01">[1](#footnote_01)</sup>:
 
 <pre style="font-size:80%;">
-C:\opt\go-1.20.1\    <i>(451 MB)</i>
+C:\opt\go-1.20.2\    <i>(451 MB)</i>
 C:\opt\Git-2.39.2\   <i>(314 MB)</i>
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\go\    <i>( 60 MB)</i>
 </pre>
 <!--
 go1.14   -> 334 MB, go1.15   -> 369 MB, go1.16   -> 387 MB, go1.17 -> 407 MB
 go1.18.1 -> 427 MB, go1.18.2 -> 345 MB, go1.18.4 -> 423 MB, go1.19 -> 451 MB
-go1.19.2 -> 451 MB, go1.20.1 -> 245 MB
+go1.19.2 -> 451 MB, go1.20.2 -> 245 MB
 -->
 
 ## <span id="structure">Directory structure</span>
@@ -42,9 +42,9 @@ This project is organized as follows:
 <pre style="font-size:80%;">
 docs\
 examples\{<a href="./examples/README.md">README.md</a>, ..}
+<a href="PACKAGES.md">PACKAGES.md</a>
 <a href="README.md">README.md</a>
 <a href="RESOURCES.md">RESOURCES.md</a>
-<a href="SETUP.md">SETUP.md</a>
 <a href="setenv.bat">setenv.bat</a>
 </pre>
 
@@ -52,9 +52,9 @@ where
 
 - directory [**`docs\`**](docs/) contains [Go][golang] related papers/articles.
 - directory [**`examples\`**](examples/) contains [Go][golang] code examples.
+- file [**`PACKAGES.md`**](PACKAGES.md) presents the [Go][golang] packages our projects depend on.
 - file [**`README.md`**](README.md) is the [Markdown][github_markdown] document for this page.
 - file [**`RESOURCES.md`**](RESOURCES.md) gathers [Go][golang] related documents.
-- file [**`SETUP.md`**](SETUP.md) presents the [Go][golang] packages our projects depend on.
 - file [**`setenv.bat`**](setenv.bat) is the batch script for setting up our environment.
 
 
@@ -67,7 +67,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 </dd>
 <dd>
 <pre style="font-size:80%;">
-<a href="https://golang.org/dl/#stable" rel="external">go1.20.1.windows-amd64.zip</a>        <i>(245 MB)</i>
+<a href="https://golang.org/dl/#stable" rel="external">go1.20.2.windows-amd64.zip</a>        <i>(245 MB)</i>
 <a href="https://github.com/magefile/mage/releases" rel="external">mage_1.14.0_Windows-64bit.zip</a>     <i>(  1 MB)</i>
 <a href="https://git-scm.com/download/win" rel="external">PortableGit-2.39.2-64-bit.7z.exe</a>  <i>( 41 MB)</i>
 </pre>
@@ -134,7 +134,7 @@ For instance:
 <b>&gt; <a href="https://golang.org/cmd/go/#hdr-Print_Go_environment_information">go env</a> GOARCH GOOS GOROOT GOPATH GOBIN</b>
 amd64
 windows
-c:\opt\go-1.20.1
+c:\opt\go-1.20.2
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\go
 %USERPROFILE%\go\bin
 </pre>
