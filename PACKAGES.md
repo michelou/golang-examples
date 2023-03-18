@@ -1,4 +1,4 @@
-# <span id="top">Golang Setup</span> <span style="size:25%;"><a href="README.md">↩</a></span>
+# <span id="top">Golang Packages</span> <span style="size:25%;"><a href="README.md">↩</a></span>
 
 <table style="font-family:Helvetica,Arial;line-height:1.6;">
   <tr>
@@ -17,7 +17,7 @@ We also install the following Go packages :
 
 The installed Go packages are located in <code>%GOPATH%</code>.
 
-## <span id="golint"><a href="https://github.com/golang/lint"><b><code>golint</code></b></a></span>
+## <span id="golint"><a href="https://github.com/golang/lint"><b><code>golint</code></b></a> Package</span>
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://golang.org/cmd/go/#hdr-Add_dependencies_to_current_module_and_install_them">go get</a> -u golang.org/x/lint/golint</b>
@@ -31,7 +31,7 @@ The installed Go packages are located in <code>%GOPATH%</code>.
 %USERPROFILE%\go\src\golang.org\x\lint\misc\vim\ftplugin\go\lint.vim
 </pre>
 
-## <span id="gopkgs"><a href="https://github.com/uudashr/gopkgs"><b><code>gopkgs</code></b></a></span>
+## <span id="gopkgs"><a href="https://github.com/uudashr/gopkgs"><b><code>gopkgs</code></b></a> Package</span>
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://golang.org/cmd/go/#hdr-Add_dependencies_to_current_module_and_install_them">go get</a> -u -v github.com/uudashr/gopkgs/cmd/gopkgs</b>
@@ -47,7 +47,7 @@ github.com/pkg/errors (download)
 %USERPROFILE%\go\src\github.com\uudashr\gopkgs\internal\gopkgs_test.go
 ...</pre>
 
-## <span id="mage"><a href="https://github.com/magefile/mage"><b><code>mage</code></b></a></span> [**&#x25B4;**](#top)
+## <span id="mage"><a href="https://github.com/magefile/mage"><b><code>mage</code></b></a> Package</span> [**&#x25B4;**](#top)
 
 We just need to execute the Go command `install` <sup id="anchor_01">[1](#footnote_01)</sup>.
 
@@ -58,7 +58,7 @@ github.com/magefile/mage v1.0.1 v1.0.2 v1.2.4 v1.3.0 v1.4.0 v1.5.0 v1.6.0 v1.6.1
 <b>&gt; <a href="https://go.dev/ref/mod#go-install">go install</a> github.com/magefile/mage@v1.14.0</b>
 </pre>
 
-## <span id="mysql"><a href="https://github.com/go-sql-driver/mysql"><b><code>mysql</code></b></a></span>
+## <span id="mysql"><a href="https://github.com/go-sql-driver/mysql"><b><code>mysql</code></b></a> Package</span>
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://go.dev/ref/mod#go-list">go list</a> -m -versions github.com/go-sql-driver/mysql</b>
@@ -72,7 +72,7 @@ package github.com/go-sql-driver/mysql is not a main package
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\go\pkg\mod\cache\[...]\go-sql-driver\mysql@v1.7.0
 </pre>
 
-## <span id="footnotes">Footnotes</span>
+## <span id="footnotes">Footnotes</span> [**&#x25B4;**](#top)
 
 <span id="footnote_01">[1]</span> ***Mage Module*** [↩](#anchor_01)
 
