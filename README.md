@@ -24,9 +24,9 @@ This project depends on the following external software for the **Microsoft Wind
 
 Optionally one may also install the following software:
 
-- [Visual Studio Code 1.76][vscode_downloads] ([*release notes*][vscode_relnotes])
+- [Visual Studio Code 1.77][vscode_downloads] ([*release notes*][vscode_relnotes])
 
-For instance our development environment looks as follows (*March 2023*) <sup id="anchor_01">[1](#footnote_01)</sup>:
+For instance our development environment looks as follows (*April 2023*) <sup id="anchor_01">[1](#footnote_01)</sup>:
 
 <pre style="font-size:80%;">
 C:\opt\go-1.20.2\    <i>(451 MB)</i>
@@ -65,7 +65,7 @@ where
 
 ## <span id="commands">Batch commands</span>
 
-### **`setenv.bat`**
+### **`setenv.bat`** <sup id="anchor_03">[3](#footnote_03)</sup>
 
 Command [**`setenv.bat`**](setenv.bat) is executed once to setup our development environment; it makes external tools such as [**`code.cmd`**][code_cli] and [**`git.exe`**][git_cli] directly available from the command prompt.
 
@@ -112,7 +112,28 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 </ol>
 </dd></dl>
 
-<span id="footnote_03">[3]</span> ***Go environment variables*** [↩](#anchor_03)
+<span id="footnote_03">[3]</span> **`setenv.bat` *usage*** [↩](#anchor_03)
+
+<dl><dd>
+<a href=./setenv.bat><code><b>setenv.bat</b></code></a> has specific environment variables set that enable us to use command-line developer tools more easily.
+</dd>
+<dd>It is similar to the setup scripts described on the page <a href="https://learn.microsoft.com/en-us/visualstudio/ide/reference/command-prompt-powershell" rel="external">"Visual Studio Developer Command Prompt and Developer PowerShell"</a> of the <a href="https://learn.microsoft.com/en-us/visualstudio/windows" rel="external">Visual Studio</a> online documentation.
+</dd>
+<dd>
+For instance we can quickly check that the two scripts <code>Launch-VsDevShell.ps1</code> and <code>VsDevCmd.bat</code> are indeed available in our Visual Studio 2019 installation :
+<pre style="font-size:80%;">
+<b>&gt; <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/where" rel="external">where</a> /r "C:\Program Files (x86)\Microsoft Visual Studio" *vsdev*</b>
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\Tools\Launch-VsDevShell.ps1
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\Tools\VsDevCmd.bat
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\Tools\vsdevcmd\core\vsdevcmd_end.bat
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\Tools\vsdevcmd\core\vsdevcmd_start.bat
+</pre>
+</dd>
+<dd>
+Concretely, <code>setenv.bat</code> in our GitHub projects which depend on Visual Studio (e.g. <a href="https://github.com/michelou/cpp-examples"><code>michelou/cpp-examples</code></a>) do invoke <code>VsDevCmd.bat</code> (resp. <code>vcvarall.bat</code> for older Visual Studio versions) to setup the Visual Studio tools on the command prompt. 
+</dd></dl>
+
+<span id="footnote_04">[4]</span> ***Go environment variables*** [↩](#anchor_04)
 
 <dl><dd>
 <pre style="font-size:80%;">
@@ -181,7 +202,7 @@ windows/arm64
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/March 2023* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/April 2023* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
