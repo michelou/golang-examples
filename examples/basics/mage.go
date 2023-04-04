@@ -22,7 +22,7 @@ func init() {
     targetDir := filepath.Join(".", "target")
     sources, _ = filepath.Glob("./src/main/*.go")
 
-    targetName := "hello"
+    targetName := "basics"
     if (runtime.GOOS == "windows") { targetName += ".exe" }
 
     outputFile = filepath.Join(targetDir, targetName)

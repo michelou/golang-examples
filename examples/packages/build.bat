@@ -57,8 +57,19 @@ set "_SOURCE_DIR=%_ROOT_DIR%src"
 set "_TARGET_DIR=%_ROOT_DIR%target"
 set "_TARGET_FILE=%_TARGET_DIR%\hello.exe"
 
-set _GO_CMD=go.exe
-set _GO_OPTS=-o "%_TARGET_FILE%"
+if not exist "%GOROOT%\bin\go.exe" (
+    echo %_ERROR_LABEL% Go installation not found 1>&2
+    set _EXITCODE=1
+    goto :eof
+)
+set "_GO_CMD=%GOROOT%\bin\go.exe"
+
+if not exist "%GOBIN%\golint.exe" (
+    echo %_ERROR_LABEL% GoLint command not found ^(check GOBIN variable ^) 1>&2
+    set _EXITCODE=1
+    goto :eof
+)
+set "_GOLINT_CMD=%GOBIN%\golint.exe"
 goto :eof
 
 :env_colors
@@ -112,6 +123,7 @@ set _CLEAN=0
 set _COMPILE=0
 set _DOC=0
 set _HELP=0
+set _LINT=0
 set _RUN=0
 set _TIMER=0
 set _VERBOSE=0
@@ -139,6 +151,7 @@ if "%__ARG:~0,1%"=="-" (
     ) else if "%__ARG%"=="compile" ( set _COMPILE=1
     ) else if "%__ARG%"=="doc" ( set _DOC=1
     ) else if "%__ARG%"=="help" ( set _HELP=1
+    ) else if "%__ARG%"=="lint" ( set _LINT=1
     ) else if "%__ARG%"=="run" ( set _COMPILE=1& set _RUN=1
     ) else (
         echo %_ERROR_LABEL% Unknown subcommand %__ARG% 1>&2
@@ -172,8 +185,8 @@ if %_VERBOSE%==1 (
 echo Usage: %__BEG_O%%_BASENAME% { ^<option^> ^| ^<subcommand^> }%__END%
 echo.
 echo   %__BEG_P%Options:%__END%
-echo     %__BEG_O%-debug%__END%        show commands executed by this script
-echo     %__BEG_O%-timer%__END%        display total elapsed time
+echo     %__BEG_O%-debug%__END%        display commands executed by this script
+echo     %__BEG_O%-timer%__END%        display total execution time
 echo     %__BEG_O%-verbose%__END%      display progress messages
 echo.
 echo   %__BEG_P%Subcommands:%__END%
@@ -181,7 +194,7 @@ echo     %__BEG_O%clean%__END%         delete generated class files
 echo     %__BEG_O%compile%__END%       compile Go source files
 echo     %__BEG_O%doc%__END%           generate documentation
 echo     %__BEG_O%help%__END%          display this help message
-echo     %__BEG_O%run%__END%           execute main class
+echo     %__BEG_O%run%__END%           execute the generated program "%__BEG_O%!_TARGET_FILE:%_ROOT_DIR%=!%__END%"
 if %_VERBOSE%==0 goto :eof
 echo.
 echo   %__BEG_P%Build settings:%__END%
@@ -193,16 +206,44 @@ goto :eof
 call :rmdir "%_TARGET_DIR%"
 goto :eof
 
-rem input parameter(s): %1=directory path
+rem input parameter: %1=directory path
 :rmdir
 set "__DIR=%~1"
 if not exist "%__DIR%\" goto :eof
 if %_DEBUG%==1 ( echo %_DEBUG_LABEL% rmdir /s /q "%__DIR%" 1>&2
-) else if %_VERBOSE%==1 ( echo Remove directory "!__DIR:%_ROOT_DIR%=!" 1>&2
+) else if %_VERBOSE%==1 ( echo Delete directory "!__DIR:%_ROOT_DIR%=!" 1>&2
 )
 rmdir /s /q "%__DIR%"
 if not %ERRORLEVEL%==0 (
+    echo %_ERROR_LABEL% Failed to delete directory "!__DIR:%_ROOT_DIR%=!" 1>&2
     set _EXITCODE=1
+    goto :eof
+)
+goto :eof
+
+:lint
+pushd "%_SOURCE_DIR%"
+
+if %_DEBUG%==1 ( echo %_DEBUG_LABEL% "%_GO_CMD%" fmt 1>&2
+) else if %_VERBOSE%==1 ( echo Check format of Go source files in directory "!_SOURCE_DIR:%_ROOT_DIR%=!" 1>&2
+)
+call "%_GO_CMD%" fmt
+if not %ERRORLEVEL%==0 (
+    popd
+    echo %_ERROR_LABEL% Found errors while checking format of Go source files 1>&2
+    set _EXITCODE=1
+    goto :eof
+)
+popd
+set __GOLINT_OPTS=-set_exit_status
+
+if %_DEBUG%==1 ( echo %_DEBUG_LABEL% "%_GOLINT_CMD%" %__GOLINT_OPTS% "%_SOURCE_DIR%" 1>&2
+) else if %_VERBOSE%==1 ( echo Analyze Go source files in directory "!_SOURCE_DIR:%_ROOT_DIR%=!" 1>&2
+)
+call "%_GOLINT_CMD%" %__GOLINT_OPTS% "%_SOURCE_DIR%"
+if not %ERRORLEVEL%==0 (
+    echo %_WARNING_LABEL% Found errors while analyzing Go source files 1>&2
+    @rem set _EXITCODE=1
     goto :eof
 )
 goto :eof
@@ -217,13 +258,16 @@ if %_DEBUG%==1 echo %_DEBUG_LABEL% GOPATH=%GOPATH%
 
 if not exist "%_TARGET_DIR%" mkdir "%_TARGET_DIR%"
 
+set __GO_OPTS=-o "%_TARGET_FILE%"
+
 set "__MAIN_FILE=%_SOURCE_DIR%\Main.go"
 
-if %_DEBUG%==1 ( echo %_DEBUG_LABEL% "%_GO_CMD%" build %_GO_OPTS% "%__MAIN_FILE%" 1>&2
+if %_DEBUG%==1 ( echo %_DEBUG_LABEL% "%_GO_CMD%" build %__GO_OPTS% "%__MAIN_FILE%" 1>&2
 ) else if %_VERBOSE%==1 ( echo Compile Go source files to directory "!_TARGET_DIR:%_ROOT_DIR%\=!" 1>&2
 )
-call "%_GO_CMD%" build %_GO_OPTS% "%__MAIN_FILE%"
+call "%_GO_CMD%" build %__GO_OPTS% "%__MAIN_FILE%"
 if not %ERRORLEVEL%==0 (
+    echo %_ERROR_LABEL% Failed to compile Go source files to directory "!_TARGET_DIR:%_ROOT_DIR%\=!" 1>&2
     set _EXITCODE=1
     goto compile_end
 )
@@ -232,6 +276,21 @@ endlocal & set GOPATH=%__GOPATH%
 goto :eof
 
 :doc
+if not exist "%_TARGET_DOCS_DIR%" mkdir "%_TARGET_DOCS_DIR%" 1>NUL
+
+set __SOURCE_FILES=
+for %%f in (%_SOURCE_DIR%\*.go) do (
+    set __SOURCE_FILES=!__SOURCE_FILES! "%%f"
+)
+if %_DEBUG%==1 ( echo %_DEBUG_LABEL% %_GO_CMD% doc %__SOURCE_FILES% 1>&2
+) else if %_VERBOSE%==1 ( echo Generate HTML documentation into directory "!_TARGET_DOCS_DIR:%_ROOT_DIR%=!" 1>&2
+)
+call "%_GO_CMD%" doc %__SOURCE_FILES%
+if not %ERRORLEVEL%==0 (
+    if %_DEBUG%==1 echo %_DEBUG_LABEL% Failed to generate HTML documentation into directory "!_TARGET_DOCS_DIR:%_ROOT_DIR%=!" 1>&2
+    set _EXITCODE=1
+    goto :eof
+)
 goto :eof
 
 :run
@@ -245,6 +304,7 @@ if %_DEBUG%==1 ( echo %_DEBUG_LABEL% "!_TARGET_FILE:%_ROOT_DIR%=!" 1>&2
 )
 call "%_TARGET_FILE%"
 if not %ERRORLEVEL%==0 (
+    echo %_ERROR_LABEL% Failed to execute target "!_TARGET_FILE:%_ROOT_DIR%=!" 1>&2
     set _EXITCODE=1
     goto :eof
 )
@@ -265,7 +325,7 @@ rem ## Cleanups
 if %_TIMER%==1 (
     for /f "delims=" %%i in ('powershell -c "(Get-Date)"') do set __TIMER_END=%%i
     call :duration "%_TIMER_START%" "!__TIMER_END!"
-    echo Total elapsed time: !_DURATION! 1>&2
+    echo Total execution time: !_DURATION! 1>&2
 )
 exit /b %_EXITCODE%
 endlocal

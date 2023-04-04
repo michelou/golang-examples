@@ -67,6 +67,7 @@
 
 ## <span id="books">Books</span> [**&#x25B4;**](#top)
 
+- [Functional Programming in Go][book_meeus] by Dylan Meeus, March 2023.<br/><span style="font-size:80%;">(Packt, ISBN 978-1-80181-116-3, 248 pages)</span>
 - [GoLang - The Ultimate Guide][book_uzayr2] by Sufyan bin Uzayr, December 2022.<br/><span style="font-size:80%;">(CRC Press, ISBN 978-1-0323-1231-6, 366 pages)</span>
 - [Mastering Golang][book_uzayr1] by Sufyan bin Uzayr, November 2022.<br/><span style="font-size:80%;">(CRC Press, ISBN 978-1-0323-1591-1, 298 pages)</span>
 - [Essential Go](https://www.programming-books.io/essential/go/) (*free online book*) by [Krzysztof Kowalczyk](https://blog.kowalczyk.info/).
@@ -147,6 +148,7 @@
 [book_freeman]: https://link.springer.com/book/10.1007/978-1-4842-7355-5
 [book_guerrieri]: https://www.packtpub.com/product/hands-on-systems-programming-with-go/9781789804072
 [book_kennedy]: https://www.amazon.com/gp/product/1617291781/
+[book_meeus]: https://www.packtpub.com/product/functional-programming-in-go/9781801811163
 [book_ryer]: https://www.amazon.com/gp/product/1786468948/
 [book_tirado]: https://jmtirado.net/build-systems-with-go/
 [book_tsoukalos]: https://www.amazon.com/gp/product/B07WC24RTQ

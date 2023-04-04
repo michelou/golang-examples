@@ -59,7 +59,7 @@ set _WARNING_LABEL=%_STRONG_FG_YELLOW%Warning%_RESET%:
 
 set "_SOURCE_DIR=%_ROOT_DIR%src"
 set "_TARGET_DIR=%_ROOT_DIR%target"
-set "_EXE_FILE=%_TARGET_DIR%\flowcontrol.exe"
+set "_TARGET_FILE=%_TARGET_DIR%\flowcontrol.exe"
 
 if not exist "%GOROOT%\bin\go.exe" (
     echo %_ERROR_LABEL% Go installation directory not found 1>&2
@@ -69,7 +69,7 @@ if not exist "%GOROOT%\bin\go.exe" (
 set "_GO_CMD=%GOROOT%\bin\go.exe"
 
 if not exist "%GOBIN%\golint.exe" (
-    echo %_ERROR_LABEL% GoLint command not found 1>&2
+    echo %_ERROR_LABEL% GoLint command not found ^(check GOBIN variable ^) 1>&2
     set _EXITCODE=1
     goto :eof
 )
@@ -193,7 +193,7 @@ if %_VERBOSE%==1 (
 echo Usage: %__BEG_O%%_BASENAME% { ^<option^> ^| ^<subcommand^> }%__END%
 echo.
 echo   %__BEG_P%Options:%__END%
-echo     %__BEG_O%-debug%__END%      show commands executed by this script
+echo     %__BEG_O%-debug%__END%      display commands executed by this script
 echo     %__BEG_O%-timer%__END%      display total elapsed time
 echo     %__BEG_O%-verbose%__END%    display progress messages
 echo.
@@ -203,7 +203,7 @@ echo     %__BEG_O%compile%__END%     compile Go source files
 echo     %__BEG_O%doc%__END%         generate documentation
 echo     %__BEG_O%help%__END%        display this help message
 echo     %__BEG_O%lint%__END%        analyze Go source files with %__BEG_N%GoLint%__END%
-echo     %__BEG_O%run%__END%         execute the generated program
+echo     %__BEG_O%run%__END%         execute the generated program "%__BEG_O%!_TARGET_FILE:%_ROOT_DIR%=!%__END%"
 if %_VERBOSE%==0 goto :eof
 echo.
 echo   %__BEG_P%Build settings:%__END%
@@ -271,10 +271,10 @@ if %__N%==0 (
 ) else if %__N%==1 ( set __N_FILES=%__N% Go source file
 ) else ( set __N_FILES=%__N% Go source files
 )
-if %_DEBUG%==1 ( echo %_DEBUG_LABEL% "%_GO_CMD%" build -o "%_EXE_FILE%" %__SOURCE_FILES% 1>&2
+if %_DEBUG%==1 ( echo %_DEBUG_LABEL% "%_GO_CMD%" build -o "%_TARGET_FILE%" %__SOURCE_FILES% 1>&2
 ) else if %_VERBOSE%==1 ( echo Compile %__N_FILES% to directory "!_TARGET_DIR:%_ROOT_DIR%=!" 1>&2
 )
-call "%_GO_CMD%" build -o "%_EXE_FILE%" %__SOURCE_FILES%
+call "%_GO_CMD%" build -o "%_TARGET_FILE%" %__SOURCE_FILES%
 if not %ERRORLEVEL%==0 (
     echo %_ERROR_LABEL% Failed to compile %__N_FILES% to directory "!_TARGET_DIR:%_ROOT_DIR%=!" 1>&2
     set _EXITCODE=1
@@ -301,17 +301,17 @@ if not %ERRORLEVEL%==0 (
 goto :eof
 
 :run
-if not exist "%_EXE_FILE%" (
+if not exist "%_TARGET_FILE%" (
     echo %_ERROR_LABEL% Program executable not found 1>&2
     set _EXITCODE=1
     goto :eof
 )
-if %_DEBUG%==1 ( echo %_DEBUG_LABEL% "%_EXE_FILE%" 1>&2
-) else if %_VERBOSE%==1 ( echo Execute target "!_EXE_FILE:%_ROOT_DIR%=!" 1>&2
+if %_DEBUG%==1 ( echo %_DEBUG_LABEL% "%_TARGET_FILE%" 1>&2
+) else if %_VERBOSE%==1 ( echo Execute target "!_TARGET_FILE:%_ROOT_DIR%=!" 1>&2
 )
-call "%_EXE_FILE%"
+call "%_TARGET_FILE%"
 if not %ERRORLEVEL%==0 (
-    echo %_ERROR_LABEL% Executable not found ^("!_EXE_FILE:%_ROOT_DIR%=!"^) 1>&2
+    echo %_ERROR_LABEL% Executable not found ^("!_TARGET_FILE:%_ROOT_DIR%=!"^) 1>&2
     set _EXITCODE=1
     goto :eof
 )
