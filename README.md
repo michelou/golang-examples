@@ -17,27 +17,27 @@ This project depends on the following external software for the **Microsoft Wind
 
 - [Git 2.40][git_downloads] ([*release notes*][git_relnotes])
 - [go 1.20][golang_downloads] ([*release notes*][golang_relnotes])
-- [Mage 1.14][mage_downloads] ([*release notes*][mage_relnotes])
+- [Mage 1.15][mage_downloads] ([*release notes*][mage_relnotes])
 
 > **&#9755;** ***Go packages***<br/>
 > We present the installed [Go][golang] packages in document [`PACKAGES.md`](./PACKAGES.md).
 
 Optionally one may also install the following software:
 
-- [Visual Studio Code 1.77][vscode_downloads] ([*release notes*][vscode_relnotes])
+- [Visual Studio Code 1.78][vscode_downloads] ([*release notes*][vscode_relnotes])
 
-For instance our development environment looks as follows (*April 2023*) <sup id="anchor_01">[1](#footnote_01)</sup>:
+For instance our development environment looks as follows (*June 2023*) <sup id="anchor_01">[1](#footnote_01)</sup>:
 
 <pre style="font-size:80%;">
-C:\opt\go-1.20.2\    <i>(451 MB)</i>
-C:\opt\Git-2.40.0\   <i>(314 MB)</i>
+C:\opt\go-1.20.4\    <i>(451 MB)</i>
+C:\opt\Git-2.40.1\   <i>(314 MB)</i>
 C:\opt\VSCode\       <i>(341 MB)</i>
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\go\    <i>( 60 MB)</i>
 </pre>
 <!--
 go1.14   -> 334 MB, go1.15   -> 369 MB, go1.16   -> 387 MB, go1.17 -> 407 MB
 go1.18.1 -> 427 MB, go1.18.2 -> 345 MB, go1.18.4 -> 423 MB, go1.19 -> 451 MB
-go1.19.2 -> 451 MB, go1.20.2 -> 245 MB
+go1.19.2 -> 451 MB, go1.20.2 -> 245 MB, go1.20.4 -> 246 MB
 -->
 
 ## <span id="structure">Directory structure</span>
@@ -72,14 +72,15 @@ Command [**`setenv.bat`**](setenv.bat) is executed once to setup our development
 <pre style="font-size:80%;">
 <b>&gt; <a href="setenv.bat">setenv</a></b>
 Tool versions:
-   code 1.76.2, go go1.20.2 windows/amd64, mage !__VERSION!
-   git 2.40.0.windows.1, diff 3.9, bash 5.2.15(1)-release
+   code 1.78.2, go go1.20.4 windows/amd64, mage 1.15.0
+   git 2.40.1.windows.1, diff 3.9, bash 5.2.15(1)-release
 
-<b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/where_1" rel="external">where</a> code git</b>
+<b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/where_1" rel="external">where</a> code git mage</b>
 C:\opt\VSCode\bin\code
 C:\opt\VSCode\bin\code.cmd
-C:\opt\Git-2.40.0\bin\git.exe
-C:\opt\Git-2.40.0\mingw64\bin\git.exe
+C:\opt\Git-2.40.1\bin\git.exe
+C:\opt\Git-2.40.1\mingw64\bin\git.exe
+C:\opt\go-1.20.4\bin\mage.exe
 </pre>
 
 ## <span id="footnotes">Footnotes</span> [**&#x25B4;**](#top)
@@ -91,9 +92,9 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 </dd>
 <dd>
 <pre style="font-size:80%;">
-<a href="https://golang.org/dl/#stable" rel="external">go1.20.2.windows-amd64.zip</a>        <i>(245 MB)</i>
-<a href="https://github.com/magefile/mage/releases" rel="external">mage_1.14.0_Windows-64bit.zip</a>     <i>(  1 MB)</i>
-<a href="https://git-scm.com/download/win" rel="external">PortableGit-2.40.0-64-bit.7z.exe</a>  <i>( 41 MB)</i>
+<a href="https://golang.org/dl/#stable" rel="external">go1.20.4.windows-amd64.zip</a>        <i>(245 MB)</i>
+<a href="https://github.com/magefile/mage/releases" rel="external">mage_1.15.0_Windows-64bit.zip</a>     <i>(  1 MB)</i>
+<a href="https://git-scm.com/download/win" rel="external">PortableGit-2.40.1-64-bit.7z.exe</a>  <i>( 41 MB)</i>
 </pre>
 </dd></dl>
 
@@ -102,10 +103,10 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 <dl><dd>
 <ol>
 <li>Command <b><code>go.exe get</code></b> requires a <a href="https://git-scm.com/docs/git"><b><code>git.exe</code></b></a> executable in <code>%PATH%</code>, and since we've installed Git for Windows we just just need to add <code>bin\</code> path to our execution path,
-      e.g. <code>c:\opt\Git-2.40.0\bin\</code>
+      e.g. <code>c:\opt\Git-2.40.1\bin\</code>
 </li>
 <li>Command <b><code>go.exe fmt</code></b> (or utility <b><code>gofmt</code></b>) requires a <a href="https://www.gnu.org/software/diffutils/manual/html_node/Invoking-diff.html"><b><code>diff.exe</code></b></a> executable in <code>%PATH%</code>, and since we've installed Git for Windows we just just need to add <code>usr\bin\</code> path to your execution path,
-      e.g. <code>c:\opt\Git-2.40.0\usr\bin\</code>
+      e.g. <code>c:\opt\Git-2.40.1\usr\bin\</code>
 </li>
 <li><a href="http://liteide.org/en/">LiteIDE</a> - a simple, open source, cross-platform Go IDE.
 </li>
@@ -179,7 +180,7 @@ For instance:
 <b>&gt; <a href="https://golang.org/cmd/go/#hdr-Print_Go_environment_information">go env</a> GOARCH GOOS GOROOT GOPATH GOBIN</b>
 amd64
 windows
-c:\opt\go-1.20.2
+c:\opt\go-1.20.4
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\go
 %USERPROFILE%\go\bin
 </pre>
@@ -202,7 +203,7 @@ windows/arm64
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/April 2023* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/June 2023* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -218,18 +219,18 @@ windows/arm64
 [git_cli]: https://git-scm.com/docs/git
 [git_downloads]: https://git-scm.com/download/win
 [git_exe]: https://git-scm.com/docs/git
-[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.40.0.txt
+[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.40.1.txt
 [github_markdown]: https://github.github.com/gfm/
 [golang]: https://golang.org/
 [golang_downloads]: https://golang.org/dl/#stable
-[golang_relnotes]: https://golang.org/doc/devel/release.html#go1.18
+[golang_relnotes]: https://golang.org/doc/devel/release.html#go1.20
 [graalvm_examples]: https://github.com/michelou/graalvm-examples
 [haskell_examples]: https://github.com/michelou/haskell-examples
 [kafka_examples]: https://github.com/michelou/kafka-examples
 [kotlin_examples]: https://github.com/michelou/kotlin-examples
 [llvm_examples]: https://github.com/michelou/llvm-examples
 [mage_downloads]: https://github.com/magefile/mage/releases
-[mage_relnotes]: https://github.com/magefile/mage/releases/tag/v1.14.0
+[mage_relnotes]: https://github.com/magefile/mage/releases/tag/v1.15.0
 [nodejs_examples]: https://github.com/michelou/nodejs-examples
 [rust_examples]: https://github.com/michelou/rust-examples
 [scala3_examples]: https://github.com/michelou/dotty-examples
