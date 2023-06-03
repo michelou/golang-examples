@@ -19,6 +19,7 @@
 - [Processing Large Files with Go](https://medium.com/@snassr/processing-large-files-in-go-golang-6ea87effbfe2) by Snassr, October 2022.
 - [Unit Testing in Go](https://medium.com/@snassr/unit-testing-in-go-golang-3a856ee3b9ba) by Snassr, September 2022.
 - [Alex Edwards Blog](https://www.alexedwards.net/blog/category/golang) :
+  - [An introduction to Packages, Imports and Modules in Go](https://www.alexedwards.net/blog/an-introduction-to-packages-imports-and-modules), February 2023.
   - [The ‘fat service’ pattern for Go web applications](https://www.alexedwards.net/blog/the-fat-service-pattern), September 2022.
   - [Golang Interfaces Explained](https://www.alexedwards.net/blog/interfaces-explained), August 2019.
   - [An Overview of Go's Tooling][blog_edwards], April 2019.
@@ -88,7 +89,7 @@
 ## <span id="projects">Projects</span>
 
 - [`fastmath`](https://github.com/13rac1/fastmath) - Golang 8/16 bit math functions for when speed matters more than precision.
-
+- [Go MySQL Drive](https://github.com/go-sql-driver/mysql) &ndash;  MySQL driver for Go's [database/sql](https://pkg.go.dev/database/sql) package.
 
 ## <span id="talks">Talks</span>
 

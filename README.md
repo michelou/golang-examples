@@ -15,7 +15,7 @@
 
 This project depends on the following external software for the **Microsoft Windows** platform:
 
-- [Git 2.40][git_downloads] ([*release notes*][git_relnotes])
+- [Git 2.41][git_downloads] ([*release notes*][git_relnotes])
 - [go 1.20][golang_downloads] ([*release notes*][golang_relnotes])
 - [Mage 1.15][mage_downloads] ([*release notes*][mage_relnotes])
 
@@ -30,7 +30,7 @@ For instance our development environment looks as follows (*June 2023*) <sup id=
 
 <pre style="font-size:80%;">
 C:\opt\go-1.20.4\    <i>(451 MB)</i>
-C:\opt\Git-2.40.1\   <i>(314 MB)</i>
+C:\opt\Git-2.41.0\   <i>(358 MB)</i>
 C:\opt\VSCode\       <i>(341 MB)</i>
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\go\    <i>( 60 MB)</i>
 </pre>
@@ -73,13 +73,13 @@ Command [**`setenv.bat`**](setenv.bat) is executed once to setup our development
 <b>&gt; <a href="setenv.bat">setenv</a></b>
 Tool versions:
    code 1.78.2, go go1.20.4 windows/amd64, mage 1.15.0
-   git 2.40.1.windows.1, diff 3.9, bash 5.2.15(1)-release
+   git 2.41.0.windows.1, diff 3.9, bash 5.2.15(1)-release
 
 <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/where_1" rel="external">where</a> code git mage</b>
 C:\opt\VSCode\bin\code
 C:\opt\VSCode\bin\code.cmd
-C:\opt\Git-2.40.1\bin\git.exe
-C:\opt\Git-2.40.1\mingw64\bin\git.exe
+C:\opt\Git-2.41.0\bin\git.exe
+C:\opt\Git-2.41.0\mingw64\bin\git.exe
 C:\opt\go-1.20.4\bin\mage.exe
 </pre>
 
@@ -94,7 +94,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 <pre style="font-size:80%;">
 <a href="https://golang.org/dl/#stable" rel="external">go1.20.4.windows-amd64.zip</a>        <i>(245 MB)</i>
 <a href="https://github.com/magefile/mage/releases" rel="external">mage_1.15.0_Windows-64bit.zip</a>     <i>(  1 MB)</i>
-<a href="https://git-scm.com/download/win" rel="external">PortableGit-2.40.1-64-bit.7z.exe</a>  <i>( 41 MB)</i>
+<a href="https://git-scm.com/download/win" rel="external">PortableGit-2.41.0-64-bit.7z.exe</a>  <i>( 41 MB)</i>
 </pre>
 </dd></dl>
 
@@ -103,10 +103,10 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 <dl><dd>
 <ol>
 <li>Command <b><code>go.exe get</code></b> requires a <a href="https://git-scm.com/docs/git"><b><code>git.exe</code></b></a> executable in <code>%PATH%</code>, and since we've installed Git for Windows we just just need to add <code>bin\</code> path to our execution path,
-      e.g. <code>c:\opt\Git-2.40.1\bin\</code>
+      e.g. <code>c:\opt\Git-2.41.0\bin\</code>
 </li>
 <li>Command <b><code>go.exe fmt</code></b> (or utility <b><code>gofmt</code></b>) requires a <a href="https://www.gnu.org/software/diffutils/manual/html_node/Invoking-diff.html"><b><code>diff.exe</code></b></a> executable in <code>%PATH%</code>, and since we've installed Git for Windows we just just need to add <code>usr\bin\</code> path to your execution path,
-      e.g. <code>c:\opt\Git-2.40.1\usr\bin\</code>
+      e.g. <code>c:\opt\Git-2.41.0\usr\bin\</code>
 </li>
 <li><a href="http://liteide.org/en/">LiteIDE</a> - a simple, open source, cross-platform Go IDE.
 </li>
@@ -219,7 +219,7 @@ windows/arm64
 [git_cli]: https://git-scm.com/docs/git
 [git_downloads]: https://git-scm.com/download/win
 [git_exe]: https://git-scm.com/docs/git
-[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.40.1.txt
+[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.41.0.txt
 [github_markdown]: https://github.github.com/gfm/
 [golang]: https://golang.org/
 [golang_downloads]: https://golang.org/dl/#stable
