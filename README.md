@@ -191,7 +191,7 @@ Run the following command to list the architectures supported on the Windows OS 
 <dd>
 <pre style="font-size:80%;">
 <b>&gt; go version</b>
-go version go1.20 windows/amd64
+go version go1.20.4 windows/amd64
 &nbsp;
 <b>&gt; <a href="https://pkg.go.dev/cmd/go#hdr-Run_specified_go_tool" rel="external">go tool</a> dist list |<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/findstr" rel="external">findstr</a> windows</b>
 windows/386
