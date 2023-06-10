@@ -284,11 +284,11 @@ if %_DEBUG%==1 ( set __GO_OPTS=-v %__GO_OPTS%
 )
 
 if %_DEBUG%==1 ( echo %_DEBUG_LABEL% "%_GO_CMD%" build %__GO_OPTS% "%__MAIN_FILE%" 1>&2
-) else if %_VERBOSE%==1 ( echo Compile Go source files to directory "!_TARGET_DIR:%_ROOT_DIR%\=!" 1>&2
+) else if %_VERBOSE%==1 ( echo Compile Go source files to directory "!_TARGET_DIR:%_ROOT_DIR%=!" 1>&2
 )
 call "%_GO_CMD%" build %__GO_OPTS% "%__MAIN_FILE%"
 if not %ERRORLEVEL%==0 (
-    if %_DEBUG%==1 echo %_DEBUG_LABEL% Failed to compile Go source files to directory "!_TARGET_DIR:%_ROOT_DIR%\=!" 1>&2
+    if %_DEBUG%==1 echo %_DEBUG_LABEL% Failed to compile Go source files to directory "!_TARGET_DIR:%_ROOT_DIR%=!" 1>&2
     set _EXITCODE=1
     goto compile_end
 )

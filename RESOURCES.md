@@ -68,6 +68,7 @@
 
 ## <span id="books">Books</span> [**&#x25B4;**](#top)
 
+- [Effective Concurrency in Go][book_serdar] by Burak Serdar, April 2023.<br/><span style="font-size:80%;">(Packt, ISBN 978-1-8046-1907-0, 212 pages)</span>
 - [Functional Programming in Go][book_meeus] by Dylan Meeus, March 2023.<br/><span style="font-size:80%;">(Packt, ISBN 978-1-80181-116-3, 248 pages)</span>
 - [GoLang - The Ultimate Guide][book_uzayr2] by Sufyan bin Uzayr, December 2022.<br/><span style="font-size:80%;">(CRC Press, ISBN 978-1-0323-1231-6, 366 pages)</span>
 - [Mastering Golang][book_uzayr1] by Sufyan bin Uzayr, November 2022.<br/><span style="font-size:80%;">(CRC Press, ISBN 978-1-0323-1591-1, 298 pages)</span>
@@ -82,7 +83,7 @@
 - [Go in Action][book_kennedy] by William Kennedy, Brian Ketelsen &amp; Erik St. Martin, November 2015.</br><span style="font-size:80%;">(Manning Publications, ISBN 978-1617291784, 264 pages)</span>
 - [The Go Programming Language][book_donovan] by Alan Donovan &amp; Brian Kerninghan, October 2015.</br><span style="font-size:80%;">(Addison-Wesley, ISBN 978-0134190440, 398 pages)</span>
 
-## <span id="news">News</span>
+## <span id="news">News</span> [**&#x25B4;**](#top)
 
 - [Golang Weekly](https://golangweekly.com/latest).
 
@@ -150,6 +151,7 @@
 [book_guerrieri]: https://www.packtpub.com/product/hands-on-systems-programming-with-go/9781789804072
 [book_kennedy]: https://www.amazon.com/gp/product/1617291781/
 [book_meeus]: https://www.packtpub.com/product/functional-programming-in-go/9781801811163
+[book_serdar]: https://www.packtpub.com/product/effective-concurrency-in-go/9781804619070
 [book_ryer]: https://www.amazon.com/gp/product/1786468948/
 [book_tirado]: https://jmtirado.net/build-systems-with-go/
 [book_tsoukalos]: https://www.amazon.com/gp/product/B07WC24RTQ

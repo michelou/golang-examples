@@ -8,6 +8,26 @@
   </tr>
 </table>
 
+## <span id="hello">`hello` Example</span>
+
+Command [`build.bat`](./hello/build.bat) executes the Go command `%GOROOT%\bin\go build` with the appropriate parameters and runs the generated executable `hello.exe` :
+
+<pre style="font-size:80%;">
+<b>&gt; <a href="./hello/build.bat">build</a> -verbose run</b>
+Compile Go source files to directory "target"
+Execute target "target\hello.exe"
+hello, world
+</pre>
+
+Build tool [`mage.exe`](https://magefile.org/) takes its Makefile-like runnable targets from the Go file [`mage.go`](./hello/mage.go); for instance :
+
+<pre style="font-size:80%;">
+<b>&gt; <a href="">mage</a> clean build &amp; target\hello.exe</b>
+Cleaning...
+Building...
+hello, world
+</pre>
+
 *WIP*
 
 ***
