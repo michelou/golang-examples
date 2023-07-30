@@ -133,7 +133,74 @@ if "%__ARG:~0,1%"=="-" (
 shift
 goto args_loop
 :args_done
-if %_DEBUG%==1 echo %_DEBUG_LABEL% _BASH=%_BASH% 1>&2
+call :drive_name "%_ROOT_DIR%"
+if not %_EXITCODE%==0 goto :eof
+if %_DEBUG%==1 (
+    echo %_DEBUG_LABEL% Options    : _BASH=%_BASH% _VERBOSE=%_VERBOSE% 1>&2
+    echo %_DEBUG_LABEL% Subcommands: _HELP=%_HELP% 1>&2
+    echo %_DEBUG_LABEL% Variables  : _DRIVE_NAME=%_DRIVE_NAME% 1>&2
+)
+goto :eof
+
+@rem input parameter: %1: path to be substituted
+@rem output parameter: _DRIVE_NAME
+:drive_name
+set "__GIVEN_PATH=%~1"
+
+@rem https://serverfault.com/questions/62578/how-to-get-a-list-of-drive-letters-on-a-system-through-a-windows-shell-bat-cmd
+set __DRIVE_NAMES=F:G:H:I:J:K:L:M:N:O:P:Q:R:S:T:U:V:W:X:Y:Z:
+for /f %%i in ('wmic logicaldisk get deviceid ^| findstr :') do (
+    set "__DRIVE_NAMES=!__DRIVE_NAMES:%%i=!"
+)
+if %_DEBUG%==1 echo %_DEBUG_LABEL% __DRIVE_NAMES=%__DRIVE_NAMES% ^(WMIC^) 1>&2
+if not defined __DRIVE_NAMES (
+    echo %_ERROR_LABEL% No more free drive name 1>&2
+    set _EXITCODE=1
+    goto :eof
+)
+for /f "tokens=1,2,*" %%f in ('subst') do (
+    set "__SUBST_DRIVE=%%f"
+    set "__SUBST_DRIVE=!__SUBST_DRIVE:~0,2!"
+    set "__SUBST_PATH=%%h"
+    if "!__SUBST_DRiVE!"=="!__GIVEN_PATH:~0,2!" (
+        set _DRIVE_NAME=!__SUBST_DRIVE:~0,2!
+        if %_DEBUG%==1 ( echo %_DEBUG_LABEL% Select drive !_DRIVE_NAME! for which a substitution already exists 1>&2
+        ) else if %_VERBOSE%==1 ( echo Select drive !_DRIVE_NAME! for which a substitution already exists 1>&2
+        )
+        goto :eof
+    ) else if "!__SUBST_PATH!"=="!__GIVEN_PATH!" (
+        set "_DRIVE_NAME=!__SUBST_DRIVE!"
+        if %_DEBUG%==1 ( echo %_DEBUG_LABEL% Select drive !_DRIVE_NAME! for which a substitution already exists 1>&2
+        ) else if %_VERBOSE%==1 ( echo Select drive !_DRIVE_NAME! for which a substitution already exists 1>&2
+        )
+        goto :eof
+    )
+)
+for /f "tokens=1,2,*" %%i in ('subst') do (
+    set __USED=%%i
+    call :drive_names "!__USED:~0,2!"
+)
+if %_DEBUG%==1 echo %_DEBUG_LABEL% __DRIVE_NAMES=%__DRIVE_NAMES% ^(SUBST^) 1>&2
+
+set "_DRIVE_NAME=!__DRIVE_NAMES:~0,2!"
+if /i "%_DRIVE_NAME%"=="%__GIVEN_PATH:~0,2%" goto :eof
+
+if %_DEBUG%==1 ( echo %_DEBUG_LABEL% subst "%_DRIVE_NAME%" "%__GIVEN_PATH%" 1>&2
+) else if %_VERBOSE%==1 ( echo Assign path "%__GIVEN_PATH%" to drive %_DRIVE_NAME% 1>&2
+)
+subst "%_DRIVE_NAME%" "%__GIVEN_PATH%"
+if not %ERRORLEVEL%==0 (
+    echo %_ERROR_LABEL% Failed to assigned drive %_DRIVE_NAME% to path 1>&2
+    set _EXITCODE=1
+    goto :eof
+)
+goto :eof
+
+@rem input parameter: %1=Used drive name
+@rem output parameter: __DRIVE_NAMES
+:drive_names
+set "__USED_NAME=%~1"
+set "__DRIVE_NAMES=!__DRIVE_NAMES:%__USED_NAME%=!"
 goto :eof
 
 :help
@@ -345,6 +412,10 @@ endlocal & (
         @rem We prepend %_GIT_HOME%\bin to hide C:\Windows\System32\bash.exe
         set "PATH=%_GIT_HOME%\bin;%PATH%%_VSCODE_PATH%%_GOLANG_PATH%%_GIT_PATH%;%_GOBIN%;%~dp0bin"
         call :print_env %_VERBOSE%
+        if not "%CD:~0,2%"=="%_DRIVE_NAME%" (
+            if %_DEBUG%==1 echo %_DEBUG_LABEL% cd /d %_DRIVE_NAME% 1>&2
+            cd /d %_DRIVE_NAME%
+        )
         if %_BASH%==1 (
             @rem see https://conemu.github.io/en/GitForWindows.html
             if %_DEBUG%==1 echo %_DEBUG_LABEL% %_GIT_HOME%\bin\bash.exe --login 1>&2
