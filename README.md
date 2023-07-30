@@ -26,7 +26,7 @@ Optionally one may also install the following software:
 
 - [Visual Studio Code 1.78][vscode_downloads] ([*release notes*][vscode_relnotes])
 
-For instance our development environment looks as follows (*June 2023*) <sup id="anchor_01">[1](#footnote_01)</sup>:
+For instance our development environment looks as follows (*August 2023*) <sup id="anchor_01">[1](#footnote_01)</sup>:
 
 <pre style="font-size:80%;">
 C:\opt\go-1.20.5\    <i>(451 MB)</i>
@@ -37,8 +37,8 @@ C:\opt\VSCode\       <i>(341 MB)</i>
 <!--
 go1.14   -> 334 MB, go1.15   -> 369 MB, go1.16   -> 387 MB, go1.17 -> 407 MB
 go1.18.1 -> 427 MB, go1.18.2 -> 345 MB, go1.18.4 -> 423 MB, go1.19 -> 451 MB
-go1.19.2 -> 451 MB, go1.20.2 -> 245 MB, go1.20.4 -> 246 MB
-go1.20.5 -> MB
+go1.19.2 -> 451 MB, go1.20.2 -> 245 MB, go1.20.3 -> 246 MB, go1.20.4 -> 246 MB
+go1.20.5 -> 246 MB
 -->
 
 ## <span id="structure">Directory structure</span>
@@ -204,7 +204,7 @@ windows/arm64
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/June 2023* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/August 2023* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->

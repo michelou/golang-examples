@@ -12,7 +12,7 @@ We also install the following Go packages :
 
 - [`golint`][github_golint] (*deprecated*)
 - [`gopkgs 2.1`][github_gopkgs] ([*release notes*][github_gopkgs_latest])
-- [`mage 1.14`][github_mage] ([*release notes*][github_mage_latest])
+- [`mage 1.15`][github_mage] ([*release notes*][github_mage_latest])
 - [`mysql 1.7`][github_mysql] ([*release notes*][github_mysql_latest])
 
 The installed Go packages are located in <code>%GOPATH%</code>.
@@ -34,6 +34,9 @@ The installed Go packages are located in <code>%GOPATH%</code>.
 ## <span id="gopkgs"><a href="https://github.com/uudashr/gopkgs"><b><code>gopkgs</code></b></a> Package</span>
 
 <pre style="font-size:80%;">
+<b>&gt; <a href="https://go.dev/ref/mod#go-list">go list</a> -m -versions github.com/uudashr/gopkgs</b>
+github.com/uudashr/gopkgs v1.0.0 v1.0.1 v1.2.0 v1.3.0 v1.3.1 v1.3.2 v2.0.1+incompatible
+&nbsp;
 <b>&gt; <a href="https://go.dev/ref/mod#go-install">go install</a> go install github.com/uudashr/gopkgs/v2/cmd/gopkgs@latest</b>
 go: downloading github.com/uudashr/gopkgs/v2 v2.1.2
 go: downloading github.com/karrick/godirwalk v1.12.0
@@ -93,7 +96,7 @@ By default <code><b>%GOBIN%</b></code> variable should default to <code><b>%GOPA
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/June 2023* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/August 2023* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->

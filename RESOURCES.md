@@ -16,6 +16,12 @@
 
 ## <span id="blogs">Blogs</span>
 
+- [Mohit Khare Blog](https://www.mohitkhare.com/categories/golang/) :
+  - [Naming Conventions in Golang](https://www.mohitkhare.com/blog/go-naming-conventions/), May 2023.
+  - [Introduction to Generics in Go](https://www.mohitkhare.com/blog/go-generics/), November 2022.
+  - [Introduction to Linting in Go](https://www.mohitkhare.com/blog/linting-in-golang/), July 2021.
+  - [Introduction to Goroutines](https://www.mohitkhare.com/blog/introduction-to-goroutines/), April 2021.
+  - [Guide to Environment variables in Go](https://www.mohitkhare.com/blog/environment-variable-golang/), August 2020.
 - [Processing Large Files with Go](https://medium.com/@snassr/processing-large-files-in-go-golang-6ea87effbfe2) by Snassr, October 2022.
 - [Unit Testing in Go](https://medium.com/@snassr/unit-testing-in-go-golang-3a856ee3b9ba) by Snassr, September 2022.
 - [Alex Edwards Blog](https://www.alexedwards.net/blog/category/golang) :
@@ -76,8 +82,9 @@
 - [Pro Go][book_freeman] by Adam Freeman, 2022.<br/><span style="font-size:80%;">(Apress, ISBN 978-1-4842-7354-8, 1076 pages)</span>
 - [Go for Java Programmers][book_feigenbaum] by Barry Feigenbaum, 2022.<br/><span style="font-size:80%;">(Apress, ISBN 978-1-4842-7198-8, 582 pages)</span>
 - [Build Systems with Go][book_tirado] by Juan M. Tirado, April 2021.<br/><span style="font-size:80%;">(E-Book, [GitHub repository](https://github.com/juanmanuel-tirado/savetheworldwithgo))</span>
-- [Mastering Go][book_tsoukalos] by Mihalis Thsoukalos, August 2019.</br><span style="font-size:80%;">(Packt Publishing, ISBN 978-1633430075, 312 pages, [GitHub repository](https://github.com/PacktPublishing/Mastering-Go-Second-Edition))</span>
-- [System Programming with Go][book_guerrieri] by Alex Guerrieri, July 2019.</br><span style="font-size:80%;">(Packt Publishing, ISBN 978-1-7898-0407-2, 458 pages)</span>
+- [Mastering Go][book_tsoukalos] by Mihalis Thsoukalos, August 2019.<br/><span style="font-size:80%;">(Packt Publishing, ISBN 978-1633430075, 312 pages, [GitHub repository](https://github.com/PacktPublishing/Mastering-Go-Second-Edition))</span>
+- [System Programming with Go][book_guerrieri] by Alex Guerrieri, July 2019.<br/><span style="font-size:80%;">(Packt Publishing, ISBN 978-1-7898-0407-2, 458 pages)</span>
+- [Dependency Injection in Go][book_scott] by Corey Scott, November 2018.<br/><span style="font-size:80%;">(Packt, ISBN 978-1-7891-3276-2, 346 pages)</span>
 - [Go in Practice][book_butcher] by Matt Butcher &amp; Matt Farina, October 2016.</br><span style="font-size:80%;">(Manning Publications, ISBN 978-1633430075, 312 pages)</span>
 - [Go Blueprints][book_ryer] by Mat Ryer, October 2016.</br><span style="font-size:80%;">(Packt Publishing, ISBN 978-1786468949, 394 pages)</span>
 - [Go in Action][book_kennedy] by William Kennedy, Brian Ketelsen &amp; Erik St. Martin, November 2015.</br><span style="font-size:80%;">(Manning Publications, ISBN 978-1617291784, 264 pages)</span>
@@ -90,6 +97,7 @@
 ## <span id="projects">Projects</span>
 
 - [`fastmath`](https://github.com/13rac1/fastmath) - Golang 8/16 bit math functions for when speed matters more than precision.
+- [Go generics the hard way](https://github.com/akutz/go-generics-the-hard-way) &ndash; A hands-on approach to getting started with Go generics.
 - [Go MySQL Drive](https://github.com/go-sql-driver/mysql) &ndash;  MySQL driver for Go's [database/sql](https://pkg.go.dev/database/sql) package.
 
 ## <span id="talks">Talks</span>
@@ -125,7 +133,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/June 2023* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/August 2023* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -153,6 +161,7 @@
 [book_meeus]: https://www.packtpub.com/product/functional-programming-in-go/9781801811163
 [book_serdar]: https://www.packtpub.com/product/effective-concurrency-in-go/9781804619070
 [book_ryer]: https://www.amazon.com/gp/product/1786468948/
+[book_scott]: https://www.amazon.ca/Hands-Dependency-Injection-Corey-Scott/dp/1789132762
 [book_tirado]: https://jmtirado.net/build-systems-with-go/
 [book_tsoukalos]: https://www.amazon.com/gp/product/B07WC24RTQ
 [book_uzayr1]: https://www.taylorfrancis.com/books/mono/10.1201/9781003310457/mastering-golang-sufyan-bin-uzayr
