@@ -102,7 +102,7 @@ set _STRONG_BG_BLUE=[104m
 goto :eof
 
 @rem input parameter: %*
-@rem output parameter: _BASH, _HELP, _VERBOSE
+@rem output parameters: _BASH, _HELP, _VERBOSE
 :args
 set _BASH=0
 set _HELP=0
@@ -245,7 +245,7 @@ if defined __CODE_CMD (
     for /f %%f in ('dir /ad /b "!__PATH!\VSCode*" 2^>NUL') do set "_VSCODE_HOME=!__PATH!\%%f"
     if not defined _VSCODE_HOME (
         set "__PATH=%ProgramFiles%"
-        for /f %%f in ('dir /ad /b "!__PATH!\VSCode*" 2^>NUL') do set "_VSCODE_HOME=!__PATH!\%%f"
+        for /f "delims=" %%f in ('dir /ad /b "!__PATH!\VSCode*" 2^>NUL') do set "_VSCODE_HOME=!__PATH!\%%f"
     )
     if defined _VSCODE_HOME (
         if %_DEBUG%==1 echo %_DEBUG_LABEL% Using default VS Code installation directory !_VSCODE_HOME!
