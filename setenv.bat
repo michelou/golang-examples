@@ -102,7 +102,7 @@ set _STRONG_BG_BLUE=[104m
 goto :eof
 
 @rem input parameter: %*
-@rem output parameter: _HELP, _VERBOSE
+@rem output parameter: _BASH, _HELP, _VERBOSE
 :args
 set _BASH=0
 set _HELP=0
@@ -143,7 +143,7 @@ if %_DEBUG%==1 (
 goto :eof
 
 @rem input parameter: %1: path to be substituted
-@rem output parameter: _DRIVE_NAME
+@rem output parameter: _DRIVE_NAME (2 characters: letter + ':')
 :drive_name
 set "__GIVEN_PATH=%~1"
 
@@ -186,11 +186,11 @@ set "_DRIVE_NAME=!__DRIVE_NAMES:~0,2!"
 if /i "%_DRIVE_NAME%"=="%__GIVEN_PATH:~0,2%" goto :eof
 
 if %_DEBUG%==1 ( echo %_DEBUG_LABEL% subst "%_DRIVE_NAME%" "%__GIVEN_PATH%" 1>&2
-) else if %_VERBOSE%==1 ( echo Assign path "%__GIVEN_PATH%" to drive %_DRIVE_NAME% 1>&2
+) else if %_VERBOSE%==1 ( echo Assign drive %_DRIVE_NAME% to path "%__GIVEN_PATH%" 1>&2
 )
 subst "%_DRIVE_NAME%" "%__GIVEN_PATH%"
 if not %ERRORLEVEL%==0 (
-    echo %_ERROR_LABEL% Failed to assigned drive %_DRIVE_NAME% to path 1>&2
+    echo %_ERROR_LABEL% Failed to assign drive %_DRIVE_NAME% to path "%__GIVEN_PATH%" 1>&2
     set _EXITCODE=1
     goto :eof
 )
@@ -217,8 +217,8 @@ echo Usage: %__BEG_O%%_BASENAME% { ^<option^> ^| ^<subcommand^> }%__END%
 echo.
 echo   %__BEG_P%Options:%__END%
 echo     %__BEG_O%-bash%__END%       start Git bash shell instead of Windows command prompt
-echo     %__BEG_O%-debug%__END%      show commands executed by this script
-echo     %__BEG_O%-verbose%__END%    display environment settings
+echo     %__BEG_O%-debug%__END%      display commands executed by this script
+echo     %__BEG_O%-verbose%__END%    display progress messages
 echo.
 echo   %__BEG_P%Subcommands:%__END%
 echo     %__BEG_O%help%__END%        display this help message
@@ -230,7 +230,7 @@ set _VSCODE_HOME=
 set _VSCODE_PATH=
 
 set __CODE_CMD=
-for /f %%f in ('where code.cmd 2^>NUL') do set "__CODE_CMD=%%f"
+for /f "delims=" %%f in ('where code.cmd 2^>NUL') do set "__CODE_CMD=%%f"
 if defined __CODE_CMD (
     if %_DEBUG%==1 echo %_DEBUG_LABEL% Using path of VS Code executable found in PATH 1>&2
     for %%i in ("%__CODE_CMD%") do set "__CODE_BIN_DIR=%%~dpi"
@@ -265,7 +265,7 @@ set _GOLANG_HOME=
 set _GOLANG_PATH=
 
 set __GO_CMD=
-for /f %%f in ('where go.exe 2^>NUL') do set "__GO_CMD=%%f"
+for /f "delims=" %%f in ('where go.exe 2^>NUL') do set "__GO_CMD=%%f"
 if defined __GIT_CMD (
     if %_DEBUG%==1 echo %_DEBUG_LABEL% Using path of Go executable found in PATH 1>&2
     for %%i in ("%__GO_CMD%") do set "__GO_BIN_DIR=%%~dpi"
@@ -282,7 +282,7 @@ if defined __GIT_CMD (
         for /f %%f in ('dir /ad /b "!__PATH!\Go-*" 2^>NUL') do set "_GOLANG_HOME=!__PATH!\%%f"
         if not defined _GOLANG_HOME (
             set "__PATH=%ProgramFiles%"
-            for /f %%f in ('dir /ad /b "!__PATH!\Go-*" 2^>NUL') do set "_GOLANG_HOME=!__PATH!\%%f"
+            for /f "delims=" %%f in ('dir /ad /b "!__PATH!\Go-*" 2^>NUL') do set "_GOLANG_HOME=!__PATH!\%%f"
         )
     )
     if defined _GOLANG_HOME (
@@ -303,7 +303,7 @@ set _GIT_HOME=
 set _GIT_PATH=
 
 set __GIT_CMD=
-for /f %%f in ('where git.exe 2^>NUL') do set "__GIT_CMD=%%f"
+for /f "delims=" %%f in ('where git.exe 2^>NUL') do set "__GIT_CMD=%%f"
 if defined __GIT_CMD (
     if %_DEBUG%==1 echo %_DEBUG_LABEL% Using path of Git executable found in PATH 1>&2
     for %%i in ("%__GIT_CMD%") do set "__GIT_BIN_DIR=%%~dpi"
@@ -324,7 +324,7 @@ if defined __GIT_CMD (
         for /f %%f in ('dir /ad /b "!__PATH!\Git*" 2^>NUL') do set "_GIT_HOME=!__PATH!\%%f"
         if not defined _GIT_HOME (
             set "__PATH=%ProgramFiles%"
-            for /f %%f in ('dir /ad /b "!__PATH!\Git*" 2^>NUL') do set "_GIT_HOME=!__PATH!\%%f"
+            for /f "delims=" %%f in ('dir /ad /b "!__PATH!\Git*" 2^>NUL') do set "_GIT_HOME=!__PATH!\%%f"
         )
     )
     if defined _GIT_HOME (
