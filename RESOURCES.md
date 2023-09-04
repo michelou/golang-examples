@@ -10,25 +10,29 @@
 
 ## <span id="articles">Articles</span>
 
+- [How To Use Generics in Go](https://www.digitalocean.com/community/tutorials/how-to-use-generics-in-go) by Kristin Davidson, June 2022.
 - [The Go Programming Language and Environment][article_cox] by Russ Cox et al., May 2022.
 - [Introduction to the Go Programming Language][article_lee] by Wei-Meng Lee, November 2020.
 - [Building Go Applications for Different OS and Architectures][article_guides] by Gopher Guides, October 2019.
 
-## <span id="blogs">Blogs</span>
+## <span id="blogs">Blogs</span> [**&#x25B4;**](#top)
 
 - [Mohit Khare Blog](https://www.mohitkhare.com/categories/golang/) :
   - [Naming Conventions in Golang](https://www.mohitkhare.com/blog/go-naming-conventions/), May 2023.
   - [Introduction to Generics in Go](https://www.mohitkhare.com/blog/go-generics/), November 2022.
   - [Introduction to Linting in Go](https://www.mohitkhare.com/blog/linting-in-golang/), July 2021.
   - [Introduction to Goroutines](https://www.mohitkhare.com/blog/introduction-to-goroutines/), April 2021.
+  - [Understanding Defer In Golang](https://www.mohitkhare.com/blog/defer-in-golang/), May 2021.
   - [Guide to Environment variables in Go](https://www.mohitkhare.com/blog/environment-variable-golang/), August 2020.
 - [Processing Large Files with Go](https://medium.com/@snassr/processing-large-files-in-go-golang-6ea87effbfe2) by Snassr, October 2022.
 - [Unit Testing in Go](https://medium.com/@snassr/unit-testing-in-go-golang-3a856ee3b9ba) by Snassr, September 2022.
+- [Generics can make your Go code slower](https://planetscale.com/blog/generics-can-make-your-go-code-slower) by Vicent Marti, March 2022.
 - [Alex Edwards Blog](https://www.alexedwards.net/blog/category/golang) :
   - [An introduction to Packages, Imports and Modules in Go](https://www.alexedwards.net/blog/an-introduction-to-packages-imports-and-modules), February 2023.
   - [The ‘fat service’ pattern for Go web applications](https://www.alexedwards.net/blog/the-fat-service-pattern), September 2022.
   - [Golang Interfaces Explained](https://www.alexedwards.net/blog/interfaces-explained), August 2019.
   - [An Overview of Go's Tooling][blog_edwards], April 2019.
+- [Generics and Value Types in Golang](https://www.dolthub.com/blog/2022-04-01-fast-generics/) by Andy Arthur, April 2022.
 - [Ardan Labs Go Blog](https://www.ardanlabs.com/categories/go-programing/) :
   - [Blockchain In Go: Part III: Redundant Storage And Consensus](https://www.ardanlabs.com/blog/2022/04/blockchain-04-redundant-storage-and-consensus.html) by William Kennedy, April 2022.
    - [Visualization in Go - Plotting Stock Information](https://www.ardanlabs.com/blog/2022/01/visualizations-in-go.html) by Miki Tebeka, January 2022.
@@ -45,6 +49,8 @@
   - [File-driven testing in Go](https://eli.thegreenplace.net/2022/file-driven-testing-in-go/), February 2022.
   - [Rewriting Go source code with AST tooling](https://eli.thegreenplace.net/2021/rewriting-go-source-code-with-ast-tooling/), October 2021.
   - [Go internals: capturing loop variables in closures](https://eli.thegreenplace.net/2019/go-internals-capturing-loop-variables-in-closures/), September 2019.
+  - [Go compiler internals: adding a new statement to Go - Part 2](https://eli.thegreenplace.net/2019/go-compiler-internals-adding-a-new-statement-to-go-part-2/), July 2019.
+  - [Go compiler internals: adding a new statement to Go - Part 1](https://eli.thegreenplace.net/2019/go-compiler-internals-adding-a-new-statement-to-go-part-1/), July 2019.
 - [**DEV** Community](https://dev.to/):
   - [Rollback Functions in Golang](https://dev.to/omniawahid/rollback-functions-in-golang-7e9) by Omnia Wahid, February 2022.
   - [Working MongoDB with Golang]() by Burak Seyhan, November 2021.
@@ -56,6 +62,10 @@
 - [Software adventures and thoughts][blog_ralchev] by Svetlin Ralchev.
 - [Make Your Build Better With Mage](https://blog.gopheracademy.com/advent-2017/mage/) by Nate Finch, December 2017.
 - [Cross compilation with Go 1.5][blog_cheney] by Dave Cheney, August 2015.
+- [Gopher Guides](https://www.gopherguides.com/articles) by Cory LaNou :
+  - [Go (golang) Slog Package](https://www.gopherguides.com/articles/golang-slog-package), August 2023.
+  - [Leveraging the Go Type System](https://www.gopherguides.com/articles/leveraging-the-go-type-system), February 2021.
+  - [Embracing the Go Type System](https://www.gopherguides.com/articles/embracing-the-go-type-system), January 2021.
 - [**golangspec**](https://medium.com/golangspec) (Medium):
   - [Untyped constants in Go][blog_lowicki2020b] by Michael Lowicki, March 2020.
   - [Equality in Golang][blog_lowicki2020a] by Michael Lowicki, February 2020.
@@ -133,7 +143,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/August 2023* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/September 2023* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->

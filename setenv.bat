@@ -117,7 +117,7 @@ if "%__ARG:~0,1%"=="-" (
     ) else if "%__ARG%"=="-debug" ( set _DEBUG=1
     ) else if "%__ARG%"=="-verbose" ( set _VERBOSE=1
     ) else (
-        echo %_ERROR_LABEL% Unknown option %__ARG% 1>&2
+        echo %_ERROR_LABEL% Unknown option "%__ARG%" 1>&2
         set _EXITCODE=1
         goto args_done
     )
@@ -125,7 +125,7 @@ if "%__ARG:~0,1%"=="-" (
     @rem subcommand
     if "%__ARG%"=="help" ( set _HELP=1
     ) else (
-        echo %_ERROR_LABEL% Unknown subcommand %__ARG% 1>&2
+        echo %_ERROR_LABEL% Unknown subcommand "%__ARG%" 1>&2
         set _EXITCODE=1
         goto args_done
     )
@@ -235,7 +235,7 @@ if defined __CODE_CMD (
     if %_DEBUG%==1 echo %_DEBUG_LABEL% Using path of VS Code executable found in PATH 1>&2
     for %%i in ("%__CODE_CMD%") do set "__CODE_BIN_DIR=%%~dpi"
     for %%f in ("!__CODE_BIN_DIR!.") do set "_VSCODE_HOME=%%~dpf"
-    @rem keep _CODE_PATH undefined since executable already in path
+    @rem keep _VSCODE_PATH undefined since executable already in path
     goto :eof
 ) else if defined VSCODE_HOME (
     set "_VSCODE_HOME=%VSCODE_HOME%"
@@ -248,11 +248,11 @@ if defined __CODE_CMD (
         for /f "delims=" %%f in ('dir /ad /b "!__PATH!\VSCode*" 2^>NUL') do set "_VSCODE_HOME=!__PATH!\%%f"
     )
     if defined _VSCODE_HOME (
-        if %_DEBUG%==1 echo %_DEBUG_LABEL% Using default VS Code installation directory !_VSCODE_HOME!
+        if %_DEBUG%==1 echo %_DEBUG_LABEL% Using default VS Code installation directory "!_VSCODE_HOME!"
     )
 )
 if not exist "%_VSCODE_HOME%\bin\code.cmd" (
-    echo %_ERROR_LABEL% VS Code executable not found ^(%_VSCODE_HOME%^) 1>&2
+    echo %_ERROR_LABEL% VS Code executable not found ^("%_VSCODE_HOME%"^) 1>&2
     set _EXITCODE=1
     goto :eof
 )
@@ -290,7 +290,7 @@ if defined __GIT_CMD (
     )
 )
 if not exist "%_GOLANG_HOME%\bin\go.exe" (
-    echo %_ERROR_LABEL% Go executable not found ^(%_GOLANG_HOME%^) 1>&2
+    echo %_ERROR_LABEL% Go executable not found ^("%_GOLANG_HOME%"^) 1>&2
     set _EXITCODE=1
     goto :eof
 )
@@ -332,7 +332,7 @@ if defined __GIT_CMD (
     )
 )
 if not exist "%_GIT_HOME%\bin\git.exe" (
-    echo %_ERROR_LABEL% Git executable not found ^(%_GIT_HOME%^) 1>&2
+    echo %_ERROR_LABEL% Git executable not found ^("%_GIT_HOME%"^) 1>&2
     set _EXITCODE=1
     goto :eof
 )
@@ -394,7 +394,11 @@ if %__VERBOSE%==1 (
     if defined GOROOT echo    "GOROOT=%GOROOT%" 1>&2
     if defined VSCODE_HOME echo    "VSCODE_HOME=%VSCODE_HOME%" 1>&2
     echo Path associations: 1>&2
-    for /f "delims=" %%i in ('subst') do echo    %%i 1>&2
+    for /f "delims=" %%i in ('subst') do (
+        set "__LINE=%%i"
+        setlocal enabledelayedexpansion
+        echo    !__LINE:%USERPROFILE%=%%USERPROFILE%%! 1>&2
+    )
 )
 goto :eof
 
