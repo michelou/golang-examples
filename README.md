@@ -24,12 +24,12 @@ This project depends on the following external software for the **Microsoft Wind
 
 Optionally one may also install the following software:
 
-- [Visual Studio Code 1.81][vscode_downloads] ([*release notes*][vscode_relnotes])
+- [Visual Studio Code 1.82][vscode_downloads] ([*release notes*][vscode_relnotes])
 
 For instance our development environment looks as follows (*September 2023*) <sup id="anchor_01">[1](#footnote_01)</sup>:
 
 <pre style="font-size:80%;">
-C:\opt\go-1.21.0\    <i>(451 MB)</i>
+C:\opt\go\           <i>(206 MB)</i>
 C:\opt\Git\          <i>(367 MB)</i>
 C:\opt\VSCode\       <i>(341 MB)</i>
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\go\    <i>( 60 MB)</i>
@@ -38,7 +38,7 @@ C:\opt\VSCode\       <i>(341 MB)</i>
 go1.14   -> 334 MB, go1.15   -> 369 MB, go1.16   -> 387 MB, go1.17 -> 407 MB
 go1.18.1 -> 427 MB, go1.18.2 -> 345 MB, go1.18.4 -> 423 MB, go1.19 -> 451 MB
 go1.19.2 -> 451 MB, go1.20.2 -> 245 MB, go1.20.3 -> 246 MB, go1.20.4 -> 246 MB
-go1.20.5 -> 246 MB, go1.20.6 -> 246 MB, go1.21.0 -> 206 MB
+go1.20.5 -> 246 MB, go1.20.6 -> 246 MB, go1.21.0 -> 206 MB, go1.21.1 -> 206 MB
 -->
 
 ## <span id="structure">Directory structure</span> [**&#x25B4;**](#top)
@@ -73,7 +73,7 @@ Command [**`setenv.bat`**](setenv.bat) is executed once to setup our development
 <pre style="font-size:80%;">
 <b>&gt; <a href="setenv.bat">setenv</a></b>
 Tool versions:
-   code 1.81.1, go go1.21.0 windows/amd64, mage 1.15.0
+   code 1.81.1, go go1.21.1 windows/amd64, mage 1.15.0
    git 2.42.0.windows.1, diff 3.10, bash 5.2.15(1)-release
 
 <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/where_1" rel="external">where</a> code git mage</b>
@@ -81,7 +81,7 @@ C:\opt\VSCode\bin\code
 C:\opt\VSCode\bin\code.cmd
 C:\opt\Git\bin\git.exe
 C:\opt\Git\mingw64\bin\git.exe
-C:\opt\go-1.21.0\bin\mage.exe
+C:\opt\go\bin\mage.exe
 </pre>
 
 ## <span id="footnotes">Footnotes</span> [**&#x25B4;**](#top)
@@ -93,7 +93,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 </dd>
 <dd>
 <pre style="font-size:80%;">
-<a href="https://golang.org/dl/#stable" rel="external">go1.21.0.windows-amd64.zip</a>        <i>(245 MB)</i>
+<a href="https://golang.org/dl/#stable" rel="external">go1.21.1.windows-amd64.zip</a>        <i>(245 MB)</i>
 <a href="https://github.com/magefile/mage/releases" rel="external">mage_1.15.0_Windows-64bit.zip</a>     <i>(  1 MB)</i>
 <a href="https://git-scm.com/download/win" rel="external">PortableGit-2.42.0-64-bit.7z.exe</a>  <i>( 41 MB)</i>
 </pre>
@@ -181,7 +181,7 @@ For instance:
 <b>&gt; <a href="https://golang.org/cmd/go/#hdr-Print_Go_environment_information">go env</a> GOARCH GOOS GOROOT GOPATH GOBIN</b>
 amd64
 windows
-c:\opt\go-1.21.0
+c:\opt\go
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\go
 %USERPROFILE%\go\bin
 </pre>
@@ -192,7 +192,7 @@ Run the following command to list the architectures supported on the Windows OS 
 <dd>
 <pre style="font-size:80%;">
 <b>&gt; go version</b>
-go version go1.21.0 windows/amd64
+go version go1.21.1 windows/amd64
 &nbsp;
 <b>&gt; <a href="https://pkg.go.dev/cmd/go#hdr-Run_specified_go_tool" rel="external">go tool</a> dist list |<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/findstr" rel="external">findstr</a> windows</b>
 windows/386

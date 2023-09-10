@@ -121,8 +121,7 @@
 - Cheat sheet: [Go string handling overview](https://yourbasic.org/golang/string-functions-reference-cheat-sheet/).
 - [Timing functions in golang](https://coderwall.com/p/cp5fya/measuring-execution-time-in-go).
 
-
-## <span id="tools">Tools</span>
+## <span id="tools">Tools</span> [**&#x25B4;**](#top)
 
 - [Cobra][tool_cobra] &ndash; both a library for creating powerful modern CLI applications as well as a program to generate applications and command files.
 - [go-cache][tool_go_cache] &ndash; an in-memory key:value store/cache library for Go,
