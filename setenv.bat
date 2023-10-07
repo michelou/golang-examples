@@ -25,6 +25,7 @@ if %_HELP%==1 (
 
 set _GIT_PATH=
 set _GOLANG_PATH=
+set _MSYS_PATH=
 set _VSCODE_PATH=
 
 call :vscode
@@ -36,6 +37,15 @@ if not %_EXITCODE%==0 goto end
 call :git
 if not %_EXITCODE%==0 goto end
 
+call :msys
+if not %_EXITCODE%==0 goto end
+
+call :vscode
+if not %_EXITCODE%==0 (
+    @rem optional
+    echo %_WARNING_LABEL% VS Code installation not found 1>&2
+    set _EXITCODE=0
+)
 goto end
 
 @rem #########################################################################
@@ -217,11 +227,11 @@ echo Usage: %__BEG_O%%_BASENAME% { ^<option^> ^| ^<subcommand^> }%__END%
 echo.
 echo   %__BEG_P%Options:%__END%
 echo     %__BEG_O%-bash%__END%       start Git bash shell instead of Windows command prompt
-echo     %__BEG_O%-debug%__END%      display commands executed by this script
-echo     %__BEG_O%-verbose%__END%    display progress messages
+echo     %__BEG_O%-debug%__END%      print commands executed by this script
+echo     %__BEG_O%-verbose%__END%    print progress messages
 echo.
 echo   %__BEG_P%Subcommands:%__END%
-echo     %__BEG_O%help%__END%        display this help message
+echo     %__BEG_O%help%__END%        print this help message
 goto :eof
 
 @rem output parameters: _VSCODE_HOME, _VSCODE_PATH
@@ -232,9 +242,9 @@ set _VSCODE_PATH=
 set __CODE_CMD=
 for /f "delims=" %%f in ('where code.cmd 2^>NUL') do set "__CODE_CMD=%%f"
 if defined __CODE_CMD (
+    for /f "delims=" %%i in ("%__CODE_CMD%") do set "__CODE_BIN_DIR=%%~dpi"
+    for /f "delims=" %%f in ("!__CODE_BIN_DIR!.") do set "_VSCODE_HOME=%%~dpf"
     if %_DEBUG%==1 echo %_DEBUG_LABEL% Using path of VS Code executable found in PATH 1>&2
-    for %%i in ("%__CODE_CMD%") do set "__CODE_BIN_DIR=%%~dpi"
-    for %%f in ("!__CODE_BIN_DIR!.") do set "_VSCODE_HOME=%%~dpf"
     @rem keep _VSCODE_PATH undefined since executable already in path
     goto :eof
 ) else if defined VSCODE_HOME (
@@ -267,9 +277,9 @@ set _GOLANG_PATH=
 set __GO_CMD=
 for /f "delims=" %%f in ('where go.exe 2^>NUL') do set "__GO_CMD=%%f"
 if defined __GIT_CMD (
+    for /f "delims=" %%i in ("%__GO_CMD%") do set "__GO_BIN_DIR=%%~dpi"
+    for /f "delims=" %%f in ("!__GO_BIN_DIR!.") do set "_GOLANG_HOME=%%~dpf"
     if %_DEBUG%==1 echo %_DEBUG_LABEL% Using path of Go executable found in PATH 1>&2
-    for %%i in ("%__GO_CMD%") do set "__GO_BIN_DIR=%%~dpi"
-    for %%f in ("!__GO_BIN_DIR!.") do set "_GOLANG_HOME=%%~dpf"
     @rem keep _GOLANG_PATH undefined since executable already in path
     goto :eof
 ) else if defined GO_HOME (
@@ -305,13 +315,13 @@ set _GIT_PATH=
 set __GIT_CMD=
 for /f "delims=" %%f in ('where git.exe 2^>NUL') do set "__GIT_CMD=%%f"
 if defined __GIT_CMD (
-    if %_DEBUG%==1 echo %_DEBUG_LABEL% Using path of Git executable found in PATH 1>&2
-    for %%i in ("%__GIT_CMD%") do set "__GIT_BIN_DIR=%%~dpi"
-    for %%f in ("!__GIT_BIN_DIR!.") do set "_GIT_HOME=%%~dpf"
+    for /f "delims=" %%i in ("%__GIT_CMD%") do set "__GIT_BIN_DIR=%%~dpi"
+    for /f "delims=" %%f in ("!__GIT_BIN_DIR!.") do set "_GIT_HOME=%%~dpf"
     @rem Executable git.exe is present both in bin\ and \mingw64\bin\
     if not "!_GIT_HOME:mingw=!"=="!_GIT_HOME!" (
         for %%f in ("!_GIT_HOME!.") do set "_GIT_HOME=%%~dpf"
     )
+    if %_DEBUG%==1 echo %_DEBUG_LABEL% Using path of Git executable found in PATH 1>&2
     @rem keep _GIT_PATH undefined since executable already in path
     goto :eof
 ) else if defined GIT_HOME (
@@ -337,6 +347,76 @@ if not exist "%_GIT_HOME%\bin\git.exe" (
     goto :eof
 )
 set "_GIT_PATH=;%_GIT_HOME%\bin;%_GIT_HOME%\mingw64\bin;%_GIT_HOME%\usr\bin"
+goto :eof
+
+@rem output parameters: _MSYS_HOME, _MSYS_PATH
+:msys
+set _MSYS_HOME=
+set _MSYS_PATH=
+
+set __MAKE_CMD=
+for /f "delims=" %%f in ('where make.exe 2^>NUL') do set "__MAKE_CMD=%%f"
+if defined __MAKE_CMD (
+    for /f "delims=" %%i in ("%__MAKE_CMD%") do set "__MAKE_BIN_DIR=%%~dpi"
+    for /f "delims=" %%f in ("!__MAKE_BIN_DIR!\.") do set "_MSYS_HOME=%%~dpf"
+    if %_DEBUG%==1 echo %_DEBUG_LABEL% Using path of GNU Make executable found in PATH 1>&2
+    @rem keep _MSYS_PATH undefined since executable already in path
+    goto :eof
+) else if defined MSYS_HOME (
+    set "_MSYS_HOME=%MSYS_HOME%"
+    if %_DEBUG%==1 echo %_DEBUG_LABEL% Using environment variable MSYS_HOME 1>&2
+) else (
+    set "__PATH=%ProgramFiles%"
+    for /f "delims=" %%f in ('dir /ad /b "!__PATH!\msys*" 2^>NUL') do set "_MSYS_HOME=!__PATH!\%%f"
+    if not defined _MSYS_HOME (
+        set __PATH=C:\opt
+        for /f %%f in ('dir /ad /b "!__PATH!\msys*" 2^>NUL') do set "_MSYS_HOME=!__PATH!\%%f"
+    )
+)
+if not exist "%_MSYS_HOME%\usr\bin\make.exe" (
+    echo %_ERROR_LABEL% GNU Make executable not found ^("%_MSYS_HOME%"^) 1>&2
+    set _MSYS_HOME=
+    set _EXITCODE=1
+    goto :eof
+)
+@rem 1st path -> (make.exe, python.exe), 2nd path -> gcc.exe
+set "_MSYS_PATH=;%_MSYS_HOME%\usr\bin;%_MSYS_HOME%\mingw64\bin"
+goto :eof
+
+@rem output parameters: _VSCODE_HOME, _VSCODE_PATH
+:vscode
+set _VSCODE_HOME=
+set _VSCODE_PATH=
+
+set __CODE_CMD=
+for /f "delims=" %%f in ('where code.exe 2^>NUL') do set "__CODE_CMD=%%f"
+if defined __CODE_CMD (
+    if %_DEBUG%==1 echo %_DEBUG_LABEL% Using path of VSCode executable found in PATH 1>&2
+    @rem keep _VSCODE_PATH undefined since executable already in path
+    goto :eof
+) else if defined VSCODE_HOME (
+    set "_VSCODE_HOME=%VSCODE_HOME%"
+    if %_DEBUG%==1 echo %_DEBUG_LABEL% Using environment variable VSCODE_HOME 1>&2
+) else (
+    set __PATH=C:\opt
+    if exist "!__PATH!\VSCode\" ( set "_VSCODE_HOME=!__PATH!\VSCode"
+    ) else (
+        for /f %%f in ('dir /ad /b "!__PATH!\VSCode-1*" 2^>NUL') do set "_VSCODE_HOME=!__PATH!\%%f"
+        if not defined _VSCODE_HOME (
+            set "__PATH=%ProgramFiles%"
+            for /f "delims=" %%f in ('dir /ad /b "!__PATH!\VSCode-1*" 2^>NUL') do set "_VSCODE_HOME=!__PATH!\%%f"
+        )
+    )
+)
+if not exist "%_VSCODE_HOME%\code.exe" (
+    echo %_ERROR_LABEL% VSCode executable not found ^("%_VSCODE_HOME%"^) 1>&2
+    if exist "%_VSCODE_HOME%\Code - Insiders.exe" (
+        echo %_WARNING_LABEL% It looks like you've installed an Insider version of VSCode 1>&2
+    )
+    set _EXITCODE=1
+    goto :eof
+)
+set "_VSCODE_PATH=;%_VSCODE_HOME%"
 goto :eof
 
 :print_env
@@ -392,6 +472,7 @@ if %__VERBOSE%==1 (
     if defined GOBIN echo    "GOBIN=%GOBIN%" 1>&2
     if defined GOPATH echo    "GOPATH=%GOPATH%" 1>&2
     if defined GOROOT echo    "GOROOT=%GOROOT%" 1>&2
+    if defined MSYS_HOME echo    "MSYS_HOME=%MSYS_HOME%" 1>&2
     if defined VSCODE_HOME echo    "VSCODE_HOME=%VSCODE_HOME%" 1>&2
     echo Path associations: 1>&2
     for /f "delims=" %%i in ('subst') do (
@@ -412,6 +493,7 @@ endlocal & (
         if not defined GOBIN set "GOBIN=%_GOBIN%"
         if not defined GOPATH set "GOPATH=%_GOPATH%"
         if not defined GOROOT set "GOROOT=%_GOLANG_HOME%"
+        if not defined MSYS_HOME set "MSYS_HOME=%_MSYS_HOME%"
         if not defined VSCODE_HOME set "VSCODE_HOME=%_VSCODE_HOME%"
         @rem We prepend %_GIT_HOME%\bin to hide C:\Windows\System32\bash.exe
         set "PATH=%_GIT_HOME%\bin;%PATH%%_VSCODE_PATH%%_GOLANG_PATH%%_GIT_PATH%;%_GOBIN%;%~dp0bin"

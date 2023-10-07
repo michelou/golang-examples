@@ -42,6 +42,8 @@
   - [Generics Part 02: Underlying Types](https://www.ardanlabs.com/blog/2020/08/generics-02-underlying-types.html) by William Kennedy, August 2020.
   - [Generics Part 01: Basic Syntax](https://www.ardanlabs.com/blog/2020/07/generics-01-basic-syntax.html) by William Kennedy, July 2020.
 - [The Go Blog](https://go.dev/blog/) :
+  - [Deconstructing Type Parameters](https://go.dev/blog/deconstructing-type-parameters) by Ian Lance Taylor, September 2023.
+  - [Fixing For Loops in Go 1.22](https://go.dev/blog/loopvar-preview) by David Chase and Russ Cox, September 2023.
   - &#128077; [An Introduction to Generics](https://go.dev/blog/intro-generics) by Robert Griesemer and Ian Lance Taylor, March 2022.
   - [Twelve Years of Go][blog_cox] by Russ Cox, November 2021.
 - [Options Pattern in Golang](https://levelup.gitconnected.com/options-pattern-in-golang-9a0384a9d8db) by Himanshu Pandey, March 2022.
@@ -142,7 +144,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/September 2023* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/October 2023* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
