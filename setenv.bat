@@ -196,11 +196,11 @@ set "_DRIVE_NAME=!__DRIVE_NAMES:~0,2!"
 if /i "%_DRIVE_NAME%"=="%__GIVEN_PATH:~0,2%" goto :eof
 
 if %_DEBUG%==1 ( echo %_DEBUG_LABEL% subst "%_DRIVE_NAME%" "%__GIVEN_PATH%" 1>&2
-) else if %_VERBOSE%==1 ( echo Assign drive %_DRIVE_NAME% to path "%__GIVEN_PATH%" 1>&2
+) else if %_VERBOSE%==1 ( echo Assign drive %_DRIVE_NAME% to path "!__GIVEN_PATH:%USERPROFILE%=%%USERPROFILE%%!" 1>&2
 )
 subst "%_DRIVE_NAME%" "%__GIVEN_PATH%"
 if not %ERRORLEVEL%==0 (
-    echo %_ERROR_LABEL% Failed to assign drive %_DRIVE_NAME% to path "%__GIVEN_PATH%" 1>&2
+    echo %_ERROR_LABEL% Failed to assign drive %_DRIVE_NAME% to path "!__GIVEN_PATH:%USERPROFILE%=%%USERPROFILE%%!" 1>&2
     set _EXITCODE=1
     goto :eof
 )
@@ -252,7 +252,7 @@ if defined __CODE_CMD (
     if %_DEBUG%==1 echo %_DEBUG_LABEL% Using environment variable VSCODE_HOME
 ) else (
     set __PATH=C:\opt
-    for /f %%f in ('dir /ad /b "!__PATH!\VSCode*" 2^>NUL') do set "_VSCODE_HOME=!__PATH!\%%f"
+    for /f "delims=" %%f in ('dir /ad /b "!__PATH!\VSCode*" 2^>NUL') do set "_VSCODE_HOME=!__PATH!\%%f"
     if not defined _VSCODE_HOME (
         set "__PATH=%ProgramFiles%"
         for /f "delims=" %%f in ('dir /ad /b "!__PATH!\VSCode*" 2^>NUL') do set "_VSCODE_HOME=!__PATH!\%%f"
@@ -289,7 +289,7 @@ if defined __GIT_CMD (
     set __PATH=C:\opt
     if exist "!__PATH!\Go\" ( set "_GOLANG_HOME=!__PATH!\Go"
     ) else (
-        for /f %%f in ('dir /ad /b "!__PATH!\Go-*" 2^>NUL') do set "_GOLANG_HOME=!__PATH!\%%f"
+        for /f "delims=" %%f in ('dir /ad /b "!__PATH!\Go-*" 2^>NUL') do set "_GOLANG_HOME=!__PATH!\%%f"
         if not defined _GOLANG_HOME (
             set "__PATH=%ProgramFiles%"
             for /f "delims=" %%f in ('dir /ad /b "!__PATH!\Go-*" 2^>NUL') do set "_GOLANG_HOME=!__PATH!\%%f"
@@ -331,7 +331,7 @@ if defined __GIT_CMD (
     set __PATH=C:\opt
     if exist "!__PATH!\Git\" ( set "_GIT_HOME=!__PATH!\Git"
     ) else (
-        for /f %%f in ('dir /ad /b "!__PATH!\Git*" 2^>NUL') do set "_GIT_HOME=!__PATH!\%%f"
+        for /f "delims=" %%f in ('dir /ad /b "!__PATH!\Git*" 2^>NUL') do set "_GIT_HOME=!__PATH!\%%f"
         if not defined _GIT_HOME (
             set "__PATH=%ProgramFiles%"
             for /f "delims=" %%f in ('dir /ad /b "!__PATH!\Git*" 2^>NUL') do set "_GIT_HOME=!__PATH!\%%f"
@@ -371,6 +371,9 @@ if defined __MAKE_CMD (
     if not defined _MSYS_HOME (
         set __PATH=C:\opt
         for /f %%f in ('dir /ad /b "!__PATH!\msys*" 2^>NUL') do set "_MSYS_HOME=!__PATH!\%%f"
+    )
+    if defined _MSYS_HOME (
+        if %_DEBUG%==1 echo %_DEBUG_LABEL% Using default MSYS installation directory "!_MSYS_HOME!" 1>&2
     )
 )
 if not exist "%_MSYS_HOME%\usr\bin\make.exe" (

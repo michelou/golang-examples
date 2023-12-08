@@ -19,12 +19,30 @@ Execute target "target\hello.exe"
 hello, world
 </pre>
 
-Build tool [`mage.exe`](https://magefile.org/) takes its Makefile-like runnable targets from the Go file [`mage.go`](./hello/mage.go); for instance :
+Build tool [`mage.exe`][mage_cli] takes its Makefile-like runnable targets from the Go file [`mage.go`](./hello/mage.go); for instance targets **`clean`** and **`build`** :
+
+> **Note** : Mage supports a makefile-style tree of dependencies using the helper library [`github.com/magefile/mage/mg`](https://magefile.org/dependencies/). To declare dependencies, pass any number of dependent functions to `mg.Deps`.
 
 <pre style="font-size:80%;">
-<b>&gt; <a href="">mage</a> clean build &amp; target\hello.exe</b>
+<b>&gt; <a href="https://magefile.org/magefiles/">mage</a> clean build &amp; target\hello.exe</b>
+hello, world
+</pre>
+
+Adding the Mage option **`-v`** will print some progress messages :
+
+<pre style="font-size:80%;">
+<b>&gt; <a href="https://magefile.org/magefiles/">mage</a> -v clean build & target\hello.exe</b>
+Running target: Clean
 Cleaning...
+Running target: Build
 Building...
+hello, world
+</pre>
+
+Finally, one may also invoke the [Mage target][mage_targets] **`run`** directly (target **`run`** requires at least one argument, thus the dummy argument `0` below):
+
+<pre style="font-size:80%;">
+<b>&gt; <a href="https://magefile.org/magefiles/">mage</a> clean run 0</b>
 hello, world
 </pre>
 
@@ -32,9 +50,11 @@ hello, world
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/October 2023* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/December 2023* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
 
+[mage_cli]: https://magefile.org/
+[mage_targets]: https://magefile.org/targets/
 [windows_batch_file]: https://en.wikibooks.org/wiki/Windows_Batch_Scripting

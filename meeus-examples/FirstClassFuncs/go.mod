@@ -1,4 +1,4 @@
-module hello/hello
+module first-class-funcs/first-class-funcs
 
 go 1.21
 

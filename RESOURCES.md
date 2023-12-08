@@ -86,6 +86,7 @@
 
 ## <span id="books">Books</span> [**&#x25B4;**](#top)
 
+- [Go Cookbook][book_chang] by Sau Sheong Chang, September 2023.<br/><span style="font-size:80%;">(O'Reilly, ISBN 978-1-098-12211-9, 370 pages)</span>
 - [Effective Concurrency in Go][book_serdar] by Burak Serdar, April 2023.<br/><span style="font-size:80%;">(Packt, ISBN 978-1-8046-1907-0, 212 pages)</span>
 - [Functional Programming in Go][book_meeus] by Dylan Meeus, March 2023.<br/><span style="font-size:80%;">(Packt, ISBN 978-1-80181-116-3, 248 pages)</span>
 - [GoLang - The Ultimate Guide][book_uzayr2] by Sufyan bin Uzayr, December 2022.<br/><span style="font-size:80%;">(CRC Press, ISBN 978-1-0323-1231-6, 366 pages)</span>
@@ -144,7 +145,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/October 2023* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/December 2023* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -164,6 +165,7 @@
 [blog_sasidharan2]: https://deepu.tech/golang-for-javascript-developers-part-2/
 [blog_vanslyck]: https://carolynvanslyck.com/blog/2021/01/mage-is-my-favorite-make/
 [book_butcher]: https://www.amazon.com/gp/product/1633430073/
+[book_chang]: https://www.oreilly.com/library/view/go-cookbook/9781098122102/
 [book_donovan]: https://www.amazon.com/gp/product/0134190440/
 [book_feigenbaum]: https://link.springer.com/book/10.1007/978-1-4842-7199-5
 [book_freeman]: https://link.springer.com/book/10.1007/978-1-4842-7355-5

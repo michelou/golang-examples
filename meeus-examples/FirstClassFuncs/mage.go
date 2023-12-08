@@ -3,8 +3,8 @@
 package main
 
 import (
-    "errors"
-	"fmt"
+	"errors"
+    "fmt"
     "io/ioutil"
 	"os"
 	"os/exec"
@@ -24,7 +24,7 @@ func init() {
     targetDir := filepath.Join(".", "target")
     sources, _ = filepath.Glob("./src/main/*.go")
 
-    targetName := "hello"
+    targetName := "first-class-funcs"
     if (runtime.GOOS == "windows") { targetName += ".exe" }
 
     outputFile = filepath.Join(targetDir, targetName)
