@@ -27,11 +27,7 @@ Optionally one may also install the following software:
 
 - [Visual Studio Code 1.85][vscode_downloads] ([*release notes*][vscode_relnotes])
 
-<<<<<<< HEAD
-For instance our development environment looks as follows (*December 2023*) <sup id="anchor_01">[1](#footnote_01)</sup>:
-=======
 For instance our development environment looks as follows (*January 2024*) <sup id="anchor_01">[1](#footnote_01)</sup>:
->>>>>>> 31ae5ab (updated .md files)
 
 <pre style="font-size:80%;">
 C:\opt\go\           <i>(206 MB)</i>
@@ -43,13 +39,8 @@ C:\opt\VSCode\       <i>(341 MB)</i>
 go1.14   -> 334 MB, go1.15   -> 369 MB, go1.16   -> 387 MB, go1.17 -> 407 MB
 go1.18.1 -> 427 MB, go1.18.2 -> 345 MB, go1.18.4 -> 423 MB, go1.19 -> 451 MB
 go1.19.2 -> 451 MB, go1.20.2 -> 245 MB, go1.20.3 -> 246 MB, go1.20.4 -> 246 MB
-<<<<<<< HEAD
 go1.20.5 -> 246 MB, go1.20.6 -> 246 MB, go1.21.0 -> 206 MB, go1.21.1 -> 206 MB
-go1.21.2 -> 206 MB, go1.21.5 -> 206 MB
-=======
-go1.20.5 -> 246 MB, go1.20.6 -> 246 MB, go1.21.0 -> 206 MB, go1.21.3 -> 206 MB
-go1.21.4 -> 206 MB, go1.21.6 -> 
->>>>>>> 31ae5ab (updated .md files)
+go1.21.2 -> 206 MB, go1.21.5 -> 206 MB, go1.21.6 -> 206 MB
 -->
 
 ## <span id="structure">Directory structure</span> [**&#x25B4;**](#top)
@@ -81,22 +72,13 @@ where
 
 ### **`setenv.bat`** <sup id="anchor_03">[3](#footnote_03)</sup>
 
-<<<<<<< HEAD
 We execute command [**`setenv.bat`**](setenv.bat) once to setup our development environment; it makes external tools such as [**`code.cmd`**][code_cli], [**`git.exe`**][git_cli] and [**`mage.exe`**][mage_cli] directly available from the command prompt.
-=======
-We execute command [**`setenv.bat`**](setenv.bat) once to setup our development environment; it makes external tools such as [**`code.cmd`**][code_cli] and [**`git.exe`**][git_cli] directly available from the command prompt.
->>>>>>> 31ae5ab (updated .md files)
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="setenv.bat">setenv</a></b>
 Tool versions:
-<<<<<<< HEAD
    code 1.85.0, go go1.21.5 windows/amd64, mage 1.15.0
-   git 2.43.0.windows.1, diff 3.10, bash 5.2.15(1)-release
-=======
-   code 1.84.2, go go1.21.6 windows/amd64, mage 1.15.0
    git 2.43.0.windows.1, diff 3.10, bash 5.2.21(1)-release
->>>>>>> 31ae5ab (updated .md files)
 
 <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/where_1" rel="external">where</a> code git mage</b>
 C:\opt\VSCode\bin\code
@@ -115,15 +97,9 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 </dd>
 <dd>
 <pre style="font-size:80%;">
-<<<<<<< HEAD
-<a href="https://golang.org/dl/#stable" rel="external">go1.21.5.windows-amd64.zip</a>        <i>(245 MB)</i>
-<a href="https://github.com/magefile/mage/releases" rel="external">mage_1.15.0_Windows-64bit.zip</a>     <i>(  1 MB)</i>
-<a href="https://git-scm.com/download/win" rel="external">PortableGit-2.43.0-64-bit.7z.exe</a>  <i>( 41 MB)</i>
-=======
 <a href="https://golang.org/dl/#stable" rel="external">go1.21.6.windows-amd64.zip</a>        <i>(70 MB)</i>
 <a href="https://github.com/magefile/mage/releases" rel="external">mage_1.15.0_Windows-64bit.zip</a>     <i>( 1 MB)</i>
 <a href="https://git-scm.com/download/win" rel="external">PortableGit-2.43.0-64-bit.7z.exe</a>  <i>(41 MB)</i>
->>>>>>> 31ae5ab (updated .md files)
 </pre>
 </dd></dl>
 
@@ -220,11 +196,7 @@ Run the following command to list the architectures supported on the Windows OS 
 <dd>
 <pre style="font-size:80%;">
 <b>&gt; go version</b>
-<<<<<<< HEAD
-go version go1.21.5 windows/amd64
-=======
 go version go1.21.6 windows/amd64
->>>>>>> 31ae5ab (updated .md files)
 &nbsp;
 <b>&gt; <a href="https://pkg.go.dev/cmd/go#hdr-Run_specified_go_tool" rel="external">go tool</a> dist list |<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/findstr" rel="external">findstr</a> windows</b>
 windows/386
@@ -236,11 +208,7 @@ windows/arm64
 
 ***
 
-<<<<<<< HEAD
-*[mics](https://lampwww.epfl.ch/~michelou/)/December 2023* [**&#9650;**](#top)
-=======
 *[mics](https://lampwww.epfl.ch/~michelou/)/January 2024* [**&#9650;**](#top)
->>>>>>> 31ae5ab (updated .md files)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -268,11 +236,8 @@ windows/arm64
 [kafka_examples]: https://github.com/michelou/kafka-examples
 [kotlin_examples]: https://github.com/michelou/kotlin-examples
 [llvm_examples]: https://github.com/michelou/llvm-examples
-<<<<<<< HEAD
 [mage_cli]: https://
-=======
 [m2_examples]: https://github.com/michelou/m2-examples
->>>>>>> 31ae5ab (updated .md files)
 [mage_downloads]: https://github.com/magefile/mage/releases
 [mage_relnotes]: https://github.com/magefile/mage/releases/tag/v1.15.0
 [msys2_changelog]: https://github.com/msys2/setup-msys2/blob/main/CHANGELOG.md

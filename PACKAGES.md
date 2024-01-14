@@ -96,11 +96,7 @@ By default <code><b>%GOBIN%</b></code> variable should default to <code><b>%GOPA
 
 ***
 
-<<<<<<< HEAD
-*[mics](https://lampwww.epfl.ch/~michelou/)/December 2023* [**&#9650;**](#top)
-=======
 *[mics](https://lampwww.epfl.ch/~michelou/)/January 2024* [**&#9650;**](#top)
->>>>>>> 31ae5ab (updated .md files)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->

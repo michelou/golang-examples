@@ -248,11 +248,6 @@ if defined __CODE_CMD (
     for /f "delims=" %%i in ("%__CODE_CMD%") do set "__CODE_BIN_DIR=%%~dpi"
     for /f "delims=" %%f in ("!__CODE_BIN_DIR!.") do set "_VSCODE_HOME=%%~dpf"
     if %_DEBUG%==1 echo %_DEBUG_LABEL% Using path of VS Code executable found in PATH 1>&2
-<<<<<<< HEAD
-=======
-    for /f "delims=" %%i in ("%__CODE_CMD%") do set "__CODE_BIN_DIR=%%~dpi"
-    for /f "delims=" %%f in ("!__CODE_BIN_DIR!.") do set "_VSCODE_HOME=%%~dpf"
->>>>>>> 31ae5ab (updated .md files)
     @rem keep _VSCODE_PATH undefined since executable already in path
     goto :eof
 ) else if defined VSCODE_HOME (
