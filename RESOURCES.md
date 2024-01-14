@@ -17,6 +17,8 @@
 
 ## <span id="blogs">Blogs</span> [**&#x25B4;**](#top)
 
+- [**Red Hat** Developer](https://developers.redhat.com/) articles :
+  - [Learning Go: Stale slices explained](https://developers.redhat.com/articles/2023/10/18/learning-go-stale-slices-explained) by Massimiliano Ziccardi, October 2023.
 - [Mohit Khare Blog](https://www.mohitkhare.com/categories/golang/) :
   - [Naming Conventions in Golang](https://www.mohitkhare.com/blog/go-naming-conventions/), May 2023.
   - [Introduction to Generics in Go](https://www.mohitkhare.com/blog/go-generics/), November 2022.
@@ -28,6 +30,8 @@
 - [Unit Testing in Go](https://medium.com/@snassr/unit-testing-in-go-golang-3a856ee3b9ba) by Snassr, September 2022.
 - [Generics can make your Go code slower](https://planetscale.com/blog/generics-can-make-your-go-code-slower) by Vicent Marti, March 2022.
 - [Alex Edwards Blog](https://www.alexedwards.net/blog/category/golang) :
+  - [Demystifying function parameters in Go][blog_edwards_params], November 2023.
+  - [A gentle introduction to Pointers][blog_edwards_pointers], July 2023.
   - [An introduction to Packages, Imports and Modules in Go](https://www.alexedwards.net/blog/an-introduction-to-packages-imports-and-modules), February 2023.
   - [The ‘fat service’ pattern for Go web applications](https://www.alexedwards.net/blog/the-fat-service-pattern), September 2022.
   - [Golang Interfaces Explained](https://www.alexedwards.net/blog/interfaces-explained), August 2019.
@@ -145,7 +149,11 @@
 
 ***
 
+<<<<<<< HEAD
 *[mics](https://lampwww.epfl.ch/~michelou/)/December 2023* [**&#9650;**](#top)
+=======
+*[mics](https://lampwww.epfl.ch/~michelou/)/January 2024* [**&#9650;**](#top)
+>>>>>>> 31ae5ab (updated .md files)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -156,6 +164,8 @@
 [blog_cheney]: https://dave.cheney.net/2015/08/22/cross-compilation-with-go-1-5
 [blog_cox]: https://go.dev/blog/12years
 [blog_edwards]: https://www.alexedwards.net/blog/an-overview-of-go-tooling
+[blog_edwards_params]: https://www.alexedwards.net/blog/demystifying-function-parameters-in-go
+[blog_edwards_pointers]: https://www.alexedwards.net/blog/a-gentle-introduction-to-pointers
 [blog_lowick2016]: https://medium.com/golangspec/variadic-functions-in-go-13c33182b851
 [blog_lowicki2020a]: https://medium.com/golangspec/equality-in-golang-ff44da79b7f1
 [blog_lowicki2020b]: https://medium.com/golangspec/untyped-constants-in-go-2c69eb519b5b

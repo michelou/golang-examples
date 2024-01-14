@@ -10,7 +10,7 @@
 
 ## <span id="hello">`hello` Example</span>
 
-Command [`build.bat`](./hello/build.bat) executes the Go command `%GOROOT%\bin\go build` with the appropriate parameters and runs the generated executable `hello.exe` :
+Command [**`build.bat`**](./hello/build.bat) executes the Go command `%GOROOT%\bin\go build` with the appropriate parameters and runs the generated executable `hello.exe` :
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="./hello/build.bat">build</a> -verbose run</b>
@@ -50,7 +50,11 @@ hello, world
 
 ***
 
+<<<<<<< HEAD
 *[mics](https://lampwww.epfl.ch/~michelou/)/December 2023* [**&#9650;**](#top)
+=======
+*[mics](https://lampwww.epfl.ch/~michelou/)/January 2024* [**&#9650;**](#top)
+>>>>>>> 31ae5ab (updated .md files)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->

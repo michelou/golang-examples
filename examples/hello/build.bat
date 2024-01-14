@@ -241,10 +241,10 @@ if not %ERRORLEVEL%==0 (
 goto :eof
 
 :lint
-pushd "%_SOURCE_DIR%"
+pushd "%_SOURCE_MAIN_DIR%"
 
 if %_DEBUG%==1 ( echo %_DEBUG_LABEL% "%_GO_CMD%" fmt 1>&2
-) else if %_VERBOSE%==1 ( echo Check format of Go source files in directory "!_SOURCE_DIR:%_ROOT_DIR%=!" 1>&2
+) else if %_VERBOSE%==1 ( echo Check format of Go source files in directory "!_SOURCE_MAIN_DIR:%_ROOT_DIR%=!" 1>&2
 )
 call "%_GO_CMD%" fmt
 if not %ERRORLEVEL%==0 (

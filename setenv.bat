@@ -34,6 +34,9 @@ if not %_EXITCODE%==0 goto end
 call :golang
 if not %_EXITCODE%==0 goto end
 
+call :msys
+if not %_EXITCODE%==0 goto end
+
 call :git
 if not %_EXITCODE%==0 goto end
 
@@ -245,6 +248,11 @@ if defined __CODE_CMD (
     for /f "delims=" %%i in ("%__CODE_CMD%") do set "__CODE_BIN_DIR=%%~dpi"
     for /f "delims=" %%f in ("!__CODE_BIN_DIR!.") do set "_VSCODE_HOME=%%~dpf"
     if %_DEBUG%==1 echo %_DEBUG_LABEL% Using path of VS Code executable found in PATH 1>&2
+<<<<<<< HEAD
+=======
+    for /f "delims=" %%i in ("%__CODE_CMD%") do set "__CODE_BIN_DIR=%%~dpi"
+    for /f "delims=" %%f in ("!__CODE_BIN_DIR!.") do set "_VSCODE_HOME=%%~dpf"
+>>>>>>> 31ae5ab (updated .md files)
     @rem keep _VSCODE_PATH undefined since executable already in path
     goto :eof
 ) else if defined VSCODE_HOME (
@@ -280,6 +288,11 @@ if defined __GIT_CMD (
     for /f "delims=" %%i in ("%__GO_CMD%") do set "__GO_BIN_DIR=%%~dpi"
     for /f "delims=" %%f in ("!__GO_BIN_DIR!.") do set "_GOLANG_HOME=%%~dpf"
     if %_DEBUG%==1 echo %_DEBUG_LABEL% Using path of Go executable found in PATH 1>&2
+<<<<<<< HEAD
+=======
+    for /f "delims=" %%i in ("%__GO_CMD%") do set "__GO_BIN_DIR=%%~dpi"
+    for /f "delims=" %%f in ("!__GO_BIN_DIR!.") do set "_GOLANG_HOME=%%~dpf"
+>>>>>>> 31ae5ab (updated .md files)
     @rem keep _GOLANG_PATH undefined since executable already in path
     goto :eof
 ) else if defined GO_HOME (
@@ -307,6 +320,40 @@ if not exist "%_GOLANG_HOME%\bin\go.exe" (
 set "_GOLANG_PATH=;%_GOLANG_HOME%\bin"
 goto :eof
 
+@rem output parameters: _MSYS_HOME, _MSYS_PATH
+:msys
+set _MSYS_HOME=
+set _MSYS_PATH=
+
+set __MAKE_CMD=
+for /f "delims=" %%f in ('where make.exe 2^>NUL') do set "__MAKE_CMD=%%f"
+if defined __MAKE_CMD (
+    for /f "delims=" %%i in ("%__MAKE_CMD%") do set "__MAKE_BIN_DIR=%%~dpi"
+    for /f "delims=" %%f in ("!__MAKE_BIN_DIR!") do set "_MSYS_HOME=%%~dpf"
+    if %_DEBUG%==1 echo %_DEBUG_LABEL% Using path of GNU Make executable found in PATH 1>&2
+    @rem keep _MSYS_PATH undefined since executable already in path
+    goto :eof
+) else if defined MSYS_HOME (
+    set "_MSYS_HOME=%MSYS_HOME%"
+    if %_DEBUG%==1 echo %_DEBUG_LABEL% Using environment variable MSYS_HOME 1>&2
+) else (
+    set "__PATH=%ProgramFiles%"
+    for /f "delims=" %%f in ('dir /ad /b "!__PATH!\msys*" 2^>NUL') do set "_MSYS_HOME=!__PATH!\%%f"
+    if not defined _MSYS_HOME (
+        set __PATH=C:\opt
+        for /f %%f in ('dir /ad /b "!__PATH!\msys*" 2^>NUL') do set "_MSYS_HOME=!__PATH!\%%f"
+    )
+)
+if not exist "%_MSYS_HOME%\usr\bin\make.exe" (
+    echo %_ERROR_LABEL% GNU Make executable not found ^("%_MSYS_HOME%"^) 1>&2
+    set _MSYS_HOME=
+    set _EXITCODE=1
+    goto :eof
+)
+@rem 1st path -> (make.exe, python.exe), 2nd path -> gcc.exe
+set "_MSYS_PATH=;%_MSYS_HOME%\usr\bin;%_MSYS_HOME%\mingw64\bin"
+goto :eof
+
 @rem output parameters: _GIT_HOME, _GIT_PATH
 :git
 set _GIT_HOME=
@@ -315,6 +362,10 @@ set _GIT_PATH=
 set __GIT_CMD=
 for /f "delims=" %%f in ('where git.exe 2^>NUL') do set "__GIT_CMD=%%f"
 if defined __GIT_CMD (
+<<<<<<< HEAD
+=======
+    if %_DEBUG%==1 echo %_DEBUG_LABEL% Using path of Git executable found in PATH 1>&2
+>>>>>>> 31ae5ab (updated .md files)
     for /f "delims=" %%i in ("%__GIT_CMD%") do set "__GIT_BIN_DIR=%%~dpi"
     for /f "delims=" %%f in ("!__GIT_BIN_DIR!.") do set "_GIT_HOME=%%~dpf"
     @rem Executable git.exe is present both in bin\ and \mingw64\bin\
@@ -499,7 +550,7 @@ endlocal & (
         if not defined MSYS_HOME set "MSYS_HOME=%_MSYS_HOME%"
         if not defined VSCODE_HOME set "VSCODE_HOME=%_VSCODE_HOME%"
         @rem We prepend %_GIT_HOME%\bin to hide C:\Windows\System32\bash.exe
-        set "PATH=%_GIT_HOME%\bin;%PATH%%_VSCODE_PATH%%_GOLANG_PATH%%_GIT_PATH%;%_GOBIN%;%~dp0bin"
+        set "PATH=%_GIT_HOME%\bin;%PATH%%_VSCODE_PATH%%_GOLANG_PATH%%_MSYS_PATH%%_GIT_PATH%;%_GOBIN%;%~dp0bin"
         call :print_env %_VERBOSE%
         if not "%CD:~0,2%"=="%_DRIVE_NAME%" (
             if %_DEBUG%==1 echo %_DEBUG_LABEL% cd /d %_DRIVE_NAME% 1>&2

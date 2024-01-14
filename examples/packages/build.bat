@@ -1,7 +1,8 @@
 @echo off
 setlocal enabledelayedexpansion
 
-set _DEBUG=1
+@rem only for interactive debugging !
+set _DEBUG=0
 
 @rem #########################################################################
 @rem ## Environment setup
@@ -141,7 +142,7 @@ if "%__ARG:~0,1%"=="-" (
     ) else if "%__ARG%"=="-timer" ( set _TIMER=1
     ) else if "%__ARG%"=="-verbose" ( set _VERBOSE=1
     ) else (
-        echo %_ERROR_LABEL% Unknown option %__ARG% 1>&2
+        echo %_ERROR_LABEL% Unknown option "%__ARG%" 1>&2
         set _EXITCODE=1
         goto args_done
     )
@@ -154,7 +155,7 @@ if "%__ARG:~0,1%"=="-" (
     ) else if "%__ARG%"=="lint" ( set _LINT=1
     ) else if "%__ARG%"=="run" ( set _COMPILE=1& set _RUN=1
     ) else (
-        echo %_ERROR_LABEL% Unknown subcommand %__ARG% 1>&2
+        echo %_ERROR_LABEL% Unknown subcommand "%__ARG%" 1>&2
         set _EXITCODE=1
         goto args_done
     )
@@ -185,15 +186,15 @@ if %_VERBOSE%==1 (
 echo Usage: %__BEG_O%%_BASENAME% { ^<option^> ^| ^<subcommand^> }%__END%
 echo.
 echo   %__BEG_P%Options:%__END%
-echo     %__BEG_O%-debug%__END%        display commands executed by this script
-echo     %__BEG_O%-timer%__END%        display total execution time
-echo     %__BEG_O%-verbose%__END%      display progress messages
+echo     %__BEG_O%-debug%__END%        print commands executed by this script
+echo     %__BEG_O%-timer%__END%        print total execution time
+echo     %__BEG_O%-verbose%__END%      print progress messages
 echo.
 echo   %__BEG_P%Subcommands:%__END%
 echo     %__BEG_O%clean%__END%         delete generated class files
 echo     %__BEG_O%compile%__END%       compile Go source files
 echo     %__BEG_O%doc%__END%           generate documentation
-echo     %__BEG_O%help%__END%          display this help message
+echo     %__BEG_O%help%__END%          print this help message
 echo     %__BEG_O%run%__END%           execute the generated program "%__BEG_O%!_TARGET_FILE:%_ROOT_DIR%=!%__END%"
 if %_VERBOSE%==0 goto :eof
 echo.
@@ -250,11 +251,11 @@ goto :eof
 
 :compile
 setlocal
-set __GOPATH=%GOPATH%
-set "GOPATH=%_ROOT_DIR%"
+set "__GOPATH=%GOPATH%"
+set "GOPATH=%_ROOT_DIR%src"
 if defined __GOPATH set "GOPATH=%__GOPATH%;%GOPATH%"
 
-if %_DEBUG%==1 echo %_DEBUG_LABEL% GOPATH=%GOPATH%
+if %_DEBUG%==1 echo %_DEBUG_LABEL% "GOPATH=%GOPATH%"
 
 if not exist "%_TARGET_DIR%" mkdir "%_TARGET_DIR%"
 
@@ -263,16 +264,16 @@ set __GO_OPTS=-o "%_TARGET_FILE%"
 set "__MAIN_FILE=%_SOURCE_DIR%\Main.go"
 
 if %_DEBUG%==1 ( echo %_DEBUG_LABEL% "%_GO_CMD%" build %__GO_OPTS% "%__MAIN_FILE%" 1>&2
-) else if %_VERBOSE%==1 ( echo Compile Go source files to directory "!_TARGET_DIR:%_ROOT_DIR%\=!" 1>&2
+) else if %_VERBOSE%==1 ( echo Compile Go source files to directory "!_TARGET_DIR:%_ROOT_DIR%=!" 1>&2
 )
 call "%_GO_CMD%" build %__GO_OPTS% "%__MAIN_FILE%"
 if not %ERRORLEVEL%==0 (
-    echo %_ERROR_LABEL% Failed to compile Go source files to directory "!_TARGET_DIR:%_ROOT_DIR%\=!" 1>&2
+    echo %_ERROR_LABEL% Failed to compile Go source files to directory "!_TARGET_DIR:%_ROOT_DIR%=!" 1>&2
     set _EXITCODE=1
     goto compile_end
 )
 :compile_end
-endlocal & set GOPATH=%__GOPATH%
+endlocal & set "GOPATH=%__GOPATH%"
 goto :eof
 
 :doc
@@ -295,7 +296,7 @@ goto :eof
 
 :run
 if not exist "%_TARGET_FILE%" (
-    echo %_ERROR_LABEL% Target file not found 1>&2
+    echo %_ERROR_LABEL% Target file "!_TARGET_FILE:%_ROOT_DIR%=!" not found 1>&2
     set _EXITCODE=1
     goto :eof
 )
