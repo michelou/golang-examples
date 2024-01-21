@@ -12,6 +12,10 @@ set _EXITCODE=0
 @rem files README.md, RESOURCES.md, etc.
 set _LAST_MODIFIED_OLD=michelou/)/December 2023
 set _LAST_MODIFIED_NEW=michelou/)/January 2024
+
+set _LAST_DOWNLOAD_OLD=(\*December 2023\*)
+set _LAST_DOWNLOAD_NEW=(*January 2024*)
+
 @rem https://superuser.com/questions/909127/findstr-dos-commands-multiple-string-argument
 set _MD_EXCLUDES=golang.org sql_LOCAL
 
@@ -56,6 +60,7 @@ if not exist "%GIT_HOME%\usr\bin\grep.exe" (
 )
 set "_GREP_CMD=%GIT_HOME%\usr\bin\grep.exe"
 set "_SED_CMD=%GIT_HOME%\usr\bin\sed.exe"
+set "_UNIX2DOS_CMD=%GIT_HOME%\usr\bin\unix2dos.exe"
 goto :eof
 
 :env_colors
@@ -176,7 +181,16 @@ for /f "delims=" %%f in ('dir /b /s "%_ROOT_DIR%\*.md" ^| findstr /v "%_MD_EXCLU
     if !ERRORLEVEL!==0 (
         if %_DEBUG%==1 echo %_DEBUG_LABEL% "%_SED_CMD%" -i "s@%_LAST_MODIFIED_OLD%@%_LAST_MODIFIED_NEW%@g" "!__INPUT_FILE!" 1>&2
         call "%_SED_CMD%" -i "s@%_LAST_MODIFIED_OLD%@%_LAST_MODIFIED_NEW%@g" "!__INPUT_FILE!"
+        call "%_UNIX2DOS_CMD%" -q "!__INPUT_FILE!"
         set /a __N+=1
+    )
+    if %_DEBUG%==1 echo %_DEBUG_LABEL% "%_GREP_CMD%" -q "%_LAST_DOWNLOAD_OLD%" "!__INPUT_FILE!" 1>&2
+    call "%_GREP_CMD%" -q "%_LAST_DOWNLOAD_OLD%" "!__INPUT_FILE!"
+    if !ERRORLEVEL!==0 (
+        if %_DEBUG%==1 echo %_DEBUG_LABEL% "%_SED_CMD%" -i "s@%_LAST_DOWNLOAD_OLD%@%_LAST_DOWNLOAD_NEW%@g" "!__INPUT_FILE!" 1>&2
+        call "%_SED_CMD%" -i "s@%_LAST_DOWNLOAD_OLD%@%_LAST_DOWNLOAD_NEW%@g" "!__INPUT_FILE!"
+        call "%_UNIX2DOS_CMD%" -q "!__INPUT_FILE!"
+        if !__N!==!__OLD_N! set /a __N+=1
     )
 )
 call :message %__N% "Markdown"
