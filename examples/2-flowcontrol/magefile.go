@@ -3,7 +3,6 @@
 package main
 
 import (
-	"fmt"
 	"os"
 	"os/exec"
     "path/filepath"
@@ -14,25 +13,19 @@ import (
 )
 
 var sources []string
-var executable string
-var installDir string
 var targetDir string
+var targetFile string
+var installFile string
 
 func init() {
-    parentDir := filepath.Dir(os.Args[0])
-    fmt.Println("1111111111111 parentDir="+parentDir)
-    targetDir = filepath.Join(parentDir, "target")
-    fmt.Println("2222222222222 targetDir="+targetDir)
-    if (runtime.GOOS == "windows") {
-        sources, _ = filepath.Glob(".\\src\\*.go")
-        executable = filepath.Join(targetDir, "hello.exe")
-        fmt.Println("33333333333333 executable="+executable)
-        installDir = "c:\\temp\\"
-    } else {
-        sources, _ = filepath.Glob("./src/*.go")
-        executable = filepath.Join(targetDir, "hello")
-        installDir = "/usr/bin/"
-    }
+    targetDir = filepath.Join(".", "target")
+    sources, _ = filepath.Glob("./src/main/*.go")
+
+    targetName := "flowcontrol"
+    if (runtime.GOOS == "windows") { targetName += ".exe" }
+
+    targetFile = filepath.Join(targetDir, targetName)
+    installFile = filepath.Join(os.Getenv("GOBIN"), targetName)
 }
 
 // Default target to run when none is specified
@@ -40,20 +33,19 @@ func init() {
 // var Default = Build
 
 func Build() error {
-	fmt.Println("Building...")
-	cmd := exec.Command("go", "build", "-o", executable, strings.Join(sources, " "))
+    goPath, err := exec.LookPath("go")
+    if err != nil { return err }
+	cmd := exec.Command(goPath, "build", "-o", targetFile, strings.Join(sources, " "))
 	return cmd.Run()
 }
 
 // A custom install step if you need your bin someplace other than go/bin
 func Install() error {
 	mg.Deps(Build)
-	fmt.Println("Installing...")
-	return os.Rename("./" + executable, installDir + executable)
+	return os.Rename(targetFile, installFile)
 }
 
 // Clean up after yourself
 func Clean() {
-	fmt.Println("Cleaning...")
-	os.RemoveAll(executable)
+	os.RemoveAll(targetFile)
 }

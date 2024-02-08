@@ -4,8 +4,6 @@ package main
 
 import (
     "errors"
-	"fmt"
-    "io/ioutil"
 	"os"
 	"os/exec"
     "path/filepath"
@@ -17,7 +15,7 @@ import (
 )
 
 var sources []string
-var outputFile string
+var targetFile string
 var installFile string
 
 func init() {
@@ -27,7 +25,7 @@ func init() {
     targetName := "hello"
     if (runtime.GOOS == "windows") { targetName += ".exe" }
 
-    outputFile = filepath.Join(targetDir, targetName)
+    targetFile = filepath.Join(targetDir, targetName)
     installFile = filepath.Join(os.Getenv("GOBIN"), targetName)
 }
 
@@ -37,42 +35,32 @@ func init() {
 
 // Build Generate application executable
 func Build() error {
-	if mg.Verbose() { fmt.Println("Building...") }
     goPath, err := exec.LookPath("go")
     if err != nil { return err } //log.Fatal(err) }
-	cmd := exec.Command(goPath, "build", "-o", outputFile, strings.Join(sources, " "))
+	cmd := exec.Command(goPath, "build", "-o", targetFile, strings.Join(sources, " "))
 	return cmd.Run()
 }
 
-// Run Run the generated executable
+// Run the generated executable
 func Run(what string) error {
      mg.Deps(Build)
-     _, err := os.Stat(outputFile); errors.Is(err, os.ErrNotExist)
+     _, err := os.Stat(targetFile); errors.Is(err, os.ErrNotExist)
      if err != nil { return err } //log.Fatal(err) }
-     binFile, err := filepath.Abs(outputFile)
+     binFile, err := filepath.Abs(targetFile)
      if err != nil { return err } //log.Fatal(err) }
-     if mg.Verbose() { fmt.Println("Running "+ outputFile) }
      cmd := exec.Command(binFile)
      cmd.Stdout = os.Stdout
      cmd.Stderr = os.Stderr
      return cmd.Run()
 }
 
-func copyFile(src string, dst string) error {
-    nBytes, err := ioutil.ReadFile(src)
-    if err != nil { return err }
-    return ioutil.WriteFile(dst, nBytes, 755)
-}
-
 // Install Install the generated executable into the GOBIN directory
 func Install() error {
 	mg.Deps(Build)
-	if mg.Verbose() { fmt.Println("Installing...") }
-	return copyFile(outputFile, installFile)
+	return os.Rename(targetFile, installFile)
 }
 
 // Clean Delete the generated executable
 func Clean() {
-	if mg.Verbose() { fmt.Println("Cleaning...") }
-	os.RemoveAll(outputFile)
+	os.RemoveAll(targetFile)
 }

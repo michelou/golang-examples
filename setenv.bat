@@ -71,10 +71,6 @@ goto :eof
 :env_colors
 @rem ANSI colors in standard Windows 10 shell
 @rem see https://gist.github.com/mlocati/#file-win10colors-cmd
-set _RESET=[0m
-set _BOLD=[1m
-set _UNDERSCORE=[4m
-set _INVERSE=[7m
 
 @rem normal foreground colors
 set _NORMAL_FG_BLACK=[30m
@@ -112,6 +108,12 @@ set _STRONG_BG_RED=[101m
 set _STRONG_BG_GREEN=[102m
 set _STRONG_BG_YELLOW=[103m
 set _STRONG_BG_BLUE=[104m
+
+@rem we define _RESET in last position to avoid crazy console output with type command
+set _BOLD=[1m
+set _INVERSE=[7m
+set _UNDERSCORE=[4m
+set _RESET=[0m
 goto :eof
 
 @rem input parameter: %*
@@ -331,7 +333,7 @@ if defined __MAKE_CMD (
     for /f "delims=" %%f in ('dir /ad /b "!__PATH!\msys*" 2^>NUL') do set "_MSYS_HOME=!__PATH!\%%f"
     if not defined _MSYS_HOME (
         set __PATH=C:\opt
-        for /f %%f in ('dir /ad /b "!__PATH!\msys*" 2^>NUL') do set "_MSYS_HOME=!__PATH!\%%f"
+        for /f "delims=" %%f in ('dir /ad /b "!__PATH!\msys*" 2^>NUL') do set "_MSYS_HOME=!__PATH!\%%f"
     )
 )
 if not exist "%_MSYS_HOME%\usr\bin\make.exe" (
@@ -356,7 +358,7 @@ if defined __GIT_CMD (
     for /f "delims=" %%f in ("!__GIT_BIN_DIR!.") do set "_GIT_HOME=%%~dpf"
     @rem Executable git.exe is present both in bin\ and \mingw64\bin\
     if not "!_GIT_HOME:mingw=!"=="!_GIT_HOME!" (
-        for %%f in ("!_GIT_HOME!.") do set "_GIT_HOME=%%~dpf"
+        for /f "delims=" %%f in ("!_GIT_HOME!.") do set "_GIT_HOME=%%~dpf"
     )
     if %_DEBUG%==1 echo %_DEBUG_LABEL% Using path of Git executable found in PATH 1>&2
     @rem keep _GIT_PATH undefined since executable already in path
@@ -407,7 +409,7 @@ if defined __MAKE_CMD (
     for /f "delims=" %%f in ('dir /ad /b "!__PATH!\msys*" 2^>NUL') do set "_MSYS_HOME=!__PATH!\%%f"
     if not defined _MSYS_HOME (
         set __PATH=C:\opt
-        for /f %%f in ('dir /ad /b "!__PATH!\msys*" 2^>NUL') do set "_MSYS_HOME=!__PATH!\%%f"
+        for /f "delims=" %%f in ('dir /ad /b "!__PATH!\msys*" 2^>NUL') do set "_MSYS_HOME=!__PATH!\%%f"
     )
     if defined _MSYS_HOME (
         if %_DEBUG%==1 echo %_DEBUG_LABEL% Using default MSYS installation directory "!_MSYS_HOME!" 1>&2
@@ -441,7 +443,7 @@ if defined __CODE_CMD (
     set __PATH=C:\opt
     if exist "!__PATH!\VSCode\" ( set "_VSCODE_HOME=!__PATH!\VSCode"
     ) else (
-        for /f %%f in ('dir /ad /b "!__PATH!\VSCode-1*" 2^>NUL') do set "_VSCODE_HOME=!__PATH!\%%f"
+        for /f "delims=" %%f in ('dir /ad /b "!__PATH!\VSCode-1*" 2^>NUL') do set "_VSCODE_HOME=!__PATH!\%%f"
         if not defined _VSCODE_HOME (
             set "__PATH=%ProgramFiles%"
             for /f "delims=" %%f in ('dir /ad /b "!__PATH!\VSCode-1*" 2^>NUL') do set "_VSCODE_HOME=!__PATH!\%%f"
@@ -473,32 +475,29 @@ if %ERRORLEVEL%==0 (
 )
 where /q "%GOROOT%\bin:go.exe"
 if %ERRORLEVEL%==0 (
-    for /f "tokens=1,2,*" %%i in ('"%GOROOT%\bin\go.exe" version') do set "__VERSIONS_LINE1=%__VERSIONS_LINE1% go %%k,"
+    setlocal enabledelayedexpansion
+    for /f "tokens=1,2,3,*" %%i in ('"%GOROOT%\bin\go.exe" version') do set "__TOKEN=%%k"
+    set "__VERSIONS_LINE1=%__VERSIONS_LINE1% go !__TOKEN:go=!,"
     set __WHERE_ARGS=%__WHERE_ARGS% "%GOROOT%\bin:go.exe"
 )
 where /q "%GOBIN%:mage.exe"
 if %ERRORLEVEL%==0 (
-    @rem for some reason option --version may return "<not set>"
-    set __VERSION=unknown
-    for /f "usebackq tokens=1-3,*" %%i in (`"%GOBIN%\mage.exe" --version ^| findstr Mage ^| findstr /v "not set" 2^>NUL`) do (
-        set __VERSION=%%l
-    )
-    set "__VERSIONS_LINE1=%__VERSIONS_LINE1% mage !__VERSION!"
+    for /f "usebackq tokens=1-3,4,*" %%i in (`"%GOBIN%\mage.exe" --version ^| findstr Mage`) do set "__VERSIONS_LINE1=%__VERSIONS_LINE1% mage %%l,"
     set __WHERE_ARGS=%__WHERE_ARGS% "%GOBIN%:mage.exe"
 )
 where /q "%GIT_HOME%\bin:git.exe"
 if %ERRORLEVEL%==0 (
-    for /f "tokens=1,2,*" %%i in ('"%GIT_HOME%\bin\git.exe" --version') do set "__VERSIONS_LINE2=%__VERSIONS_LINE2% git %%k,"
+    for /f "tokens=1,2,3,*" %%i in ('"%GIT_HOME%\bin\git.exe" --version') do set "__VERSIONS_LINE2=%__VERSIONS_LINE2% git %%k,"
     set __WHERE_ARGS=%__WHERE_ARGS% "%GIT_HOME%\bin:git.exe"
 )
 where /q "%GIT_HOME%\usr\bin:diff.exe"
 if %ERRORLEVEL%==0 (
-    for /f "tokens=1-3,*" %%i in ('"%GIT_HOME%\usr\bin\diff.exe" --version ^| findstr diff') do set "__VERSIONS_LINE2=%__VERSIONS_LINE2% diff %%l,"
+    for /f "tokens=1-3,4,*" %%i in ('"%GIT_HOME%\usr\bin\diff.exe" --version ^| findstr diff') do set "__VERSIONS_LINE2=%__VERSIONS_LINE2% diff %%l,"
     set __WHERE_ARGS=%__WHERE_ARGS% "%GIT_HOME%\usr\bin:diff.exe"
 )
 where /q "%GIT_HOME%\bin:bash.exe"
 if %ERRORLEVEL%==0 (
-    for /f "tokens=1-3,4,*" %%i in ('"%GIT_HOME%\bin\bash.exe" --version ^| findstr bash') do set "__VERSIONS_LINE2=%__VERSIONS_LINE2% bash %%l"
+    for /f "tokens=1-3,4,5,*" %%i in ('"%GIT_HOME%\bin\bash.exe" --version ^| findstr bash') do set "__VERSIONS_LINE2=%__VERSIONS_LINE2% bash %%l"
     set __WHERE_ARGS=%__WHERE_ARGS% "%GIT_HOME%\bin:bash.exe"
 )
 echo Tool versions:

@@ -8,13 +8,66 @@
   </tr>
 </table>
 
-## <span id="hello">`hello` Example</span>
+## <span id="basics">`basics` Example</span>
+
+The project directory is organized as follows :
+
+<pre style="font-size:80%;">
+<b>&gt; <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/tree">tree</a> /a /f . | <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/findstr">findstr</a> /v /b [A-Z]</b>
+|   <a href="./basics/build.bat">build.bat</a>
+|   <a href="./basics/go.mod">go.mod</a>
+|   <a href="./basics/magefile.go">magefile.go</a>
+|
+\---src
+    \---main
+            <a href="./basics/src/main/basics.go">basics.go</a>
+</pre>
+
+Command [**`build.bat`**](./basics/build.bat) executes the Go command `%GOROOT%\bin\go build` with the appropriate parameters and runs the generated executable `basics.exe` :
+
+<pre style="font-size:80%;">
+<b>&gt; <a href="./basics/build.bat">build</a> -verbose run</b>
+Compile 1 Go source file to directory "target"
+Execute target "target\basics.exe"
+My favorite number is 2
+3.141592653589793
+55
+world hello
+7 10
+2 true false no!
+Type: bool Value: false
+Type: uint64 Value: 18446744073709551615
+Type: complex128 Value: (2+3i)
+Type: int32 Value: 8658
+Hello 世界
+Happy 3.14 Day
+Go rules? true
+</pre>
+
+## <span id="hello">`hello` Example</span> [**&#x25B4;**](#top)
+
+The project directory is organized as follows :
+
+<pre style="font-size:80%;">
+<b>&gt; <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/tree">tree</a> /a /f . | <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/findstr">findstr</a> /v /b [A-Z]</b>
+|   <a href="./hello/build.bat">build.bat</a>
+|   <a href="./hello/go.mod">go.mod</a>
+|   <a href="./hello/magefile.go">magefile.go</a>
+|   <a href="./hello/Makefile">Makefile</a>
+|
+\---src
+    +---main
+    |       <a href="./hello/src/main/hello.go">hello.go</a>
+    |
+    \---test
+            <a href="./hello/src/test/hello_test.go">hello_test.go</a>
+</pre>
 
 Command [**`build.bat`**](./hello/build.bat) executes the Go command `%GOROOT%\bin\go build` with the appropriate parameters and runs the generated executable `hello.exe` :
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="./hello/build.bat">build</a> -verbose run</b>
-Compile Go source files to directory "target"
+Compile 1 Go source files to directory "target"
 Execute target "target\hello.exe"
 hello, world
 </pre>
@@ -33,9 +86,7 @@ Adding the Mage option **`-v`** will print some progress messages :
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://magefile.org/magefiles/">mage</a> -v clean build & target\hello.exe</b>
 Running target: Clean
-Cleaning...
 Running target: Build
-Building...
 hello, world
 </pre>
 
@@ -50,7 +101,7 @@ hello, world
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/January 2024* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/February 2024* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
