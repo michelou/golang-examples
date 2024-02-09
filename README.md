@@ -16,7 +16,7 @@
 This project depends on the following external software for the **Microsoft Windows** platform:
 
 - [Git 2.43][git_downloads] ([*release notes*][git_relnotes])
-- [go 1.21][golang_downloads] ([*release notes*][golang_relnotes])
+- [go 1.22][golang_downloads] ([*release notes*][golang_relnotes])
 - [Mage 1.15][mage_downloads] ([*release notes*][mage_relnotes])
 - [MSYS2 2024][msys2_downloads] ([*changelog*][msys2_changelog])
 
@@ -30,7 +30,7 @@ Optionally one may also install the following software:
 For instance our development environment looks as follows (*February 2024*) <sup id="anchor_01">[1](#footnote_01)</sup>:
 
 <pre style="font-size:80%;">
-C:\opt\go\           <i>(206 MB)</i>
+C:\opt\go\           <i>(215 MB)</i>
 C:\opt\Git\          <i>(367 MB)</i>
 C:\opt\VSCode\       <i>(341 MB)</i>
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\go\    <i>( 60 MB)</i>
@@ -40,7 +40,7 @@ go1.14   -> 334 MB, go1.15   -> 369 MB, go1.16   -> 387 MB, go1.17 -> 407 MB
 go1.18.1 -> 427 MB, go1.18.2 -> 345 MB, go1.18.4 -> 423 MB, go1.19 -> 451 MB
 go1.19.2 -> 451 MB, go1.20.2 -> 245 MB, go1.20.3 -> 246 MB, go1.20.4 -> 246 MB
 go1.20.5 -> 246 MB, go1.20.6 -> 246 MB, go1.21.0 -> 206 MB, go1.21.1 -> 206 MB
-go1.21.2 -> 206 MB, go1.21.5 -> 206 MB, go1.21.6 -> 206 MB
+go1.21.2 -> 206 MB, go1.21.5 -> 206 MB, go1.21.6 -> 206 MB, go1.22.0 -> 215 MB
 -->
 
 ## <span id="structure">Directory structure</span> [**&#x25B4;**](#top)
