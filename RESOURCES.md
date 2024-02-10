@@ -90,6 +90,7 @@
 
 ## <span id="books">Books</span> [**&#x25B4;**](#top)
 
+- [Learn Concurrent Programming with Go][book_cutajar] by James Cutajar, November 2023.<br/><span style="font-size:80%;">(Manning, ISBN 978-1-6334-3838-5, 328 pages)</span>
 - [Go Cookbook][book_chang] by Sau Sheong Chang, September 2023.<br/><span style="font-size:80%;">(O'Reilly, ISBN 978-1-098-12211-9, 370 pages)</span>
 - [Effective Concurrency in Go][book_serdar] by Burak Serdar, April 2023.<br/><span style="font-size:80%;">(Packt, ISBN 978-1-8046-1907-0, 212 pages)</span>
 - [Functional Programming in Go][book_meeus] by Dylan Meeus, March 2023.<br/><span style="font-size:80%;">(Packt, ISBN 978-1-80181-116-3, 248 pages)</span>
@@ -172,6 +173,7 @@
 [blog_vanslyck]: https://carolynvanslyck.com/blog/2021/01/mage-is-my-favorite-make/
 [book_butcher]: https://www.amazon.com/gp/product/1633430073/
 [book_chang]: https://www.oreilly.com/library/view/go-cookbook/9781098122102/
+[book_cutajar]: https://www.manning.com/books/learn-concurrent-programming-with-go
 [book_donovan]: https://www.amazon.com/gp/product/0134190440/
 [book_feigenbaum]: https://link.springer.com/book/10.1007/978-1-4842-7199-5
 [book_freeman]: https://link.springer.com/book/10.1007/978-1-4842-7355-5

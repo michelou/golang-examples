@@ -231,7 +231,7 @@ windows/arm64
 [github_markdown]: https://github.github.com/gfm/
 [golang]: https://golang.org/
 [golang_downloads]: https://golang.org/dl/#stable
-[golang_relnotes]: https://golang.org/doc/devel/release.html#go1.20
+[golang_relnotes]: https://golang.org/doc/devel/release.html#go1.22
 [graalvm_examples]: https://github.com/michelou/graalvm-examples
 [haskell_examples]: https://github.com/michelou/haskell-examples
 [kafka_examples]: https://github.com/michelou/kafka-examples
