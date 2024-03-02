@@ -9,16 +9,17 @@ set _DEBUG=0
 
 set _EXITCODE=0
 
-@rem files README.md, RESOURCES.md, etc.
-set _LAST_MODIFIED_OLD=michelou/)/February 2024
-set _LAST_MODIFIED_NEW=michelou/)/March 2024
+@rem files build.sbt, build.sc and ivy.xml
+set _CHECKSTYLE_VERSION_OLD=CHECKSTYLE_VERSION = 10.13.0
+set _CHECKSTYLE_VERSION_NEW=CHECKSTYLE_VERSION = 10.14.0
 
-set _LAST_DOWNLOAD_OLD=(\*February 2024\*)
-set _LAST_DOWNLOAD_NEW=(*March 2024*)
+@rem build.sh (copyright dates)
+set _COPYRIGHT_DATES_OLD=2018-2023
+set _COPYRIGHT_DATES_NEW=2018-2024
 
-@rem to be transformed into -not -path "./<dirname>/*"
-set _EXCLUDE_TOPDIRS=bin docs gotour
-set _EXCLUDE_SUBDIRS=_LOCAL
+@rem Makefile.inc
+set _DUMMY_VERSION_OLD=XXXX
+set _DUMMY_VERSION_NEW=XXXX
 
 call :env
 if not %_EXITCODE%==0 goto end
@@ -59,8 +60,6 @@ if not exist "%GIT_HOME%\usr\bin\grep.exe" (
     set _EXITCODE=1
     goto :eof
 )
-set "_CYGPATH_CMD=%GIT_HOME%\usr\bin\cygpath.exe"
-set "_FIND_CMD=%GIT_HOME%\usr\bin\find.exe"
 set "_GREP_CMD=%GIT_HOME%\usr\bin\grep.exe"
 set "_SED_CMD=%GIT_HOME%\usr\bin\sed.exe"
 set "_UNIX2DOS_CMD=%GIT_HOME%\usr\bin\unix2dos.exe"
@@ -174,46 +173,77 @@ echo     %__BEG_O%-verbose%__END%     print progress messages
 echo.
 echo   %__BEG_P%Subcommands:%__END%
 echo     %__BEG_O%help%__END%         print this help message
-echo     %__BEG_O%run%__END%          replace old patterns with new ones
+echo     %__BEG_O%run%__END%          execute main class
 goto :eof
 
 :run
-for /f "delims=" %%f in ('"%_CYGPATH_CMD%" %_ROOT_DIR%\') do set "__ROOT_DIR=%%~f"
+for %%i in (examples meeus-examples) do (
+@rem for %%i in (examples) do (
+    set "__PROJECT_DIR=%_ROOT_DIR%\%%i"
+    if exist "!__PROJECT_DIR!\" (
+        if %_DEBUG%==1 echo %_DEBUG_LABEL% call :update_project "!__PROJECT_DIR!" 1>&2
+        call :update_project "!__PROJECT_DIR!"
+    ) else (
+        echo %_WARNING_LABEL% Project directory not found ^("!__PROJECT_DIR!"^) 1>&2
+    )
+)
+goto :eof
 
-set __FIND_EXCLUDES=
-for %%i in (%_EXCLUDE_TOPDIRS%) do (
-    set __FIND_EXCLUDES=!__FIND_EXCLUDES! -not -path "%__ROOT_DIR%%%i/*"
-)
-for %%i in (%_EXCLUDE_SUBDIRS%) do (
-    set __FIND_EXCLUDES=!__FIND_EXCLUDES! -not -path "*/*%%i/*"
-)
-set __N=0
-if %_DEBUG%==1 echo %_DEBUG_LABEL% "%_FIND_CMD%" "%__ROOT_DIR%" -type f -name "*.md" %__FIND_EXCLUDES% 1>&2
-for /f "delims=" %%f in ('%_FIND_CMD% "%__ROOT_DIR%" -type f -name "*.md" %__FIND_EXCLUDES%') do (
-    set __OLD_N=!__N!
-    set "__INPUT_FILE=%%f"
-    if %_DEBUG%==1 ( echo %_DEBUG_LABEL% "%_GREP_CMD%" -q "%_LAST_MODIFIED_OLD%" "!__INPUT_FILE!" 1>&2
-    ) else if %_VERBOSE%==1 ( echo Check file "!__INPUT_FILE!" 1>&2
-    )
-    call "%_GREP_CMD%" -q "%_LAST_MODIFIED_OLD%" "!__INPUT_FILE!"
-    if !ERRORLEVEL!==0 (
-        if %_DEBUG%==1 ( echo %_DEBUG_LABEL% "%_SED_CMD%" -i "s@%_LAST_MODIFIED_OLD%@%_LAST_MODIFIED_NEW%@g" "!__INPUT_FILE!" 1>&2
-        ) else if %_VERBOSE%==1 ( echo    Replace pattern "%_LAST_MODIFIED_OLD%" by "%_LAST_MODIFIED_NEW%" 1>&2
+:update_project
+set __PARENT_DIR=%~1
+set __N_MK=0
+set __N_SH=0
+set __N5=0
+set __N6=0
+set __N7=0
+echo Parent directory: %__PARENT_DIR%
+for /f %%i in ('dir /ad /b "%__PARENT_DIR%" ^| findstr /v /c:"lib"') do (
+    set "__MAKEFILE=%__PARENT_DIR%\%%i\Makefile"
+    if exist "!__MAKEFILE!" (
+        if %_DEBUG%==1 echo %_DEBUG_LABEL% "%_GREP_CMD%" -q "%_CHECKSTYLE_VERSION_OLD%" "!__MAKEFILE!" 1>&2
+        call "%_GREP_CMD%" -q "%_CHECKSTYLE_VERSION_OLD%" "!__MAKEFILE!"
+        if !ERRORLEVEL!==0 (
+            if %_DEBUG%==1 echo %_DEBUG_LABEL% "%_SED_CMD%" -i "s@%_CHECKSTYLE_VERSION_OLD%@%_CHECKSTYLE_VERSION_NEW%@g" "!__MAKEFILE!" 1>&2
+            call "%_SED_CMD%" -i "s@%_CHECKSTYLE_VERSION_OLD%@%_CHECKSTYLE_VERSION_NEW%@g" "!__MAKEFILE!"
+            call "%_UNIX2DOS_CMD%" -q "!__MAKEFILE!"
+            set /a __N_MK+=1
         )
-        call "%_SED_CMD%" -i "s@%_LAST_MODIFIED_OLD%@%_LAST_MODIFIED_NEW%@g" "!__INPUT_FILE!"
-        call "%_UNIX2DOS_CMD%" -q "!__INPUT_FILE!"
-        set /a __N+=1
+    ) else (
+       echo    %_WARNING_LABEL% Could not find file "%%i\Makefile" 1>&2
     )
-    if %_DEBUG%==1 echo %_DEBUG_LABEL% "%_GREP_CMD%" -q "%_LAST_DOWNLOAD_OLD%" "!__INPUT_FILE!" 1>&2
-    call "%_GREP_CMD%" -q "%_LAST_DOWNLOAD_OLD%" "!__INPUT_FILE!"
-    if !ERRORLEVEL!==0 (
-        if %_DEBUG%==1 echo %_DEBUG_LABEL% "%_SED_CMD%" -i "s@%_LAST_DOWNLOAD_OLD%@%_LAST_DOWNLOAD_NEW%@g" "!__INPUT_FILE!" 1>&2
-        call "%_SED_CMD%" -i "s@%_LAST_DOWNLOAD_OLD%@%_LAST_DOWNLOAD_NEW%@g" "!__INPUT_FILE!"
-        call "%_UNIX2DOS_CMD%" -q "!__INPUT_FILE!"
-        if !__N!==!__OLD_N! set /a __N+=1
+    set "__BUILD_SH=%__PARENT_DIR%\%%i\build.sh"
+    if exist "!__BUILD_SH!" (
+        if %_DEBUG%==1 echo %_DEBUG_LABEL% "%_GREP_CMD%" -q "%_COPYRIGHT_DATES_OLD%" "!__BUILD_SH!" 1>&2
+        call "%_GREP_CMD%" -q "%_COPYRIGHT_DATES_OLD%" "!__BUILD_SH!"
+        if !ERRORLEVEL!==0 (
+            if %_DEBUG%==1 echo %_DEBUG_LABEL% "%_SED_CMD%" -i "s@%_COPYRIGHT_DATES_OLD%@%_COPYRIGHT_DATES_NEW%@g" "!__BUILD_SH!" 1>&2
+            call "%_SED_CMD%" -i "s@%_COPYRIGHT_DATES_OLD%@%_COPYRIGHT_DATES_NEW%@g" "!__BUILD_SH!"
+            @rem call "%_DOS2UNIX_CMD%" --force "!__BUILD_SH!"
+            set /a __N_SH+=1
+        )
+    ) else (
+       echo    %_WARNING_LABEL% Could not find file "%%i\build.sh" 1>&2
     )
 )
-call :message %__N% "Markdown"
+@rem Configuration files common to all projects
+set "__MAKEFILE_INC=%__PARENT_DIR%\Makefile.inc"
+if exist "%__MAKEFILE_INC%" (
+    set __N_INC_OLD=!__N_INC!
+    if %_DEBUG%==1 echo %_DEBUG_LABEL% "%_GREP_CMD%" -q "%_DUMMY_VERSION_OLD%" "!__MAKEFILE_INC!" 1>&2
+    call "%_GREP_CMD%" -q "%_DUMMY_VERSION_OLD%" "!__MAKEFILE_INC!"
+    if !ERRORLEVEL!==0 (
+        if %_DEBUG%==1 echo %_DEBUG_LABEL% "%_SED_CMD%" -i "s@%_DUMMY_VERSION_OLD%@%_DUMMY_VERSION_NEW%@g" "!__MAKEFILE_INC!" 1>&2
+        call "%_SED_CMD%" -i "s@%_DUMMY_VERSION_OLD%@%_DUMMY_VERSION_NRE%@g" "!__MAKEFILE_INC!"
+        call "%_UNIX2DOS_CMD%" -q "!__INPUT_FILE!"
+        set /a __N_INC+=1
+    )
+    if %_DEBUG%==1 echo %_DEBUG_LABEL% "%_GREP_CMD%" -q "%_IVY_DOTTY_VERSION_OLD%" "!__MAKEFILE_INC!" 1>&2
+) else (
+   echo    %_WARNING_LABEL% Could not find file "%__MAKEFILE_INC%" 1>&2
+)
+call :message %__N_MK% "Makefile"
+call :message %__N_SH% "build.sh"
+call :message %__N_INC% "Makefile.inc"
 goto :eof
 
 @rem input parameters: %1=nr of updates, %2=file name

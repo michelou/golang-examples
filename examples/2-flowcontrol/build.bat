@@ -59,7 +59,10 @@ set _WARNING_LABEL=%_STRONG_FG_YELLOW%Warning%_RESET%:
 
 set "_SOURCE_DIR=%_ROOT_DIR%src"
 set "_TARGET_DIR=%_ROOT_DIR%target"
-set "_TARGET_FILE=%_TARGET_DIR%\flowcontrol.exe"
+set "_TARGET_DOCS_DIR=%_TARGET_DIR%\docs"
+
+for /f "delims=" %%i in ("%~dp0\.") do set "_PROJECT_NAME=%%~ni"
+set "_EXE_FILE=%_TARGET_DIR%\%_PROJECT_NAME%.exe"
 
 if not exist "%GOROOT%\bin\go.exe" (
     echo %_ERROR_LABEL% Go installation directory not found 1>&2
@@ -286,11 +289,21 @@ if not %ERRORLEVEL%==0 (
 goto :eof
 
 :doc
+if not exist "%_TARGET_DOCS_DIR%" mkdir "%_TARGET_DOCS_DIR%"
+
 set __SOURCE_FILES=
-for /f "delims=" %%f in (%_SOURCE_DIR%\*.go) do (
+set __N=0
+for /f "delims=" %%f in ('dir /b /s "%_SOURCE_DIR%\*.go"') do (
     set __SOURCE_FILES=!__SOURCE_FILES! "%%f"
+    set /a __N+=1
 )
-set __DOC_OPTS=-u
+if %__N%==0 (
+    echo %_WARNING_LABEL% No Go source file found 1>&2
+    goto :eof
+) else if %__N%==1 ( set __N_FILES=%__N% Go source file
+) else ( set __N_FILES=%__N% Go source files
+)
+set __DOC_OPTS=-all -u
 
 if %_DEBUG%==1 ( echo %_DEBUG_LABEL% %_GO_CMD% doc %__DOC_OPTS% %__SOURCE_FILES% 1>&2
 ) else if %_VERBOSE%==1 ( echo Generate HTML documentation in directory "!_SOURCE_DIR:%_ROOT_DIR%=!" 1>&2

@@ -62,10 +62,12 @@ set _ERROR_LABEL=%_STRONG_FG_RED%Error%_RESET%:
 set _WARNING_LABEL=%_STRONG_FG_YELLOW%Warning%_RESET%:
 
 set "_SOURCE_DIR=%_ROOT_DIR%src"
-set "_SOURCE_MAIN_DIR=%_SOURCE_DIR%\main"
+set "_SOURCE_MAIN_DIR=%_SOURCE_DIR%\main\go"
 set "_TARGET_DIR=%_ROOT_DIR%target"
 set "_TARGET_DOCS_DIR=%_TARGET_DIR%\docs"
-set "_EXE_FILE=%_TARGET_DIR%\hello.exe"
+
+for /f "delims=" %%i in ("%~dp0\.") do set "_PROJECT_NAME=%%~ni"
+set "_EXE_FILE=%_TARGET_DIR%\%_PROJECT_NAME%.exe"
 
 if not exist "%GOROOT%\bin\go.exe" (
     echo %_ERROR_LABEL% Go installation not found 1>&2
@@ -85,10 +87,6 @@ goto :eof
 :env_colors
 @rem ANSI colors in standard Windows 10 shell
 @rem see https://gist.github.com/mlocati/#file-win10colors-cmd
-set _RESET=[0m
-set _BOLD=[1m
-set _UNDERSCORE=[4m
-set _INVERSE=[7m
 
 @rem normal foreground colors
 set _NORMAL_FG_BLACK=[30m
@@ -126,6 +124,12 @@ set _STRONG_BG_RED=[101m
 set _STRONG_BG_GREEN=[102m
 set _STRONG_BG_YELLOW=[103m
 set _STRONG_BG_BLUE=[104m
+
+@rem we define _RESET in last position to avoid crazy console output with type command
+set _BOLD=[1m
+set _INVERSE=[7m
+set _UNDERSCORE=[4m
+set _RESET=[0m
 goto :eof
 
 @rem input parameter: %*
@@ -273,7 +277,7 @@ set "GOPATH=%GOPATH%;%_ROOT_DIR%"
 
 if not exist "%_TARGET_DIR%" mkdir "%_TARGET_DIR%" 1>NUL
 
-set "__MAIN_FILE=%_SOURCE_MAIN_DIR%\hello.go"
+set "__MAIN_FILE=%_SOURCE_MAIN_DIR%\%_PROJECT_NAME%.go"
 
 call :action_required "%_EXE_FILE%" "%__MAIN_FILE%"
 if %_ACTION_REQUIRED%==0 goto :eof
@@ -351,26 +355,17 @@ goto :eof
 
 @rem see https://golang.org/cmd/go/#hdr-Show_documentation_for_package_or_symbol
 :doc
-set "__GOPATH=%GOPATH%"
-set "GOPATH=%_ROOT_DIR%"
+set __DOC_OPTS=-C "%_SOURCE_MAIN_DIR%" -all -u -html
 
-if not exist "%_TARGET_DOCS_DIR%" mkdir "%_TARGET_DOCS_DIR%" 1>NUL
-
-set __SOURCE_FILES=hello
-@rem for %%f in (%_SOURCE_DIR%\*.go) do (
-@rem     set __SOURCE_FILES=!__SOURCE_FILES! "%%f"
-@rem )
-if %_DEBUG%==1 ( echo %_DEBUG_LABEL% "%_GO_CMD%" doc %__SOURCE_FILES% 1>&2
-) else if %_VERBOSE%==1 ( echo Generate HTML documentation into directory "!_TARGET_DOCS_DIR:%_ROOT_DIR%=!" 1>&2
+if %_DEBUG%==1 ( echo %_DEBUG_LABEL% "%_GO_CMD%" doc %__DOC_OPTS% 1>&2
+) else if %_VERBOSE%==1 ( echo Generate HTML documentation in directory "!_SOURCE_MAIN_DIR:%_ROOT_DIR%=!" 1>&2
 )
-call "%_GO_CMD%" doc %__SOURCE_FILES%
+call "%_GO_CMD%" doc %__DOC_OPTS%
 if not %ERRORLEVEL%==0 (
-    if %_DEBUG%==1 echo %_DEBUG_LABEL% Failed to generate HTML documentation into directory "!_TARGET_DOCS_DIR:%_ROOT_DIR%=!" 1>&2
+    echo %_ERROR_LABEL% Generation of HTML documentation failed 1>&2
     set _EXITCODE=1
-    goto doc_end
+    goto :eof
 )
-:doc_end
-endlocal & set "GOPATH=%__GOPATH%"
 goto :eof
 
 :run
