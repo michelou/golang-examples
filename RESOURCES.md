@@ -10,6 +10,8 @@
 
 ## <span id="articles">Articles</span>
 
+- [Microsoft for Go Developers](https://devblogs.microsoft.com/go/) :
+  - [Go 1.22.2-1 and 1.21.9-1 Microsoft builds now available](https://devblogs.microsoft.com/go/security-go-1-22-2-1-and-1-21-9-1-microsoft-builds-now-available/) by David Goodin, April 2024.
 - [How To Use Generics in Go](https://www.digitalocean.com/community/tutorials/how-to-use-generics-in-go) by Kristin Davidson, June 2022.
 - [The Go Programming Language and Environment][article_cox] by Russ Cox et al., May 2022.
 - [Introduction to the Go Programming Language][article_lee] by Wei-Meng Lee, November 2020.
@@ -17,7 +19,10 @@
 
 ## <span id="blogs">Blogs</span> [**&#x25B4;**](#top)
 
+- [Fundamentals of I/O in Go: Part 2](https://medium.com/@andreiboar/fundamentals-of-i-o-in-go-part-2-e7bb68cd5608) by Andrei Boar, April 2024.
+- [Fundamentals of I/O in Go](https://medium.com/@andreiboar/fundamentals-of-i-o-in-go-c893d3714deb) by Andrei Boar, April 2024.
 - [**Red Hat** Developer](https://developers.redhat.com/) articles :
+  - [Go for C++ developers: A beginner's guide](https://developers.redhat.com/articles/2023/08/30/go-c-developers-beginners-guide) by Stan Cox, August 2023.
   - [Learning Go: Stale slices explained](https://developers.redhat.com/articles/2023/10/18/learning-go-stale-slices-explained) by Massimiliano Ziccardi, October 2023.
 - [Mohit Khare Blog](https://www.mohitkhare.com/categories/golang/) :
   - [Naming Conventions in Golang](https://www.mohitkhare.com/blog/go-naming-conventions/), May 2023.
@@ -150,7 +155,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/March 2024* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/April 2024* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
