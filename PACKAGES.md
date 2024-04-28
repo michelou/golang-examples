@@ -13,7 +13,7 @@ We also install the following Go packages :
 - [`golint`][github_golint] (*deprecated*)
 - [`gopkgs 2.1`][github_gopkgs] ([*release notes*][github_gopkgs_latest])
 - [`mage 1.15`][github_mage] ([*release notes*][github_mage_latest])
-- [`mysql 1.7`][github_mysql] ([*release notes*][github_mysql_latest])
+- [`mysql 1.8`][github_mysql] ([*release notes*][github_mysql_latest])
 
 The installed Go packages are located in <code>%GOPATH%</code>.
 
@@ -68,11 +68,12 @@ github.com/magefile/mage v1.0.1 v1.0.2 v1.2.4 v1.3.0 v1.4.0 v1.5.0 v1.6.0 v1.6.1
 github.com/go-sql-driver/mysql v1.0.0 v1.0.1 v1.0.2 v1.0.3 v1.1.0 v1.2.0 v1.3.0 v1.4.0 v1.4.1 v1.5.0 v1.6.0 v1.7.0 v1.7.1
 &nbsp;
 <b>&gt; <a href="https://go.dev/ref/mod#go-install">go install</a> github.com/go-sql-driver/mysql@latest</b>
-go: downloading github.com/go-sql-driver/mysql v1.7.1
+go: downloading github.com/go-sql-driver/mysql v1.8.1
+go: downloading filippo.io/edwards25519 v1.1.0
 package github.com/go-sql-driver/mysql is not a main package
 &nbsp;
 <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/where_1">where</a> /r "%GOPATH%" *sql*</b>
-<a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\go\pkg\mod\cache\[...]\go-sql-driver\mysql@v1.7.1
+<a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\go\pkg\mod\cache\[...]\go-sql-driver\mysql@v1.8.1
 </pre>
 
 ## <span id="footnotes">Footnotes</span> [**&#x25B4;**](#top)
@@ -96,7 +97,7 @@ By default <code><b>%GOBIN%</b></code> variable should default to <code><b>%GOPA
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/April 2024* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/May 2024* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->

@@ -31,6 +31,8 @@
   - [Introduction to Goroutines](https://www.mohitkhare.com/blog/introduction-to-goroutines/), April 2021.
   - [Understanding Defer In Golang](https://www.mohitkhare.com/blog/defer-in-golang/), May 2021.
   - [Guide to Environment variables in Go](https://www.mohitkhare.com/blog/environment-variable-golang/), August 2020.
+- [Oracle Developer's Blog](https://blogs.oracle.com/developers/) :
+  - [Connecting a Go application to Oracle Database](https://blogs.oracle.com/developers/post/connecting-a-go-application-to-oracle-database) by Lucas Jellema, February 2022.
 - [Processing Large Files with Go](https://medium.com/@snassr/processing-large-files-in-go-golang-6ea87effbfe2) by Snassr, October 2022.
 - [Unit Testing in Go](https://medium.com/@snassr/unit-testing-in-go-golang-3a856ee3b9ba) by Snassr, September 2022.
 - [Generics can make your Go code slower](https://planetscale.com/blog/generics-can-make-your-go-code-slower) by Vicent Marti, March 2022.
@@ -155,7 +157,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/April 2024* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/May 2024* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->

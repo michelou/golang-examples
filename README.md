@@ -27,7 +27,7 @@ Optionally one may also install the following software:
 
 - [Visual Studio Code 1.88][vscode_downloads] ([*release notes*][vscode_relnotes])
 
-For instance our development environment looks as follows (*April 2024*) <sup id="anchor_01">[1](#footnote_01)</sup>:
+For instance our development environment looks as follows (*May 2024*) <sup id="anchor_01">[1](#footnote_01)</sup>:
 
 <pre style="font-size:80%;">
 C:\opt\go\           <i>(215 MB)</i>
@@ -210,7 +210,7 @@ windows/arm64
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/April 2024* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/May 2024* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
