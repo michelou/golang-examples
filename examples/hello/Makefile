@@ -44,7 +44,6 @@ help:
 	@$(ECHO) "     help   print this help message"
 	@$(ECHO) "     lint   analyze Go source files with CheckStyle"
 	@$(ECHO) "     run    execute main program \"$(MAIN_CLASS)\""
-	@$(ECHO) "     test   execute unit tests with JUnit"
 
 ##############################################################################
 ## doc rules
@@ -94,32 +93,9 @@ $(CHECKSTYLE_TARGET): $(CHECKSTYLE_SOURCES)
 	"$(JAVA)" -jar "$(JAR_FILE)" -c=$(XML_FILE) $^
 
 ##############################################################################
-## test rules
-
-TEST_SOURCES     = $(shell $(FIND) "$(SOURCE_DIR)/test" -type f -name "*.java")
-TEST_CLASSES_DIR = $(TARGET_DIR)/test-classes
-TEST_TARGET      = $(TARGET_DIR)/.latest-test-build
-
-TEST_OPTS_FILE    = $(TARGET_DIR)/javac_test_opts.txt
-TEST_SOURCES_FILE = $(TARGET_DIR)/javac_test_sources.txt
-
-TEST_MAIN_CLASS  = $(MAIN_CLASS)JUnitTest
-TEST_CPATH       = $(HAMCREST_JAR)$(PSEP)$(JUNIT_JAR)$(PSEP)$(CLASSES_DIR)$(PSEP)$(TEST_CLASSES_DIR)
-
-$(TEST_TARGET): $(TEST_SOURCES)
-	[ -d "$(TEST_CLASSES_DIR)" ] || "$(MKDIR)" -p "$(TEST_CLASSES_DIR)"
-	@$(ECHO) -classpath "$(TEST_CPATH)" -d "$(TEST_CLASSES_DIR)" > "$(TEST_OPTS_FILE)"
-	@$(ECHO) $(TEST_SOURCES) > "$(TEST_SOURCES_FILE)"
-	"$(JAVAC)" "@$(TEST_OPTS_FILE)" "@$(TEST_SOURCES_FILE)"
-	@$(TOUCH) "$(TEST_TARGET)"
-
-test: build $(TEST_TARGET)
-	"$(JAVA)" -classpath "$(TEST_CPATH)" org.junit.runner.JUnitCore $(TEST_MAIN_CLASS)
-
-##############################################################################
 ## phony
 
-.PHONY: all build clean doc help lint run test
+.PHONY: all build clean doc help lint run
 
 .SUFFIXES:
 .SUFFIXES: .exe .go

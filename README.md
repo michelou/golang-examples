@@ -4,12 +4,13 @@
   <tr>
   <td style="border:0;padding:0 10px 0 0;min-width:25%;"><a href="https://golang.org/" rel="external"><img src="./docs/images/go-logo-blue.svg" width="120" alt="Go project"/></a></td>
   <td style="border:0;padding:0;vertical-align:text-top;">This repository gathers <a href="https://golang.org/" rel="external">Go</a> code examples coming from various websites and books.<br/>
-  It also includes several build scripts (<a href="https://en.wikibooks.org/wiki/Windows_Batch_Scripting" rel="external">batch files</a>, <a href="https://magefile.org/magefiles/" rel="external">Mage files</a>) for experimenting with <a href="https://golang.org/" rel="external">Go</a> on a Windows machine.
-  </td>
+  It also includes several build scripts (<a href="https://en.wikibooks.org/wiki/Windows_Batch_Scripting" rel="external">batch files</a>, <a href="https://magefile.org/magefiles/" rel="external">Mage files</a>) for experimenting with <a href="https://golang.org/" rel="external">Go</a> on a Windows machine.</td>
   </tr>
 </table>
 
 [Ada][ada_examples], [Akka][akka_examples], [C++][cpp_examples], [COBOL][cobol_examples],  [Dart][dart_examples], [Deno][deno_examples], [Docker][docker_examples], [Erlang][erlang_examples], [Flix][flix_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kafka][kafka_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Modula-2][m2_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [Spark][spark_examples], [Spring][spring_examples], [TruffleSqueak][trufflesqueak_examples] and [WiX Toolset][wix_examples] are other topics we are continuously monitoring.
+
+> **&#9755;** Read the report <a href="https://kuree.gitbooks.io/the-go-programming-language-report/content/" rel="external">"The Go Programming Language Report"</a> for a quick overview of the Go programming language.
 
 ## <span id="proj_deps">Project dependencies</span>
 
@@ -28,7 +29,7 @@ Optionally one may also install the following software:
 - [ConEmu][conemu_downloads] ([*release notes*][conemu_relnotes])
 - [Visual Studio Code 1.89][vscode_downloads] ([*release notes*][vscode_relnotes])
 
-For instance our development environment looks as follows (*May 2024*) <sup id="anchor_01">[1](#footnote_01)</sup>:
+For instance our development environment looks as follows (*June 2024*) <sup id="anchor_01">[1](#footnote_01)</sup>:
 
 <pre style="font-size:80%;">
 C:\opt\ConEmu\       <i>( 26 MB)</i>
@@ -43,7 +44,7 @@ go1.18.1 -> 427 MB, go1.18.2 -> 345 MB, go1.18.4 -> 423 MB, go1.19 -> 451 MB
 go1.19.2 -> 451 MB, go1.20.2 -> 245 MB, go1.20.3 -> 246 MB, go1.20.4 -> 246 MB
 go1.20.5 -> 246 MB, go1.20.6 -> 246 MB, go1.21.0 -> 206 MB, go1.21.1 -> 206 MB
 go1.21.2 -> 206 MB, go1.21.5 -> 206 MB, go1.21.6 -> 206 MB, go1.22.0 -> 215 MB
-go1.22.2 -> 215 MB
+go1.22.2 -> 215 MB, go1.22.3 -> MB
 -->
 
 ## <span id="structure">Directory structure</span> [**&#x25B4;**](#top)
@@ -81,7 +82,7 @@ We execute command [**`setenv.bat`**](setenv.bat) once to setup our development 
 <b>&gt; <a href="setenv.bat">setenv</a></b>
 Tool versions:
    code 1.89.0, go 1.22.3, mage 1.15.0
-   git 2.45.0, diff 3.10, bash 5.2.26(1)-release
+   git 2.45.2, diff 3.10, bash 5.2.26(1)-release
 
 <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/where_1" rel="external">where</a> code git mage</b>
 C:\opt\VSCode\bin\code
@@ -214,7 +215,7 @@ windows/arm64
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/May 2024* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/June 2024* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->

@@ -24,6 +24,7 @@
 - [**Red Hat** Developer](https://developers.redhat.com/) articles :
   - [Go for C++ developers: A beginner's guide](https://developers.redhat.com/articles/2023/08/30/go-c-developers-beginners-guide) by Stan Cox, August 2023.
   - [Learning Go: Stale slices explained](https://developers.redhat.com/articles/2023/10/18/learning-go-stale-slices-explained) by Massimiliano Ziccardi, October 2023.
+- [A Journey Through Time: A Brief History of Golang](https://plavno.io/company/blog/history-of-golang) by Famronbek, June 2023.
 - [Mohit Khare Blog](https://www.mohitkhare.com/categories/golang/) :
   - [Naming Conventions in Golang](https://www.mohitkhare.com/blog/go-naming-conventions/), May 2023.
   - [Introduction to Generics in Go](https://www.mohitkhare.com/blog/go-generics/), November 2022.
@@ -157,7 +158,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/May 2024* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/June 2024* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->

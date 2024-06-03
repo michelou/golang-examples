@@ -65,7 +65,7 @@ set "_SOURCE_DIR=%_ROOT_DIR%src"
 set "_SOURCE_MAIN_DIR=%_SOURCE_DIR%\main"
 set "_TARGET_DIR=%_ROOT_DIR%target"
 
-set /f "delims=" %i in ("%~dp0\.") do set "_PROJECT_NAME=%%~ni"
+for /f "delims=" %%i in ("%~dp0\.") do set "_PROJECT_NAME=%%~ni"
 set "_EXE_FILE=%_TARGET_DIR%\%_PROJECT_NAME%.exe"
 
 if not exist "%GOROOT%\bin\go.exe" (
@@ -126,8 +126,8 @@ set _STRONG_BG_BLUE=[104m
 
 @rem we define _RESET in last position to avoid crazy console output with type command
 set _BOLD=[1m
-set _INVERSE=[7m
 set _UNDERSCORE=[4m
+set _INVERSE=[7m
 set _RESET=[0m
 goto :eof
 
@@ -171,7 +171,7 @@ if "%__ARG:~0,1%"=="-" (
     ) else if "%__ARG%"=="run" ( set _COMPILE=1& set _RUN=1
     ) else if "%__ARG%"=="test" ( set _TEST=1
     ) else (
-        echo %_ERROR_LABEL% Unknown subcommand "%__ARG%" 1>&2
+        echo %_ERROR_LABEL% 11111111111 Unknown subcommand "%__ARG%" 1>&2
         set _EXITCODE=1
         goto args_done
     )
