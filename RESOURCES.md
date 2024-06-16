@@ -1,10 +1,9 @@
-# <span id="top">Golang Resources</span> <span style="size:25%;"><a href="README.md">↩</a></span>
+# <span id="top">Golang Resources</span> <span style="font-size:90%;">[↩](README.md#top)</span>
 
 <table style="font-family:Helvetica,Arial;line-height:1.6;">
   <tr>
   <td style="border:0;padding:0 10px 0 0;min-width:120px;"><a href="https://golang.org/" rel="external"><img style="border:0;" src="./docs/images/go-logo-blue.svg" width="120" alt="Go project"/></a></td>
-  <td style="border:0;padding:0;vertical-align:text-top;">This document gathers <a href="https://golang.org/" rel="external">Golang</a> related resources that caught our attention.
-  </td>
+  <td style="border:0;padding:0;vertical-align:text-top;">This document gathers <a href="https://golang.org/" rel="external">Golang</a> related resources that caught our attention.</td>
   </tr>
 </table>
 
