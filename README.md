@@ -29,7 +29,7 @@ Optionally one may also install the following software:
 - [ConEmu][conemu_downloads] ([*release notes*][conemu_relnotes])
 - [Visual Studio Code 1.90][vscode_downloads] ([*release notes*][vscode_relnotes])
 
-For instance our development environment looks as follows (*June 2024*) <sup id="anchor_01">[1](#footnote_01)</sup>:
+For instance our development environment looks as follows (*July 2024*) <sup id="anchor_01">[1](#footnote_01)</sup>:
 
 <pre style="font-size:80%;">
 C:\opt\ConEmu\       <i>( 26 MB)</i>
@@ -215,7 +215,7 @@ windows/arm64
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/June 2024* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/July 2024* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
