@@ -18,6 +18,7 @@
 
 ## <span id="blogs">Blogs</span> [**&#x25B4;**](#top)
 
+- [Writing generic collection types in Go: the missing documentation][blog_musgrave] by Zach Musgrave, July 2024.
 - [Fundamentals of I/O in Go: Part 2](https://medium.com/@andreiboar/fundamentals-of-i-o-in-go-part-2-e7bb68cd5608) by Andrei Boar, April 2024.
 - [Fundamentals of I/O in Go](https://medium.com/@andreiboar/fundamentals-of-i-o-in-go-c893d3714deb) by Andrei Boar, April 2024.
 - [**Red Hat** Developer](https://developers.redhat.com/) articles :
@@ -173,6 +174,7 @@
 [blog_lowick2016]: https://medium.com/golangspec/variadic-functions-in-go-13c33182b851
 [blog_lowicki2020a]: https://medium.com/golangspec/equality-in-golang-ff44da79b7f1
 [blog_lowicki2020b]: https://medium.com/golangspec/untyped-constants-in-go-2c69eb519b5b
+[blog_musgrave]: https://www.dolthub.com/blog/2024-07-01-golang-generic-collections/
 [blog_phelps]: https://markphelps.me/posts/trying-out-generics-in-go/
 [blog_ralchev]: http://blog.ralch.com/
 [blog_sasidharan1]: https://deepu.tech/golang-for-javascript-developers-part-1/
