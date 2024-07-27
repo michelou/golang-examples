@@ -10,6 +10,7 @@
 ## <span id="articles">Articles</span>
 
 - [Microsoft for Go Developers](https://devblogs.microsoft.com/go/) :
+  - [Go 1.22.5-2 and 1.21.12-2 Microsoft builds now available](https://devblogs.microsoft.com/go/go-1-22-5-2-and-1-21-12-2-microsoft-builds-now-available/) by David Goodin, July 2024.
   - [Go 1.22.2-1 and 1.21.9-1 Microsoft builds now available](https://devblogs.microsoft.com/go/security-go-1-22-2-1-and-1-21-9-1-microsoft-builds-now-available/) by David Goodin, April 2024.
 - [How To Use Generics in Go](https://www.digitalocean.com/community/tutorials/how-to-use-generics-in-go) by Kristin Davidson, June 2022.
 - [The Go Programming Language and Environment][article_cox] by Russ Cox et al., May 2022.
@@ -26,6 +27,8 @@
   - [Learning Go: Stale slices explained](https://developers.redhat.com/articles/2023/10/18/learning-go-stale-slices-explained) by Massimiliano Ziccardi, October 2023.
 - [A Journey Through Time: A Brief History of Golang](https://plavno.io/company/blog/history-of-golang) by Famronbek, June 2023.
 - [Mohit Khare Blog](https://www.mohitkhare.com/categories/golang/) :
+  - [Ultimate Makefile for Golang](https://www.mohitkhare.com/blog/go-makefile/), June 2024.
+  - [Building In-Memory Cache in Go](https://www.mohitkhare.com/blog/go-in-memory-cache/), March 2024.
   - [Naming Conventions in Golang](https://www.mohitkhare.com/blog/go-naming-conventions/), May 2023.
   - [Introduction to Generics in Go](https://www.mohitkhare.com/blog/go-generics/), November 2022.
   - [Introduction to Linting in Go](https://www.mohitkhare.com/blog/linting-in-golang/), July 2021.

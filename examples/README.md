@@ -1,4 +1,4 @@
-# <span id="top">Go examples</span> <span style="size:30%;"><a href="../README.md">⬆</a></span>
+# <span id="top">Go examples</span> <span style="font-size:90%;">[⬆](../README.md#top)</span>
 
 <table style="font-family:Helvetica,Arial;line-height:1.6;">
   <tr>
@@ -17,9 +17,8 @@ Example `basics` has the following directory structure :
 |   <a href="./basics/build.bat">build.bat</a>
 |   <a href="./basics/go.mod">go.mod</a>
 |   <a href="./basics/magefile.go">magefile.go</a>
-|
-\---src
-    \---main
+\---<b>src</b>
+    \---<b>main</b>
             <a href="./basics/src/main/basics.go">basics.go</a>
 </pre>
 
@@ -46,7 +45,7 @@ Go rules? true
 
 ## <span id="hello">`hello` Example</span> [**&#x25B4;**](#top)
 
-The project directory is organized as follows :
+Example `hello` has the following directory structure :
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/tree">tree</a> /a /f . | <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/findstr">findstr</a> /v /b [A-Z]</b>
@@ -54,12 +53,10 @@ The project directory is organized as follows :
 |   <a href="./hello/go.mod">go.mod</a>
 |   <a href="./hello/magefile.go">magefile.go</a>
 |   <a href="./hello/Makefile">Makefile</a>
-|
-\---src
-    +---main
+\---<b>src</b>
+    +---<b>main</b>
     |       <a href="./hello/src/main/hello.go">hello.go</a>
-    |
-    \---test
+    \---<b>test</b>
             <a href="./hello/src/test/hello_test.go">hello_test.go</a>
 </pre>
 
