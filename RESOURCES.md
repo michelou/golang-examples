@@ -10,8 +10,11 @@
 ## <span id="articles">Articles</span>
 
 - [Microsoft for Go Developers](https://devblogs.microsoft.com/go/) :
-  - [Go 1.22.5-2 and 1.21.12-2 Microsoft builds now available](https://devblogs.microsoft.com/go/go-1-22-5-2-and-1-21-12-2-microsoft-builds-now-available/) by David Goodin, July 2024.
-  - [Go 1.22.2-1 and 1.21.9-1 Microsoft builds now available](https://devblogs.microsoft.com/go/security-go-1-22-2-1-and-1-21-9-1-microsoft-builds-now-available/) by David Goodin, April 2024.
+  - [Go 1.22.6-1 and 1.21.13-1 Microsoft builds now available](https://devblogs.microsoft.com/go/go-1-22-6-1-and-1-21-13-1-microsoft-builds-now-available/) by Davis Goodin, August 2024.
+  - [Go 1.22.5-2 and 1.21.12-2 Microsoft builds now available](https://devblogs.microsoft.com/go/go-1-22-5-2-and-1-21-12-2-microsoft-builds-now-available/) by Davis Goodin, July 2024.
+  - [Go 1.22.4-1 and 1.21.11-1 Microsoft builds now available](https://devblogs.microsoft.com/go/security-go-1-22-4-1-and-1-21-11-1-microsoft-builds-now-available/) by Davis Goodin, June 2024.
+  - [Go 1.22.3-1 and 1.21.10-1 Microsoft builds now available]8) by Davis Goodin, May 2024.
+  - [Go 1.22.2-1 and 1.21.9-1 Microsoft builds now available](https://devblogs.microsoft.com/go/security-go-1-22-2-1-and-1-21-9-1-microsoft-builds-now-available/) by Davis Goodin, April 2024.
 - [How To Use Generics in Go](https://www.digitalocean.com/community/tutorials/how-to-use-generics-in-go) by Kristin Davidson, June 2022.
 - [The Go Programming Language and Environment][article_cox] by Russ Cox et al., May 2022.
 - [Introduction to the Go Programming Language][article_lee] by Wei-Meng Lee, November 2020.
@@ -41,6 +44,7 @@
 - [Unit Testing in Go](https://medium.com/@snassr/unit-testing-in-go-golang-3a856ee3b9ba) by Snassr, September 2022.
 - [Generics can make your Go code slower](https://planetscale.com/blog/generics-can-make-your-go-code-slower) by Vicent Marti, March 2022.
 - [Alex Edwards Blog](https://www.alexedwards.net/blog/category/golang) :
+  - [Implementing an in-memory cache in Go](https://www.alexedwards.net/blog/implementing-an-in-memory-cache-in-go), December 2023.
   - [Demystifying function parameters in Go][blog_edwards_params], November 2023.
   - [A gentle introduction to Pointers][blog_edwards_pointers], July 2023.
   - [An introduction to Packages, Imports and Modules in Go](https://www.alexedwards.net/blog/an-introduction-to-packages-imports-and-modules), February 2023.
@@ -57,6 +61,7 @@
   - [Generics Part 02: Underlying Types](https://www.ardanlabs.com/blog/2020/08/generics-02-underlying-types.html) by William Kennedy, August 2020.
   - [Generics Part 01: Basic Syntax](https://www.ardanlabs.com/blog/2020/07/generics-01-basic-syntax.html) by William Kennedy, July 2020.
 - [The Go Blog](https://go.dev/blog/) :
+  - [More powerful Go execution traces](https://go.dev/blog/execution-traces-2024), ba Michael Knyszek, March 2024.
   - [Deconstructing Type Parameters](https://go.dev/blog/deconstructing-type-parameters) by Ian Lance Taylor, September 2023.
   - [Fixing For Loops in Go 1.22](https://go.dev/blog/loopvar-preview) by David Chase and Russ Cox, September 2023.
   - &#128077; [An Introduction to Generics](https://go.dev/blog/intro-generics) by Robert Griesemer and Ian Lance Taylor, March 2022.
@@ -161,7 +166,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/July 2024* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/August 2024* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
