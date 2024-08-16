@@ -61,6 +61,7 @@
   - [Generics Part 02: Underlying Types](https://www.ardanlabs.com/blog/2020/08/generics-02-underlying-types.html) by William Kennedy, August 2020.
   - [Generics Part 01: Basic Syntax](https://www.ardanlabs.com/blog/2020/07/generics-01-basic-syntax.html) by William Kennedy, July 2020.
 - [The Go Blog](https://go.dev/blog/) :
+  - [Go 1.23 is released](https://go.dev/blog/go1.23) by Dmitri Shuralyov, August 2024.
   - [More powerful Go execution traces](https://go.dev/blog/execution-traces-2024), ba Michael Knyszek, March 2024.
   - [Deconstructing Type Parameters](https://go.dev/blog/deconstructing-type-parameters) by Ian Lance Taylor, September 2023.
   - [Fixing For Loops in Go 1.22](https://go.dev/blog/loopvar-preview) by David Chase and Russ Cox, September 2023.
@@ -148,6 +149,7 @@
 ## <span id="tools">Tools</span> [**&#x25B4;**](#top)
 
 - [Cobra][tool_cobra] &ndash; both a library for creating powerful modern CLI applications as well as a program to generate applications and command files.
+- [Gio UI](https://gioui.org/) &ndash; a cross-Platform GUI for Go.
 - [go-cache][tool_go_cache] &ndash; an in-memory key:value store/cache library for Go,
 - [Revel][tool_revel] &ndash; a flexible web framework for the Go language.
 - [Ristretto][tool_ristretto] &ndash; a fast, concurrent cache library for Go.
