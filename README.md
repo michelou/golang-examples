@@ -27,13 +27,13 @@ This project depends on the following external software for the **Microsoft Wind
 Optionally one may also install the following software:
 
 - [ConEmu 2023][conemu_downloads] ([*release notes*][conemu_relnotes])
-- [Visual Studio Code 1.92][vscode_downloads] ([*release notes*][vscode_relnotes])
+- [Visual Studio Code 1.93][vscode_downloads] ([*release notes*][vscode_relnotes])
 
-For instance our development environment looks as follows (*August 2024*) <sup id="anchor_01">[1](#footnote_01)</sup>:
+For instance our development environment looks as follows (*September 2024*) <sup id="anchor_01">[1](#footnote_01)</sup>:
 
 <pre style="font-size:80%;">
 C:\opt\ConEmu\       <i>( 26 MB)</i>
-C:\opt\Git\          <i>(367 MB)</i>
+C:\opt\Git\          <i>(388 MB)</i>
 C:\opt\go\           <i>(232 MB)</i>
 C:\opt\VSCode\       <i>(341 MB)</i>
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\go\    <i>( 60 MB)</i>
@@ -81,7 +81,7 @@ We execute command [**`setenv.bat`**](setenv.bat) once to setup our development 
 <pre style="font-size:80%;">
 <b>&gt; <a href="setenv.bat">setenv</a></b>
 Tool versions:
-   code 1.92.1, go 1.23.0, mage 1.15.0
+   code 1.93.0, go 1.23.1, mage 1.15.0
    git 2.46.0, diff 3.10, bash 5.2.26(1)
 
 <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/where_1" rel="external">where</a> code git mage</b>
@@ -102,7 +102,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 <dd>
 <pre style="font-size:80%;">
 <a href="https://github.com/Maximus5/ConEmu/releases/tag/v23.07.24" rel="external">ConEmuPack.230724.7z</a>              <i>(  5 MB)</i>
-<a href="https://golang.org/dl/#stable" rel="external">go1.23.0.windows-amd64.zip</a>        <i>( 70 MB)</i>
+<a href="https://golang.org/dl/#stable" rel="external">go1.23.1.windows-amd64.zip</a>        <i>( 70 MB)</i>
 <a href="https://github.com/magefile/mage/releases" rel="external">mage_1.15.0_Windows-64bit.zip</a>     <i>(  1 MB)</i>
 <a href="http://repo.msys2.org/distrib/x86_64/">msys2-x86_64-20240727.exe</a>         <i>( 94 MB)</i>
 <a href="https://git-scm.com/download/win" rel="external">PortableGit-2.46.0-64-bit.7z.exe</a>  <i>( 41 MB)</i>
@@ -203,7 +203,7 @@ Run the following command to list the architectures supported on the Windows OS 
 <dd>
 <pre style="font-size:80%;">
 <b>&gt; go version</b>
-go version go1.23.0 windows/amd64
+go version go1.23.1 windows/amd64
 &nbsp;
 <b>&gt; <a href="https://pkg.go.dev/cmd/go#hdr-Run_specified_go_tool" rel="external">go tool</a> dist list |<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/findstr" rel="external">findstr</a> windows</b>
 windows/386
@@ -215,7 +215,7 @@ windows/arm64
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/August 2024* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/September 2024* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->

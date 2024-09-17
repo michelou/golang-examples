@@ -77,6 +77,12 @@ if not exist "%GOBIN%\golint.exe" (
     goto :eof
 )
 set "_GOLINT_CMD=%GOBIN%\golint.exe"
+
+@rem we use the newer PowerShell version if available
+where /q pwsh.exe
+if %ERRORLEVEL%==0 ( set _PWSH_CMD=pwsh.exe
+) else ( set _PWSH_CMD=powershell.exe
+)
 goto :eof
 
 :env_colors
@@ -180,7 +186,7 @@ if %_DEBUG%==1 (
     echo %_DEBUG_LABEL% Variables  : "GOBIN=!GOBIN:%USERPROFILE%=%%USERPROFILE%%!" 1>&2
     echo %_DEBUG_LABEL% Variables  : "GOROOT=%GOROOT%" 1>&2
 )
-if %_TIMER%==1 for /f "delims=" %%i in ('powershell -c "(Get-Date)"') do set _TIMER_START=%%i
+if %_TIMER%==1 for /f "delims=" %%i in ('call "%_PWSH_CMD%" -c "(Get-Date)"') do set _TIMER_START=%%i
 goto :eof
 
 :help
@@ -212,8 +218,8 @@ echo     %__BEG_O%run%__END%         execute the generated program "%__BEG_O%!_T
 if %_VERBOSE%==0 goto :eof
 echo.
 echo   %__BEG_P%Build settings:%__END%
-echo     %__BEG_O%SOURCE_DIR%__END%="!_SOURCE_DIR:%_ROOT_DIR%=!"
-echo     %__BEG_O%TARGET_DIR%__END%="!_TARGET_DIR:%_ROOT_DIR%=!"
+echo     %__BEG_O%"SOURCE_DIR%__END%=!_SOURCE_DIR:%_ROOT_DIR%=!"
+echo     %__BEG_O%"TARGET_DIR%__END%=!_TARGET_DIR:%_ROOT_DIR%=!"
 goto :eof
 
 :clean
@@ -338,7 +344,7 @@ goto :eof
 set __START=%~1
 set __END=%~2
 
-for /f "delims=" %%i in ('powershell -c "$interval = New-TimeSpan -Start '%__START%' -End '%__END%'; Write-Host $interval"') do set _DURATION=%%i
+for /f "delims=" %%i in ('call "%_PWSH_CMD%" -c "$interval = New-TimeSpan -Start '%__START%' -End '%__END%'; Write-Host $interval"') do set _DURATION=%%i
 goto :eof
 
 @rem #########################################################################
@@ -346,7 +352,7 @@ goto :eof
 
 :end
 if %_TIMER%==1 (
-    for /f "delims=" %%i in ('powershell -c "(Get-Date)"') do set __TIMER_END=%%i
+    for /f "delims=" %%i in ('call "%_PWSH_CMD%" -c "(Get-Date)"') do set __TIMER_END=%%i
     call :duration "%_TIMER_START%" "!__TIMER_END!"
     echo Total execution time: !_DURATION! 1>&2
 )

@@ -9,12 +9,15 @@
 
 ## <span id="articles">Articles</span>
 
-- [Microsoft for Go Developers](https://devblogs.microsoft.com/go/) :
-  - [Go 1.22.6-1 and 1.21.13-1 Microsoft builds now available](https://devblogs.microsoft.com/go/go-1-22-6-1-and-1-21-13-1-microsoft-builds-now-available/) by Davis Goodin, August 2024.
-  - [Go 1.22.5-2 and 1.21.12-2 Microsoft builds now available](https://devblogs.microsoft.com/go/go-1-22-5-2-and-1-21-12-2-microsoft-builds-now-available/) by Davis Goodin, July 2024.
-  - [Go 1.22.4-1 and 1.21.11-1 Microsoft builds now available](https://devblogs.microsoft.com/go/security-go-1-22-4-1-and-1-21-11-1-microsoft-builds-now-available/) by Davis Goodin, June 2024.
-  - [Go 1.22.3-1 and 1.21.10-1 Microsoft builds now available]8) by Davis Goodin, May 2024.
-  - [Go 1.22.2-1 and 1.21.9-1 Microsoft builds now available](https://devblogs.microsoft.com/go/security-go-1-22-2-1-and-1-21-9-1-microsoft-builds-now-available/) by Davis Goodin, April 2024.
+- [Microsoft for Go Developers](https://devblogs.microsoft.com/go/) by Davis Goodin :
+  - [Go 1.23.1-2 and 1.22.7-2 Microsoft builds now available](https://devblogs.microsoft.com/go/go-1-23-1-2-and-1-22-7-2-microsoft-builds-now-available/), September 2024.
+  - [Go 1.23.1-1 and 1.22.7-1 Microsoft builds now available](https://devblogs.microsoft.com/go/go-1-23-1-1-and-1-22-7-1-microsoft-builds-now-available/), September 2024.
+  - [Go 1.23.0-1 Microsoft build now available](https://devblogs.microsoft.com/go/go-1-23-0-1-microsoft-build-now-available/), August 2024.
+  - [Go 1.22.6-1 and 1.21.13-1 Microsoft builds now available](https://devblogs.microsoft.com/go/go-1-22-6-1-and-1-21-13-1-microsoft-builds-now-available/), August 2024.
+  - [Go 1.22.5-2 and 1.21.12-2 Microsoft builds now available](https://devblogs.microsoft.com/go/go-1-22-5-2-and-1-21-12-2-microsoft-builds-now-available/), July 2024.
+  - [Go 1.22.4-1 and 1.21.11-1 Microsoft builds now available](https://devblogs.microsoft.com/go/security-go-1-22-4-1-and-1-21-11-1-microsoft-builds-now-available/), June 2024.
+  - [Go 1.22.3-1 and 1.21.10-1 Microsoft builds now available](https://devblogs.microsoft.com/go/security-go-1-22-3-1-and-1-21-10-1-microsoft-builds-now-available/), May 2024.
+  - [Go 1.22.2-1 and 1.21.9-1 Microsoft builds now available](https://devblogs.microsoft.com/go/security-go-1-22-2-1-and-1-21-9-1-microsoft-builds-now-available/), April 2024.
 - [How To Use Generics in Go](https://www.digitalocean.com/community/tutorials/how-to-use-generics-in-go) by Kristin Davidson, June 2022.
 - [The Go Programming Language and Environment][article_cox] by Russ Cox et al., May 2022.
 - [Introduction to the Go Programming Language][article_lee] by Wei-Meng Lee, November 2020.
@@ -61,6 +64,7 @@
   - [Generics Part 02: Underlying Types](https://www.ardanlabs.com/blog/2020/08/generics-02-underlying-types.html) by William Kennedy, August 2020.
   - [Generics Part 01: Basic Syntax](https://www.ardanlabs.com/blog/2020/07/generics-01-basic-syntax.html) by William Kennedy, July 2020.
 - [The Go Blog](https://go.dev/blog/) :
+  - [Range Over Function Types](https://go.dev/blog/range-functions) by Ian Lance Taylor, August 2024.
   - [Go 1.23 is released](https://go.dev/blog/go1.23) by Dmitri Shuralyov, August 2024.
   - [More powerful Go execution traces](https://go.dev/blog/execution-traces-2024), ba Michael Knyszek, March 2024.
   - [Deconstructing Type Parameters](https://go.dev/blog/deconstructing-type-parameters) by Ian Lance Taylor, September 2023.
@@ -168,7 +172,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/August 2024* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/September 2024* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
