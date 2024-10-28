@@ -10,6 +10,7 @@
 ## <span id="articles">Articles</span>
 
 - [Microsoft for Go Developers](https://devblogs.microsoft.com/go/) by Davis Goodin :
+  - [Go 1.23.2-1 and 1.22.8-1 Microsoft builds now available](https://devblogs.microsoft.com/go/go-1-23-2-1-and-1-22-8-1-microsoft-builds-now-available/), October 2024.
   - [Go 1.23.1-2 and 1.22.7-2 Microsoft builds now available](https://devblogs.microsoft.com/go/go-1-23-1-2-and-1-22-7-2-microsoft-builds-now-available/), September 2024.
   - [Go 1.23.1-1 and 1.22.7-1 Microsoft builds now available](https://devblogs.microsoft.com/go/go-1-23-1-1-and-1-22-7-1-microsoft-builds-now-available/), September 2024.
   - [Go 1.23.0-1 Microsoft build now available](https://devblogs.microsoft.com/go/go-1-23-0-1-microsoft-build-now-available/), August 2024.
@@ -172,7 +173,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/September 2024* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/October 2024* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
