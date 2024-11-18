@@ -56,7 +56,7 @@
   - [Golang Interfaces Explained](https://www.alexedwards.net/blog/interfaces-explained), August 2019.
   - [An Overview of Go's Tooling][blog_edwards], April 2019.
 - [Generics and Value Types in Golang](https://www.dolthub.com/blog/2022-04-01-fast-generics/) by Andy Arthur, April 2022.
-- [Ardan Labs Go Blog](https://www.ardanlabs.com/categories/go-programing/) :
+- [Ardan Labs Go Blog](https://www.ardanlabs.com/categories/go/) :
   - [Blockchain In Go: Part III: Redundant Storage And Consensus](https://www.ardanlabs.com/blog/2022/04/blockchain-04-redundant-storage-and-consensus.html) by William Kennedy, April 2022.
    - [Visualization in Go - Plotting Stock Information](https://www.ardanlabs.com/blog/2022/01/visualizations-in-go.html) by Miki Tebeka, January 2022.
   - [GIS in Go](https://www.ardanlabs.com/blog/2021/11/gis-in-go.html) by Miki Tebeka, November 2021.
