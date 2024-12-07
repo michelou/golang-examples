@@ -10,6 +10,8 @@
 ## <span id="articles">Articles</span>
 
 - [Microsoft for Go Developers](https://devblogs.microsoft.com/go/) by Davis Goodin :
+  - [Go 1.23.4-1 and 1.22.10-1 Microsoft builds now available](https://devblogs.microsoft.com/go/go-1-23-4-1-and-1-22-10-1-microsoft-builds-now-available/), December 2024.
+  - [Go 1.23.3-2 and 1.22.9-2 Microsoft builds now available](https://devblogs.microsoft.com/go/go-1-23-3-2-and-1-22-9-2-microsoft-builds-now-available/), December 2024.
   - [Go 1.23.2-1 and 1.22.8-1 Microsoft builds now available](https://devblogs.microsoft.com/go/go-1-23-2-1-and-1-22-8-1-microsoft-builds-now-available/), October 2024.
   - [Go 1.23.1-2 and 1.22.7-2 Microsoft builds now available](https://devblogs.microsoft.com/go/go-1-23-1-2-and-1-22-7-2-microsoft-builds-now-available/), September 2024.
   - [Go 1.23.1-1 and 1.22.7-1 Microsoft builds now available](https://devblogs.microsoft.com/go/go-1-23-1-1-and-1-22-7-1-microsoft-builds-now-available/), September 2024.
@@ -56,7 +58,11 @@
   - [Golang Interfaces Explained](https://www.alexedwards.net/blog/interfaces-explained), August 2019.
   - [An Overview of Go's Tooling][blog_edwards], April 2019.
 - [Generics and Value Types in Golang](https://www.dolthub.com/blog/2022-04-01-fast-generics/) by Andy Arthur, April 2022.
+<<<<<<< HEAD
 - [Ardan Labs Go Blog](https://www.ardanlabs.com/categories/go/) :
+=======
+- [Ardan Labs Go Blog](https://www.ardanlabs.com/blog/?query=golang) :
+>>>>>>> 504db76 (updated .md files)
   - [Blockchain In Go: Part III: Redundant Storage And Consensus](https://www.ardanlabs.com/blog/2022/04/blockchain-04-redundant-storage-and-consensus.html) by William Kennedy, April 2022.
    - [Visualization in Go - Plotting Stock Information](https://www.ardanlabs.com/blog/2022/01/visualizations-in-go.html) by Miki Tebeka, January 2022.
   - [GIS in Go](https://www.ardanlabs.com/blog/2021/11/gis-in-go.html) by Miki Tebeka, November 2021.
@@ -74,6 +80,7 @@
   - [Twelve Years of Go][blog_cox] by Russ Cox, November 2021.
 - [Options Pattern in Golang](https://levelup.gitconnected.com/options-pattern-in-golang-9a0384a9d8db) by Himanshu Pandey, March 2022.
 - [Eli Bendersky's blog posts](https://eli.thegreenplace.net/tag/go):
+  - [Ranging over functions in Go 1.23](https://eli.thegreenplace.net/2024/ranging-over-functions-in-go-123/), November 2024.
   - [File-driven testing in Go](https://eli.thegreenplace.net/2022/file-driven-testing-in-go/), February 2022.
   - [Rewriting Go source code with AST tooling](https://eli.thegreenplace.net/2021/rewriting-go-source-code-with-ast-tooling/), October 2021.
   - [Go internals: capturing loop variables in closures](https://eli.thegreenplace.net/2019/go-internals-capturing-loop-variables-in-closures/), September 2019.
@@ -112,6 +119,7 @@
 
 ## <span id="books">Books</span> [**&#x25B4;**](#top)
 
+- [Mastering Go][book_tsoukalos] (4<sup>th</sup> Edition) by Mihalis Thsoukalos, March 2024.<br/><span style="font-size:80%;">(Packt Publishing, ISBN 978-1805127147, 736 pages, [GitHub repository](https://github.com/PacktPublishing/Mastering-Go-Second-Edition) ***2<sup>nd</sup> Edition***)</span>
 - [Learn Concurrent Programming with Go][book_cutajar] by James Cutajar, November 2023.<br/><span style="font-size:80%;">(Manning, ISBN 978-1-6334-3838-5, 328 pages)</span>
 - [Go Cookbook][book_chang] by Sau Sheong Chang, September 2023.<br/><span style="font-size:80%;">(O'Reilly, ISBN 978-1-098-12211-9, 370 pages)</span>
 - [Effective Concurrency in Go][book_serdar] by Burak Serdar, April 2023.<br/><span style="font-size:80%;">(Packt, ISBN 978-1-8046-1907-0, 212 pages)</span>
@@ -122,7 +130,6 @@
 - [Pro Go][book_freeman] by Adam Freeman, 2022.<br/><span style="font-size:80%;">(Apress, ISBN 978-1-4842-7354-8, 1076 pages)</span>
 - [Go for Java Programmers][book_feigenbaum] by Barry Feigenbaum, 2022.<br/><span style="font-size:80%;">(Apress, ISBN 978-1-4842-7198-8, 582 pages)</span>
 - [Build Systems with Go][book_tirado] by Juan M. Tirado, April 2021.<br/><span style="font-size:80%;">(E-Book, [GitHub repository](https://github.com/juanmanuel-tirado/savetheworldwithgo))</span>
-- [Mastering Go][book_tsoukalos] by Mihalis Thsoukalos, August 2019.<br/><span style="font-size:80%;">(Packt Publishing, ISBN 978-1633430075, 312 pages, [GitHub repository](https://github.com/PacktPublishing/Mastering-Go-Second-Edition))</span>
 - [System Programming with Go][book_guerrieri] by Alex Guerrieri, July 2019.<br/><span style="font-size:80%;">(Packt Publishing, ISBN 978-1-7898-0407-2, 458 pages)</span>
 - [Dependency Injection in Go][book_scott] by Corey Scott, November 2018.<br/><span style="font-size:80%;">(Packt, ISBN 978-1-7891-3276-2, 346 pages)</span>
 - [Go in Practice][book_butcher] by Matt Butcher &amp; Matt Farina, October 2016.</br><span style="font-size:80%;">(Manning Publications, ISBN 978-1633430075, 312 pages)</span>
@@ -173,7 +180,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/October 2024* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/December 2024* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
