@@ -8,7 +8,7 @@
   </tr>
 </table>
 
-[Ada][ada_examples], [Akka][akka_examples], [C++][cpp_examples], [COBOL][cobol_examples],  [Dafny][dafny_examples],  [Dart][dart_examples], [Deno][deno_examples], [Docker][docker_examples], [Erlang][erlang_examples], [Flix][flix_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kafka][kafka_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Modula-2][m2_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [Spark][spark_examples], [Spring][spring_examples], [TruffleSqueak][trufflesqueak_examples], [WiX Toolset][wix_examples] and [Zig][zig_examples] are other topics we are continuously monitoring.
+[Ada][ada_examples], [Akka][akka_examples], [C++][cpp_examples], [COBOL][cobol_examples],  [Dafny][dafny_examples],  [Dart][dart_examples], [Deno][deno_examples], [Docker][docker_examples], [Erlang][erlang_examples], [Flix][flix_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kafka][kafka_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Modula-2][m2_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [Spark][spark_examples], [Spring][spring_examples], [Standard ML][sml_examples], [TruffleSqueak][trufflesqueak_examples], [WiX Toolset][wix_examples] and [Zig][zig_examples] are other topics we are continuously monitoring.
 
 > **&#9755;** Read the report <a href="https://kuree.gitbooks.io/the-go-programming-language-report/content/" rel="external">"The Go Programming Language Report"</a> for a quick overview of the Go programming language.
 
@@ -27,9 +27,9 @@ This project depends on the following external software for the **Microsoft Wind
 Optionally one may also install the following software:
 
 - [ConEmu 2023][conemu_downloads] ([*release notes*][conemu_relnotes])
-- [Visual Studio Code 1.95][vscode_downloads] ([*release notes*][vscode_relnotes])
+- [Visual Studio Code 1.96][vscode_downloads] ([*release notes*][vscode_relnotes])
 
-For instance our development environment looks as follows (*December 2024*) <sup id="anchor_01">[1](#footnote_01)</sup>:
+For instance our development environment looks as follows (*January 2025*) <sup id="anchor_01">[1](#footnote_01)</sup>:
 
 <pre style="font-size:80%;">
 C:\opt\ConEmu\       <i>( 26 MB)</i>
@@ -82,7 +82,7 @@ We execute command [**`setenv.bat`**](setenv.bat) once to setup our development 
 <pre style="font-size:80%;">
 <b>&gt; <a href="setenv.bat">setenv</a></b>
 Tool versions:
-   code 1.95.3, go 1.23.4, mage 1.15.0
+   code 1.96.2, go 1.23.4, mage 1.15.0
    git 2.47.1, diff 3.10, bash 5.2.37(1)
 
 <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/where_1" rel="external">where</a> code git mage</b>
@@ -107,7 +107,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 <a href="https://github.com/magefile/mage/releases" rel="external">mage_1.15.0_Windows-64bit.zip</a>     <i>(  1 MB)</i>
 <a href="http://repo.msys2.org/distrib/x86_64/">msys2-x86_64-20240727.exe</a>         <i>( 94 MB)</i>
 <a href="https://git-scm.com/download/win" rel="external">PortableGit-2.47.1-64-bit.7z.exe</a>  <i>( 41 MB)</i>
-<a href="https://code.visualstudio.com/Download#" rel="external">VSCode-win32-x64-1.95.3.zip</a>       <i>(131 MB)</i>
+<a href="https://code.visualstudio.com/Download#" rel="external">VSCode-win32-x64-1.96.2.zip</a>       <i>(131 MB)</i>
 </pre>
 </dd></dl>
 
@@ -216,7 +216,7 @@ windows/arm64
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/December 2024* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/January 2025* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -258,6 +258,7 @@ windows/arm64
 [nodejs_examples]: https://github.com/michelou/nodejs-examples#top
 [rust_examples]: https://github.com/michelou/rust-examples#top
 [scala3_examples]: https://github.com/michelou/dotty-examples#top
+[sml_examples]: https://github.com/michelou/sml-examples#top
 [spark_examples]: https://github.com/michelou/spark-examples#top
 [spring_examples]: https://github.com/michelou/spring-examples#top
 [trufflesqueak_examples]: https://github.com/michelou/trufflesqueak-examples#top

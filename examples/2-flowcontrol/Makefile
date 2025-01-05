@@ -1,5 +1,5 @@
 ##
-## Copyright (c) 2018-2024 Stéphane Micheloud
+## Copyright (c) 2018-2025 Stéphane Micheloud
 ##
 ## Licensed under the MIT License.
 ##
@@ -14,7 +14,7 @@ TARGET_DIR  = target
 ## main rules
 
 SOURCES  = $(shell $(FIND) "$(SOURCE_DIR)/main" -type f -name "*.go")
-TARGET   = $(TARGET_DIR)/hello.exe
+TARGET   = $(TARGET_DIR)/2-flowcontrol.exe
 
 GO_OPTS  = -o "$(TARGET)"
 
@@ -71,7 +71,7 @@ doc: $(DOC_TARGET)
 ## lint rules
 
 ## https://github.com/checkstyle/checkstyle/releases
-CHECKSTYLE_VERSION = 10.18.1
+CHECKSTYLE_VERSION = 10.21.1
 CHECKSTYLE_DIR     = $(HOME)/.checkstyle
 
 CHECKSTYLE_SOURCES = $(shell $(FIND) "$(SOURCE_DIR)" -type f -name "*.java")

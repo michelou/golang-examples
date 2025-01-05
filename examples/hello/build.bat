@@ -368,7 +368,7 @@ if %_DEBUG%==1 ( echo %_DEBUG_LABEL% "%_GO_CMD%" doc %__DOC_OPTS% 1>&2
 )
 call "%_GO_CMD%" doc %__DOC_OPTS%
 if not %ERRORLEVEL%==0 (
-    echo %_ERROR_LABEL% Generation of HTML documentation failed 1>&2
+    echo %_ERROR_LABEL% Failed to generate HTML documentation in directory "!_SOURCE_MAIN_DIR:%_ROOT_DIR%=!" 1>&2
     set _EXITCODE=1
     goto :eof
 )
@@ -400,7 +400,7 @@ if %_DEBUG%==1 ( echo %_DEBUG_LABEL% "%_GO_CMD%" test 1>&2
 )
 call "%_GO_CMD%" test
 if not %ERRORLEVEL%==0 (
-    if %_DEBUG%==1 echo %_DEBUG_LABEL% Failed to execute test suite 1>&2
+    echo %_ERROR_LABEL% Failed to execute test suite 1>&2
     set _EXITCODE=1
     goto :test_end
 )

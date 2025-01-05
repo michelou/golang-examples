@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Copyright (c) 2018-2024 Stéphane Micheloud
+# Copyright (c) 2018-2025 Stéphane Micheloud
 #
 # Licensed under the MIT License.
 #
@@ -93,7 +93,7 @@ Usage: $BASENAME { <option> | <subcommand> }
 
   Subcommands:
     clean        delete generated files
-    compile      compile C++ source files
+    compile      compile Go source files
     doc          generate HTML documentation with Doxygen
     help         print this help message
     run          execute the generated executable
