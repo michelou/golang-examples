@@ -282,7 +282,7 @@ set _GOLANG_PATH=
 
 set __GO_CMD=
 for /f "delims=" %%f in ('where go.exe 2^>NUL') do set "__GO_CMD=%%f"
-if defined __GIT_CMD (
+if defined __GO_CMD (
     for /f "delims=" %%i in ("%__GO_CMD%") do set "__GO_BIN_DIR=%%~dpi"
     for /f "delims=" %%f in ("!__GO_BIN_DIR!.") do set "_GOLANG_HOME=%%~dpf"
     if %_DEBUG%==1 echo %_DEBUG_LABEL% Using path of Go executable found in PATH 1>&2
@@ -519,7 +519,7 @@ if %__VERBOSE%==1 (
     )
     echo Environment variables: 1>&2
     if defined GIT_HOME echo    "GIT_HOME=%GIT_HOME%" 1>&2
-    if defined GOBIN echo    "GOBIN=%GOBIN%" 1>&2
+    if defined GOBIN echo    "GOBIN=!GOBIN:%USERPROFILE%=%%USERPROFILE%%!" 1>&2
     if defined GOPATH echo    "GOPATH=%GOPATH%" 1>&2
     if defined GOROOT echo    "GOROOT=%GOROOT%" 1>&2
     if defined MSYS_HOME echo    "MSYS_HOME=%MSYS_HOME%" 1>&2
