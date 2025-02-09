@@ -225,7 +225,7 @@ SOURCE_MAIN_DIR="$SOURCE_DIR/main/go"
 TARGET_DIR="$ROOT_DIR/target"
 TARGET_DOCS_DIR="$TARGET_DIR/docs"
 
-PROJECT_NAME=2-flowcontrol
+PROJECT_NAME=FirstClassFuncs
 EXE_FILE="$TARGET_DIR/$PROJECT_NAME.exe"
 
 ## We refrain from using `true` and `false` which are Bash commands

@@ -71,7 +71,7 @@ doc: $(DOC_TARGET)
 ## lint rules
 
 ## https://github.com/checkstyle/checkstyle/releases
-CHECKSTYLE_VERSION = 10.21.1
+CHECKSTYLE_VERSION = 10.21.2
 CHECKSTYLE_DIR     = $(HOME)/.checkstyle
 
 CHECKSTYLE_SOURCES = $(shell $(FIND) "$(SOURCE_DIR)" -type f -name "*.java")

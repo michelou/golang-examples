@@ -11,8 +11,8 @@ set _EXITCODE=0
 
 @rem files build.sbt, build.sc and ivy.xml
 @rem https://github.com/checkstyle/checkstyle/releases/
-set _CHECKSTYLE_VERSION_OLD=CHECKSTYLE_VERSION = 10.14.0
-set _CHECKSTYLE_VERSION_NEW=CHECKSTYLE_VERSION = 10.21.1
+set _CHECKSTYLE_VERSION_OLD=CHECKSTYLE_VERSION = 10.21.1
+set _CHECKSTYLE_VERSION_NEW=CHECKSTYLE_VERSION = 10.21.2
 
 @rem build.sh (copyright dates)
 set _COPYRIGHT_DATES_OLD=2018-2024

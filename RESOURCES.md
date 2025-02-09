@@ -1,15 +1,17 @@
-# <span id="top">Golang Resources</span> <span style="font-size:90%;">[↩](README.md#top)</span>
+# <span id="top">Go Resources</span> <span style="font-size:90%;">[↩](README.md#top)</span>
 
 <table style="font-family:Helvetica,Arial;line-height:1.6;">
   <tr>
   <td style="border:0;padding:0 10px 0 0;min-width:120px;"><a href="https://golang.org/" rel="external"><img style="border:0;" src="./docs/images/go-logo-blue.svg" width="120" alt="Go project"/></a></td>
-  <td style="border:0;padding:0;vertical-align:text-top;">This document gathers <a href="https://golang.org/" rel="external">Golang</a> related resources that caught our attention.</td>
+  <td style="border:0;padding:0;vertical-align:text-top;">This document gathers <a href="https://golang.org/" rel="external">Go</a> related resources that caught our attention.</td>
   </tr>
 </table>
 
 ## <span id="articles">Articles</span>
 
 - [Microsoft for Go Developers](https://devblogs.microsoft.com/go/) by Davis Goodin :
+  - [Go 1.23.6-1 and 1.22.12-1 Microsoft builds now available](https://devblogs.microsoft.com/go/go-1-23-6-1-and-1-22-12-1-microsoft-builds-now-available/), February 2025.
+  - [Go 1.23.5-1 and 1.22.11-1 Microsoft builds now available](https://devblogs.microsoft.com/go/go-1-23-5-1-and-1-22-11-1-microsoft-builds-now-available/), January 2025.
   - [Go 1.23.4-1 and 1.22.10-1 Microsoft builds now available](https://devblogs.microsoft.com/go/go-1-23-4-1-and-1-22-10-1-microsoft-builds-now-available/), December 2024.
   - [Go 1.23.3-2 and 1.22.9-2 Microsoft builds now available](https://devblogs.microsoft.com/go/go-1-23-3-2-and-1-22-9-2-microsoft-builds-now-available/), December 2024.
   - [Go 1.23.2-1 and 1.22.8-1 Microsoft builds now available](https://devblogs.microsoft.com/go/go-1-23-2-1-and-1-22-8-1-microsoft-builds-now-available/), October 2024.
@@ -52,6 +54,7 @@
 - [Unit Testing in Go](https://medium.com/@snassr/unit-testing-in-go-golang-3a856ee3b9ba) by Snassr, September 2022.
 - [Generics can make your Go code slower](https://planetscale.com/blog/generics-can-make-your-go-code-slower) by Vicent Marti, March 2022.
 - [Alex Edwards Blog](https://www.alexedwards.net/blog/category/golang) :
+  - [11 tips for structuring your Go projects](https://www.alexedwards.net/blog/11-tips-for-structuring-your-go-projects), January 2025.
   - [Implementing an in-memory cache in Go](https://www.alexedwards.net/blog/implementing-an-in-memory-cache-in-go), December 2023.
   - [Demystifying function parameters in Go][blog_edwards_params], November 2023.
   - [A gentle introduction to Pointers][blog_edwards_pointers], July 2023.
@@ -178,7 +181,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/January 2025* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/February 2025* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->

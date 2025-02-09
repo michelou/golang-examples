@@ -225,7 +225,7 @@ SOURCE_MAIN_DIR="$SOURCE_DIR/main/go"
 TARGET_DIR="$ROOT_DIR/target"
 TARGET_DOCS_DIR="$TARGET_DIR/docs"
 
-PROJECT_NAME=2-flowcontrol
+PROJECT_NAME=playingcard
 EXE_FILE="$TARGET_DIR/$PROJECT_NAME.exe"
 
 ## We refrain from using `true` and `false` which are Bash commands
@@ -257,7 +257,7 @@ PSEP=":"
 TARGET_EXT=
 if [[ $(($cygwin + $mingw + $msys)) -gt 0 ]]; then
     CYGPATH_CMD="$(which cygpath 2>/dev/null)"
-    PSEP=";"
+	PSEP=";"
     TARGET_EXT=".exe"
     GO_CMD="$(mixed_path $GOROOT)/bin/go.exe"
     GOLINT_CMD="$(mixed_path $GOBIN)/bin/golint.exe"

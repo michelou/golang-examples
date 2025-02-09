@@ -1,9 +1,6 @@
 ifndef GIT_HOME
 $(error Variable GIT_HOME is not set)
 endif
-ifndef GOBIN
-$(error Variable GOBIN is not set)
-endif
 ifndef GOROOT
 $(error Variable GOROOT is not set)
 endif
@@ -13,7 +10,8 @@ endif
 
 ifeq ($(OS),Windows_NT)
 GO         = $(subst \,/,$(GOROOT))/bin/go.exe
-GOLINT     = $(subst \,/,$(GOBIN))/golint.exe
+HOME       = $(subst \,/,$(USERPROFILE))
+LOCAL_REPO = $(subst \,/,$(USERPROFILE))/.m2/repository
 PSEP       = ;
 ## $(MSYS_HOME)\usr\bin\{cp.exe, make.exe, wget.exe}
 CP         = /usr/bin/cp.exe
@@ -26,7 +24,7 @@ RM         = /usr/bin/rm.exe
 TOUCH      = /usr/bin/touch.exe
 else
 GO         = $(GOROOT)/bin/go
-GOLINT     = $(GOBIN)/golint
+LOCAL_REPO = $(HOME)/.m2/repository
 PSEP       = :
 CP         = cp
 CURL       = curl

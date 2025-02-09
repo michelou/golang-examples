@@ -56,16 +56,17 @@ goto end
 set _BASENAME=%~n0
 set "_ROOT_DIR=%~dp0"
 
-for /f "delims=" %%i in ("%~dp0.") do set "_PROJECT_NAME=%%~ni"
 call :env_colors
 set _DEBUG_LABEL=%_NORMAL_BG_CYAN%[%_BASENAME%]%_RESET%
 set _ERROR_LABEL=%_STRONG_FG_RED%Error%_RESET%:
 set _WARNING_LABEL=%_STRONG_FG_YELLOW%Warning%_RESET%:
 
 set "_SOURCE_DIR=%_ROOT_DIR%src"
-set "_SOURCE_MAIN_DIR=%_SOURCE_DIR%\main"
+set "_SOURCE_MAIN_DIR=%_SOURCE_DIR%\main\go"
 set "_TARGET_DIR=%_ROOT_DIR%target"
 set "_TARGET_DOCS_DIR=%_TARGET_DIR%\docs"
+
+for /f "delims=" %%i in ("%~dp0\.") do set "_PROJECT_NAME=%%~ni"
 set "_EXE_FILE=%_TARGET_DIR%\%_PROJECT_NAME%.exe"
 
 if not exist "%GOROOT%\bin\go.exe" (
@@ -92,10 +93,6 @@ goto :eof
 :env_colors
 @rem ANSI colors in standard Windows 10 shell
 @rem see https://gist.github.com/mlocati/#file-win10colors-cmd
-set _RESET=[0m
-set _BOLD=[1m
-set _UNDERSCORE=[4m
-set _INVERSE=[7m
 
 @rem normal foreground colors
 set _NORMAL_FG_BLACK=[30m
@@ -133,6 +130,12 @@ set _STRONG_BG_RED=[101m
 set _STRONG_BG_GREEN=[102m
 set _STRONG_BG_YELLOW=[103m
 set _STRONG_BG_BLUE=[104m
+
+@rem we define _RESET in last position to avoid crazy console output with type command
+set _BOLD=[1m
+set _UNDERSCORE=[4m
+set _INVERSE=[7m
+set _RESET=[0m
 goto :eof
 
 @rem input parameter: %*
@@ -187,9 +190,8 @@ goto args_loop
 if %_DEBUG%==1 (
     echo %_DEBUG_LABEL% Options    : _TIMER=%_TIMER% _VERBOSE=%_VERBOSE% 1>&2
     echo %_DEBUG_LABEL% Subcommands: _CLEAN=%_CLEAN% _COMPILE=%_COMPILE% _DOC=%_DOC% _LINT=%_LINT% _RUN=%_RUN% _TEST=%_TEST% 1>&2
-    echo %_DEBUG_LABEL% Variables  : "GOBIN=!GOBIN:%USERPROFILE%=%%USERPROFILE%%!" 1>&2
+    echo %_DEBUG_LABEL% Variables  : "GOBIN=%GOBIN%" 1>&2
     echo %_DEBUG_LABEL% Variables  : "GOROOT=%GOROOT%" 1>&2
-    echo %_DEBUG_LABEL% Variables  : "_PROJECT_NAME=%_PROJECT_NAME%"
 )
 if %_TIMER%==1 for /f "delims=" %%i in ('call "%_PWSH_CMD%" -c "(Get-Date)"') do set _TIMER_START=%%i
 goto :eof
@@ -221,12 +223,11 @@ echo     %__BEG_O%help%__END%        print this help message
 echo     %__BEG_O%lint%__END%        analyze Go source files with %__BEG_N%GoLint%__END%
 echo     %__BEG_O%run%__END%         execute the generated program "%__BEG_O%!_EXE_FILE:%_ROOT_DIR%=!%__END%"
 echo     %__BEG_O%test%__END%        execute tests
-if %_VERBOSE%==1 (
-    echo.
-    echo   %__BEG_P%Build settings:%__END%
-    echo     %__BEG_O%SOURCE_DIR%__END%=!_SOURCE_DIR:%_ROOT_DIR%=!
-    echo     %__BEG_O%TARGET_DIR%__END%=!_TARGET_DIR:%_ROOT_DIR%=!
-)
+if %_VERBOSE%==0 goto :eof
+echo.
+echo   %__BEG_P%Build settings:%__END%
+echo     %__BEG_O%"SOURCE_DIR%__END%=!_SOURCE_DIR:%_ROOT_DIR%=!"
+echo     %__BEG_O%"TARGET_DIR%__END%=!_TARGET_DIR:%_ROOT_DIR%=!"
 goto :eof
 
 :clean
@@ -249,10 +250,10 @@ if not %ERRORLEVEL%==0 (
 goto :eof
 
 :lint
-pushd "%_SOURCE_DIR%"
+pushd "%_SOURCE_MAIN_DIR%"
 
 if %_DEBUG%==1 ( echo %_DEBUG_LABEL% "%_GO_CMD%" fmt 1>&2
-) else if %_VERBOSE%==1 ( echo Check format of Go source files in directory "!_SOURCE_DIR:%_ROOT_DIR%=!" 1>&2
+) else if %_VERBOSE%==1 ( echo Check format of Go source files in directory "!_SOURCE_MAIN_DIR:%_ROOT_DIR%=!" 1>&2
 )
 call "%_GO_CMD%" fmt
 if not %ERRORLEVEL%==0 (

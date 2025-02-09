@@ -257,10 +257,10 @@ PSEP=":"
 TARGET_EXT=
 if [[ $(($cygwin + $mingw + $msys)) -gt 0 ]]; then
     CYGPATH_CMD="$(which cygpath 2>/dev/null)"
-	PSEP=";"
+    PSEP=";"
     TARGET_EXT=".exe"
     GO_CMD="$(mixed_path $GOROOT)/bin/go.exe"
-    GOLINT_CMD="${mixed_path $GOBIN}/bin/golint.exe"
+    GOLINT_CMD="$(mixed_path $GOBIN)/bin/golint.exe"
 else
     GO_CMD=go
     GOLINT_CMD=golint

@@ -5,5 +5,5 @@ import "fmt"
 
 // Prints string to the console.
 func main() {
-    fmt.Printf("hello, world\n")
+	fmt.Printf("hello, world\n")
 }
