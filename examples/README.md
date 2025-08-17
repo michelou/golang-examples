@@ -149,18 +149,15 @@ TEXT main.main(SB) K:/examples/basics/src/main/basics.go
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://go.dev/ref/mod#go-install" rel="external">go install</a> <a href="https://github.com/loov/lensm">loov.dev/lensm@main</a></b>
-go: downloading loov.dev/lensm v0.0.4
-go: downloading gioui.org v0.3.1
-go: downloading golang.org/x/exp/shiny v0.0.0-20230713183714-613f0c0eb8a1
-go: downloading github.com/go-text/typesetting v0.0.0-20230803102845-24e03d8b5372
-go: downloading golang.org/x/exp v0.0.0-20230713183714-613f0c0eb8a1
-go: downloading golang.org/x/image v0.5.0
-go: downloading golang.org/x/text v0.7.0
-go: downloading github.com/tetratelabs/wabin v0.0.0-20230304001439-f6f874872834
-go: downloading golang.org/x/sys v0.1.0
-go: downloading gioui.org/cpu v0.0.0-20210817075930-8d6a761490d2
-go: downloading gioui.org/shader v1.0.8
-go: downloading golang.org/x/arch v0.2.0
+go: downloading loov.dev/lensm v0.0.6-0.20250304181700-5a7941986854
+go: downloading gioui.org v0.8.0
+go: downloading golang.org/x/exp/shiny v0.0.0-20240707233637-46b078467d37
+go: downloading golang.org/x/image v0.18.0
+go: downloading golang.org/x/exp v0.0.0-20240707233637-46b078467d37
+go: downloading github.com/go-text/typesetting v0.2.1
+go: downloading golang.org/x/sys v0.22.0
+go: downloading golang.org/x/text v0.16.0
+go: downloading golang.org/x/arch v0.14.0
 &nbsp;
 <b>&gt; <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/where" rel="external">where</a> lensm</b>
 %USERPROFILE%\go\bin\lensm.exe
@@ -176,7 +173,7 @@ The following screenshot presents the same assembly code as above :
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/February 2025* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/August 2025* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
