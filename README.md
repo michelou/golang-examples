@@ -27,7 +27,7 @@ This project depends on the following external software for the **Microsoft Wind
 Optionally one may also install the following software:
 
 - [ConEmu 2023][conemu_downloads] ([*release notes*][conemu_relnotes])
-- [Visual Studio Code 1.102][vscode_downloads] ([*release notes*][vscode_relnotes])
+- [Visual Studio Code 1.103][vscode_downloads] ([*release notes*][vscode_relnotes])
 
 For instance our development environment looks as follows (*August 2025*) <sup id="anchor_01">[1](#footnote_01)</sup>:
 
@@ -82,8 +82,8 @@ We execute command [**`setenv.bat`**](setenv.bat) once to setup our development 
 <pre style="font-size:80%;">
 <b>&gt; <a href="setenv.bat">setenv</a></b>
 Tool versions:
-   code 1.102.1, go 1.25.0, mage 1.15.0
-   git 2.47.1, diff 3.10, bash 5.2.37(1)
+   code 1.103.1, go 1.25.0, mage 1.15.0
+   git 2.50.1, diff 3.12, bash 5.2.37(1)
 
 <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/where_1" rel="external">where</a> code git mage</b>
 C:\opt\VSCode\bin\code
@@ -107,7 +107,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 <a href="https://github.com/magefile/mage/releases" rel="external">mage_1.15.0_Windows-64bit.zip</a>     <i>(  1 MB)</i>
 <a href="http://repo.msys2.org/distrib/x86_64/">msys2-x86_64-20240727.exe</a>         <i>( 94 MB)</i>
 <a href="https://git-scm.com/download/win" rel="external">PortableGit-2.50.1-64-bit.7z.exe</a>  <i>( 41 MB)</i>
-<a href="https://code.visualstudio.com/Download#" rel="external">VSCode-win32-x64-1.102.1.zip</a>      <i>(131 MB)</i>
+<a href="https://code.visualstudio.com/Download#" rel="external">VSCode-win32-x64-1.103.1.zip</a>      <i>(131 MB)</i>
 </pre>
 </dd></dl>
 
@@ -239,7 +239,7 @@ windows/arm64
 [git_cli]: https://git-scm.com/docs/git
 [git_downloads]: https://git-scm.com/download/win
 [git_exe]: https://git-scm.com/docs/git
-[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.47.1.txt
+[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.50.1.txt
 [github_markdown]: https://github.github.com/gfm/
 [golang]: https://golang.org/
 [golang_downloads]: https://golang.org/dl/#stable
