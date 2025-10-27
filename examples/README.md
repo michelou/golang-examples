@@ -173,7 +173,7 @@ The following screenshot presents the same assembly code as above :
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/August 2025* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/October 2025* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
