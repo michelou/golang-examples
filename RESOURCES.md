@@ -163,10 +163,12 @@
 
 - [Cobra][tool_cobra] &ndash; both a library for creating powerful modern CLI applications as well as a program to generate applications and command files.
 - [Gio UI](https://gioui.org/) &ndash; a cross-Platform GUI for Go.
+- [properties](https://github.com/magiconair/properties) &ndash; a Java properties scanner for Go.
 - [go-cache][tool_go_cache] &ndash; an in-memory key:value store/cache library for Go,
 - [Revel][tool_revel] &ndash; a flexible web framework for the Go language.
 - [Ristretto][tool_ristretto] &ndash; a fast, concurrent cache library for Go.
 - [setup-go](https://github.com/actions/setup-go) &ndash; Set up your GitHub Actions workflow with a specific version of Go.
+- [toml](https://github.com/BurntSushi/toml) &ndash; a TOML parser for Golang with reflection.
 - [Twirp][tool_twirp] &ndash; a simple RPC framework powered by protobuf.
 
 ## <span id="tutorials">Tutorials</span>
@@ -181,7 +183,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/October 2025* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/November 2025* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
