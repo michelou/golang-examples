@@ -10,10 +10,10 @@
 
 We also install the following Go packages :
 
-- [`golint`][github_golint] (*deprecated*)
+- [`golint`][github_golint] (*deprecated*, archived in May 2021)
 - [`gopkgs 2.1`][github_gopkgs] ([*release notes*][github_gopkgs_latest])
-- [`mage 1.15`][github_mage] ([*release notes*][github_mage_latest])
-- [`mysql 1.8`][github_mysql] ([*release notes*][github_mysql_latest])
+- [`mage 1.17`][github_mage] ([*release notes*][github_mage_latest])
+- [`mysql 1.10`][github_mysql] ([*release notes*][github_mysql_latest])
 
 The installed Go packages are located in <code>%GOPATH%</code>.
 
@@ -56,24 +56,24 @@ We just need to execute the Go command `install` <sup id="anchor_01">[1](#footno
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://go.dev/ref/mod#go-list">go list</a> -m -versions github.com/magefile/mage</b>
-github.com/magefile/mage v1.0.1 v1.0.2 v1.2.4 v1.3.0 v1.4.0 v1.5.0 v1.6.0 v1.6.1 v1.6.2 v1.7.0 v1.7.1 v1.8.0 v1.9.0 v1.10.0 v1.11.0 v1.12.0 v1.12.1 v1.13.0 v1.14.0 v1.15.0
+github.com/magefile/mage v1.0.1 v1.0.2 v1.2.4 v1.3.0 v1.4.0 v1.5.0 v1.6.0 v1.6.1 v1.6.2 v1.7.0 v1.7.1 v1.8.0 v1.9.0 v1.10.0 v1.11.0 v1.12.0 v1.12.1 v1.13.0 v1.14.0 v1.15.0 v1.16.0 v1.16.1 v1.17.0 v1.17.1 v1.17.2
 &nbsp;
-<b>&gt; <a href="https://go.dev/ref/mod#go-install">go install</a> github.com/magefile/mage@v1.15.0</b>
+<b>&gt; <a href="https://go.dev/ref/mod#go-install">go install</a> github.com/magefile/mage@v1.17.2</b>
 </pre>
 
 ## <span id="mysql"><a href="https://github.com/go-sql-driver/mysql"><b><code>mysql</code></b></a> Package</span>
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://go.dev/ref/mod#go-list">go list</a> -m -versions github.com/go-sql-driver/mysql</b>
-github.com/go-sql-driver/mysql v1.0.0 v1.0.1 v1.0.2 v1.0.3 v1.1.0 v1.2.0 v1.3.0 v1.4.0 v1.4.1 v1.5.0 v1.6.0 v1.7.0 v1.7.1
+github.com/go-sql-driver/mysql v1.0.0 v1.0.1 v1.0.2 v1.0.3 v1.1.0 v1.2.0 v1.3.0 v1.4.0 v1.4.1 v1.5.0 v1.6.0 v1.7.0 v1.7.1 v1.8.0 v1.8.1 v1.9.0 v1.9.1 v1.9.2 v1.9.3 v1.10.0
 &nbsp;
 <b>&gt; <a href="https://go.dev/ref/mod#go-install">go install</a> github.com/go-sql-driver/mysql@latest</b>
-go: downloading github.com/go-sql-driver/mysql v1.8.1
-go: downloading filippo.io/edwards25519 v1.1.0
+go: downloading github.com/go-sql-driver/mysql v1.10.0
+go: downloading filippo.io/edwards25519 v1.2.0
 package github.com/go-sql-driver/mysql is not a main package
 &nbsp;
 <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/where_1">where</a> /r "%GOPATH%" *sql*</b>
-<a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\go\pkg\mod\cache\[...]\go-sql-driver\mysql@v1.8.1
+<a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\go\pkg\mod\cache\[...]\go-sql-driver\mysql@v1.10.0
 </pre>
 
 ## <span id="footnotes">Footnotes</span> [**&#x25B4;**](#top)
@@ -85,10 +85,10 @@ Alternatively we can download the binary release <a href="https://github.com/mag
 </dd><dd>
 <pre style="font-size:80%;">
 <b>&gt; %GOBIN%\mage -version</b>
-Mage Build Tool 1.15.0
-Build Date: 2022-03-16T17:05:54Z
-Commit: 3504e09d7fcfdeab6e70281edce5d5dfb205f31a
-built with: go1.18
+Mage Build Tool 1.17.2
+Build Date: &lt;not set&gt;
+Commit: &lt;not set&gt;
+built with: go1.26.3
 </pre>
 </dd>
 <dd>
@@ -97,7 +97,7 @@ By default <code><b>%GOBIN%</b></code> variable should default to <code><b>%GOPA
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/November 2025* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/June 2026* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->

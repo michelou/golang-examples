@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Copyright (c) 2018-2025 Stéphane Micheloud
+# Copyright (c) 2018-2026 Stéphane Micheloud
 #
 # Licensed under the MIT License.
 #
@@ -260,7 +260,7 @@ if [[ $(($cygwin + $mingw + $msys)) -gt 0 ]]; then
 	PSEP=";"
     TARGET_EXT=".exe"
     GO_CMD="$(mixed_path $GOROOT)/bin/go.exe"
-    GOLINT_CMD="${mixed_path $GOBIN}/bin/golint.exe"
+    GOLINT_CMD="$(mixed_path $GOBIN)/bin/golint.exe"
 else
     GO_CMD=go
     GOLINT_CMD=golint

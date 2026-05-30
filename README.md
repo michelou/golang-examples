@@ -16,9 +16,9 @@
 
 This project depends on the following external software for the **Microsoft Windows** platform:
 
-- [Git 2.52][git_downloads] ([*release notes*][git_relnotes])
-- [go 1.25][golang_downloads] ([*release notes*][golang_relnotes])
-- [Mage 1.15][mage_downloads] ([*release notes*][mage_relnotes])
+- [Git 2.54][git_downloads] ([*release notes*][git_relnotes])
+- [go 1.26][golang_downloads] ([*release notes*][golang_relnotes])
+- [Mage 1.17][mage_downloads] ([*release notes*][mage_relnotes])
 - [MSYS2 2024][msys2_downloads] ([*changelog*][msys2_changelog])
 
 > **&#9755;** ***Go packages***<br/>
@@ -27,15 +27,15 @@ This project depends on the following external software for the **Microsoft Wind
 Optionally one may also install the following software:
 
 - [ConEmu 2023][conemu_downloads] ([*release notes*][conemu_relnotes])
-- [Visual Studio Code 1.106][vscode_downloads] ([*release notes*][vscode_relnotes])
+- [Visual Studio Code 1.120][vscode_downloads] ([*release notes*][vscode_relnotes])
 
-For instance our development environment looks as follows (*November 2025*) <sup id="anchor_01">[1](#footnote_01)</sup>:
+For instance our development environment looks as follows (*June 2026*) <sup id="anchor_01">[1](#footnote_01)</sup>:
 
 <pre style="font-size:80%;">
 C:\opt\ConEmu\       <i>( 26 MB)</i>
-C:\opt\Git\          <i>(388 MB)</i>
-C:\opt\go\           <i>(232 MB)</i>
-C:\opt\VSCode\       <i>(404 MB)</i>
+C:\opt\Git\          <i>(390 MB)</i>
+C:\opt\go\           <i>(224 MB)</i>
+C:\opt\VSCode\       <i>(660 MB)</i>
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\go\    <i>( 60 MB)</i>
 </pre>
 <!--
@@ -46,6 +46,7 @@ go1.20.5 -> 246 MB, go1.20.6 -> 246 MB, go1.21.0 -> 206 MB, go1.21.1 -> 206 MB
 go1.21.2 -> 206 MB, go1.21.5 -> 206 MB, go1.21.6 -> 206 MB, go1.22.0 -> 215 MB
 go1.22.2 -> 215 MB, go1.22.5 -> 215 MB, go1.22.6 -> 215 MB, go1.23.0 -> 232 MB
 go1.23.4 -> 232 MB, go1.23.6 -> 232 MB, go1.24.0 -> 246 MB, go1.25.0 -> 199 MB
+go1.26.3 -> 224 MB
 -->
 
 ## <span id="structure">Directory structure</span> [**&#x25B4;**](#top)
@@ -82,8 +83,8 @@ We execute command [**`setenv.bat`**](setenv.bat) once to setup our development 
 <pre style="font-size:80%;">
 <b>&gt; <a href="setenv.bat">setenv</a></b>
 Tool versions:
-   code 1.106.2, go 1.25.4, mage 1.15.0
-   git 2.52.0, diff 3.12, bash 5.2.37(1)
+   code 1.120.0, go 1.26.3, mage 1.17.2
+   git 2.54.0, diff 3.12, bash 5.3.9(1)
 
 <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/where_1" rel="external">where</a> code git mage</b>
 C:\opt\VSCode\bin\code
@@ -103,11 +104,11 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 <dd>
 <pre style="font-size:80%;">
 <a href="https://github.com/Maximus5/ConEmu/releases/tag/v23.07.24" rel="external">ConEmuPack.230724.7z</a>              <i>(  5 MB)</i>
-<a href="https://golang.org/dl/#stable" rel="external">go1.25.4.windows-amd64.zip</a>        <i>( 64 MB)</i>
-<a href="https://github.com/magefile/mage/releases" rel="external">mage_1.15.0_Windows-64bit.zip</a>     <i>(  1 MB)</i>
+<a href="https://golang.org/dl/#stable" rel="external">go1.26.3.windows-amd64.zip</a>        <i>( 64 MB)</i>
+<a href="https://github.com/magefile/mage/releases" rel="external">mage_1.17.2_Windows-64bit.zip</a>     <i>(  1 MB)</i>
 <a href="http://repo.msys2.org/distrib/x86_64/">msys2-x86_64-20240727.exe</a>         <i>( 94 MB)</i>
-<a href="https://git-scm.com/download/win" rel="external">PortableGit-2.52.0-64-bit.7z.exe</a>  <i>( 41 MB)</i>
-<a href="https://code.visualstudio.com/Download#" rel="external">VSCode-win32-x64-1.106.2.zip</a>      <i>(131 MB)</i>
+<a href="https://git-scm.com/download/win" rel="external">PortableGit-2.54.0-64-bit.7z.exe</a>  <i>( 41 MB)</i>
+<a href="https://code.visualstudio.com/Download#" rel="external">VSCode-win32-x64-1.120.0.zip</a>      <i>(131 MB)</i>
 </pre>
 </dd></dl>
 
@@ -204,7 +205,7 @@ Run the following command to list the architectures supported on the Windows OS 
 <dd>
 <pre style="font-size:80%;">
 <b>&gt; go version</b>
-go version go1.25.4 windows/amd64
+go version go1.26.3 windows/amd64
 &nbsp;
 <b>&gt; <a href="https://pkg.go.dev/cmd/go#hdr-Run_specified_go_tool" rel="external">go tool</a> dist list |<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/findstr" rel="external">findstr</a> windows</b>
 windows/386
@@ -216,7 +217,7 @@ windows/arm64
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/November 2025* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/June 2026* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -240,7 +241,7 @@ windows/arm64
 [git_cli]: https://git-scm.com/docs/git
 [git_downloads]: https://git-scm.com/download/win
 [git_exe]: https://git-scm.com/docs/git
-[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.52.0.adoc
+[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.54.0.adoc
 [github_markdown]: https://github.github.com/gfm/
 [golang]: https://golang.org/
 [golang_downloads]: https://golang.org/dl/#stable

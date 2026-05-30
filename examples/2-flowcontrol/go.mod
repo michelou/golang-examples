@@ -1,5 +1,5 @@
 module flowcontrol/flowcontrol
 
-go 1.23
+go 1.26
 
-require github.com/magefile/mage v1.15.0 // indirect
+require github.com/magefile/mage v1.17.2 // indirect

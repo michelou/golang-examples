@@ -47,6 +47,25 @@ Happy 3.14 Day
 Go rules? true
 </pre>
 
+Build tool [`mage.exe`][mage_cli] takes its Makefile-like runnable targets from the Go file [`mage.go`](./basics/mage.go); for instance targets **`clean`** and **`build`** :
+
+<pre style="font-size:80%;">
+<b>&gt; <a href="https://magefile.org/magefiles/">mage</a> clean build &amp; target\basics.exe</b>
+My favorite number is 3
+3.141592653589793
+55
+world hello
+7 10
+2 true false no!
+Type: bool Value: false
+Type: uint64 Value: 18446744073709551615
+Type: complex128 Value: (2+3i)
+Type: int32 Value: 8658
+Hello 世界
+Happy 3.14 Day
+Go rules? true
+</pre>
+
 <!--=======================================================================-->
 
 ## <span id="hello">`hello` Example</span> [**&#x25B4;**](#top)
@@ -150,19 +169,19 @@ TEXT main.main(SB) K:/examples/basics/src/main/basics.go
   0x49ae45              e9b6f9ffff              JMP main.main(SB)
 </pre>
 
-<a href=""><code>lensm</code></a> &ndash; a Go assembly and source viewer &ndash; is a nice alternative to view both assembly and source (see post "[Easy to read Golang assembly output?](https://stackoverflow.com/questions/23789951/easy-to-read-golang-assembly-output)" on [stack**overflow**](https://stackoverflow.com/))
+<a href="https://github.com/loov/lensm" rel="external"><code>lensm</code></a> &ndash; a Go assembly and source viewer &ndash; is a nice alternative to view both assembly and source (see post "[Easy to read Golang assembly output?](https://stackoverflow.com/questions/23789951/easy-to-read-golang-assembly-output)" on [stack**overflow**](https://stackoverflow.com/))
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://go.dev/ref/mod#go-install" rel="external">go install</a> <a href="https://github.com/loov/lensm">loov.dev/lensm@main</a></b>
-go: downloading loov.dev/lensm v0.0.6-0.20250304181700-5a7941986854
-go: downloading gioui.org v0.8.0
-go: downloading golang.org/x/exp/shiny v0.0.0-20240707233637-46b078467d37
-go: downloading golang.org/x/image v0.18.0
-go: downloading golang.org/x/exp v0.0.0-20240707233637-46b078467d37
-go: downloading github.com/go-text/typesetting v0.2.1
-go: downloading golang.org/x/sys v0.22.0
-go: downloading golang.org/x/text v0.16.0
-go: downloading golang.org/x/arch v0.14.0
+go: downloading loov.dev/lensm v0.0.6-0.20260124164433-a4b2c22fbb90
+go: downloading gioui.org v0.9.0
+go: downloading golang.org/x/exp/shiny v0.0.0-20260112195511-716be5621a96
+go: downloading golang.org/x/image v0.35.0
+go: downloading golang.org/x/exp v0.0.0-20260112195511-716be5621a96
+go: downloading golang.org/x/sys v0.40.0
+go: downloading github.com/go-text/typesetting v0.3.0
+go: downloading golang.org/x/text v0.33.0
+go: downloading golang.org/x/arch v0.23.0
 &nbsp;
 <b>&gt; <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/where" rel="external">where</a> lensm</b>
 %USERPROFILE%\go\bin\lensm.exe
@@ -178,7 +197,7 @@ The following screenshot presents the same assembly code as above :
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/November 2025* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/June 2026* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->

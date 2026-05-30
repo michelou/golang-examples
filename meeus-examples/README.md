@@ -10,6 +10,21 @@
 
 ## <span id="FirstClassFuncs">`FirstClassFuncs` Example</span>
 
+This example has the following directory structure :
+
+<pre style="font-size:80%;">
+<b>&gt; <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/tree">tree</a> /a /f . | <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/findstr">findstr</a> /v /b [A-Z]</b>
+|   <a href="./FirstClassFuncs/build.bat">build.bat</a>
+|   <a href="./FirstClassFuncs/build.sh">build.sh</a>
+|   <a href="./FirstClassFuncs/go.mod">go.mod</a>
+|   <a href="./FirstClassFuncs/go.sum">go.sum</a>
+|   <a href="./FirstClassFuncs/mage.go">mage.go</a>
+|   <a href="./FirstClassFuncs/Makefile">Makefile</a>
+\---<b>src</b>
+    \---<b>main</b>
+            <a href="./FirstClassFuncs/src/main/main.go">main.go</a>
+</pre>
+
 Command [`build.bat`](./FirstClassFuncs/build.bat) executes the Go command `%GOROOT%\bin\go build` with the appropriate parameters and runs the generated executable `FirstClassFuncs.exe` :
 
 <pre style="font-size:80%;">
@@ -50,11 +65,43 @@ input: [1 1 2 3 5 8 13]
 i > 5: [8 13]
 </pre>
 
-*WIP*
+<!--=======================================================================-->
+
+## <span id="FunctionCurrying">`FunctionCurrying` Example</span>
+
+This example has the following directory structure :
+
+<pre style="font-size:80%;">
+<b>&gt; <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/tree">tree</a> /a /f . | <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/findstr">findstr</a> /v /b [A-Z]</b>
+|   <a href="./FunctionCurrying/build.bat">build.bat</a>
+|   <a href="./FunctionCurrying/build.sh">build.sh</a>
+|   <a href="./FunctionCurrying/go.mod">go.mod</a>
+|   <a href="./FunctionCurrying/go.sum">go.sum</a>
+|   <a href="./FunctionCurrying/mage.go">mage.go</a>
+|   <a href="./FunctionCurrying/Makefile">Makefile</a>
+\---<b>src</b>
+    \---<b>main</b>
+            <a href="./FunctionCurrying/src/main/main.go">main.go</a>
+</pre>
+
+Command [`build.bat`](./FunctionCurrying/build.bat) executes the Go command `%GOROOT%\bin\go build` with the appropriate parameters and runs the generated executable `FunctionCurrying.exe` :
+
+<pre style="font-size:80%;">
+<b>&gt; <a href="./FunctionCurrying/build.bat">build</a> -verbose run</b>
+Compile Go source files to directory "target"
+Execute target "target\FunctionCurrying.exe"
+{Name Breed Gender}
+{Bucky 1 0}
+{Rocky 1 0}
+{Lola 1 1}
+{Dotty 1 1}
+{rocky 1 0}
+{tipsy 3 1}
+</pre>
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/November 2025* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/June 2026* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->

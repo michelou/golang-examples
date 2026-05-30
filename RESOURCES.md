@@ -30,6 +30,8 @@
 
 ## <span id="blogs">Blogs</span> [**&#x25B4;**](#top)
 
+- [Boldly Go Daily](https://boldlygo.tech/archive/)
+- [GoLinuxCloud / GO](https://www.golinuxcloud.com/category/go/)
 - [Writing generic collection types in Go: the missing documentation][blog_musgrave] by Zach Musgrave, July 2024.
 - [Fundamentals of I/O in Go: Part 2](https://medium.com/@andreiboar/fundamentals-of-i-o-in-go-part-2-e7bb68cd5608) by Andrei Boar, April 2024.
 - [Fundamentals of I/O in Go](https://medium.com/@andreiboar/fundamentals-of-i-o-in-go-c893d3714deb) by Andrei Boar, April 2024.
@@ -174,6 +176,7 @@
 ## <span id="tutorials">Tutorials</span>
 
 - [Go 101](https://go101.org/) (fundamentals, generice, optimizations, quizzes).
+- [Go Tutorial](https://www.geeksforgeeks.org/go-language/go/), September 2025.
 - [Golang 101 hacks][tutorial_xiao] by Nan Xiao.
 - [Golang Tutorial][tutorial_callicoder] by [Callicoder][callicoder_about]
 - [GoStart][tutorial_alco] by [Alexei Sholik](https://alexeisholik.com/)
@@ -183,7 +186,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/November 2025* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/June 2026* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
