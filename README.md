@@ -8,7 +8,7 @@
   </tr>
 </table>
 
-[Ada][ada_examples], [Akka][akka_examples], [C++][cpp_examples], [COBOL][cobol_examples], [Component Pascal][component_pascal_examples],  [Dafny][dafny_examples],  [Dart][dart_examples], [Deno][deno_examples], [Docker][docker_examples], [Erlang][erlang_examples], [Flix][flix_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kafka][kafka_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Modula-2][m2_examples], [MySQL][mysql_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala&nbsp;3][scala3_examples], [Spark][spark_examples], [Spring][spring_examples], [Standard&nbsp;ML][sml_examples], [TruffleSqueak][trufflesqueak_examples], [WiX&nbsp;Toolset][wix_examples] and [Zig][zig_examples] are other topics we are continuously monitoring.
+[Ada][ada_examples], [Akka][akka_examples], [C++][cpp_examples], [COBOL][cobol_examples], [Component Pascal][component_pascal_examples],  [Dafny][dafny_examples],  [Dart][dart_examples], [Deno][deno_examples], [Docker][docker_examples], [Erlang][erlang_examples], [Flix][flix_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kafka][kafka_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Modula-2][m2_examples], [MySQL][mysql_examples], [Node.js][nodejs_examples], [PowerShell][powershell_examples], [Rust][rust_examples], [Scala&nbsp;3][scala3_examples], [Spark][spark_examples], [Spring][spring_examples], [Standard&nbsp;ML][sml_examples], [TruffleSqueak][trufflesqueak_examples], [WiX&nbsp;Toolset][wix_examples] and [Zig][zig_examples] are other topics we are continuously monitoring.
 
 > **&#9755;** Read the report <a href="https://kuree.gitbooks.io/the-go-programming-language-report/content/" rel="external">"The Go Programming Language Report"</a> for a quick overview of the Go programming language.
 
@@ -27,7 +27,7 @@ This project depends on the following external software for the **Microsoft Wind
 Optionally one may also install the following software:
 
 - [ConEmu 2023][conemu_downloads] ([*release notes*][conemu_relnotes])
-- [Visual Studio Code 1.120][vscode_downloads] ([*release notes*][vscode_relnotes])
+- [Visual Studio Code 1.123][vscode_downloads] ([*release notes*][vscode_relnotes])
 
 For instance our development environment looks as follows (*June 2026*) <sup id="anchor_01">[1](#footnote_01)</sup>:
 
@@ -83,7 +83,7 @@ We execute command [**`setenv.bat`**](setenv.bat) once to setup our development 
 <pre style="font-size:80%;">
 <b>&gt; <a href="setenv.bat">setenv</a></b>
 Tool versions:
-   code 1.120.0, go 1.26.3, mage 1.17.2
+   code 1.123.0, go 1.26.3, mage 1.17.2
    git 2.54.0, diff 3.12, bash 5.3.9(1)
 
 <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/where_1" rel="external">where</a> code git mage</b>
@@ -93,6 +93,8 @@ C:\opt\Git\bin\git.exe
 C:\opt\Git\mingw64\bin\git.exe
 C:\opt\go\bin\mage.exe
 </pre>
+
+<!--=======================================================================-->
 
 ## <span id="footnotes">Footnotes</span> [**&#x25B4;**](#top)
 
@@ -108,7 +110,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 <a href="https://github.com/magefile/mage/releases" rel="external">mage_1.17.2_Windows-64bit.zip</a>     <i>(  1 MB)</i>
 <a href="http://repo.msys2.org/distrib/x86_64/">msys2-x86_64-20240727.exe</a>         <i>( 94 MB)</i>
 <a href="https://git-scm.com/download/win" rel="external">PortableGit-2.54.0-64-bit.7z.exe</a>  <i>( 41 MB)</i>
-<a href="https://code.visualstudio.com/Download#" rel="external">VSCode-win32-x64-1.120.0.zip</a>      <i>(131 MB)</i>
+<a href="https://code.visualstudio.com/Download#" rel="external">VSCode-win32-x64-1.123.0.zip</a>      <i>(131 MB)</i>
 </pre>
 </dd></dl>
 
@@ -259,6 +261,7 @@ windows/arm64
 [msys2_downloads]: http://repo.msys2.org/distrib/x86_64/
 [mysql_examples]: https://github.com/michelou/mysql-examples#top
 [nodejs_examples]: https://github.com/michelou/nodejs-examples#top
+[powershell_examples]: https://github.com/michelou/powershell-examples#top
 [rust_examples]: https://github.com/michelou/rust-examples#top
 [scala3_examples]: https://github.com/michelou/dotty-examples#top
 [sml_examples]: https://github.com/michelou/sml-examples#top
